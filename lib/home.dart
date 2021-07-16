@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   void _incrementCounter() {
     //Services.search('maze');
-    //Services.addBook(Murder On The Orient Express)
+    //Services.addBook("Murder On The Orient Express", "Agatha Christie", "1934-01-01");
     setState(() {
       _counter++;
     });

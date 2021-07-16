@@ -9,8 +9,8 @@ class Services{
   static String addBookRoute = 'books';
   //static String host = 'localhost:7000';
 
-  static Future<void> addBook(String title, String author, DateTime datePublished) async {
-    var body = jsonEncode({
+  static Future<void> addBook(String title, String author, String datePublished) async {
+    var body = json.encode({
       'title': title,
       'author': author,
       'DatePublished': datePublished
@@ -18,6 +18,7 @@ class Services{
     try{
       final response = await http.post(
         Uri.parse(emulatorUrl+addBookRoute),
+        headers: {'content-type': 'application/json'},
         body: body,
       );
       print(json.decode(response.body));
