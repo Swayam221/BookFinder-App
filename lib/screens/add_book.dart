@@ -1,3 +1,4 @@
+import 'package:bookfinder_app/services/api_calls.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -87,10 +88,15 @@ class _AddBookState extends State<AddBookPage>
                         primary: Colors.white,
                         textStyle: const TextStyle(fontSize: 20),
                       ),
-                      onPressed: () {
-                        if(!_formKey.currentState!.validate())
+                      onPressed: () async {
+                        print(titleController.text);
+                        if(_formKey.currentState!.validate())
                         {
-                          print("fasjk");
+                          await Services.addBook(titleController.text,authorController.text,date);
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text("Book Added to Database Successfully"),
+                          ));
+                          Navigator.pop(context);
                         }
                       },
                       child: const Text('Add Book To Database'),
@@ -107,6 +113,6 @@ class _AddBookState extends State<AddBookPage>
 
   void help()
   {
-    print(titleController.value);
+    print(titleController.text);
   }
 }
