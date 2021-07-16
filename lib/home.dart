@@ -1,4 +1,5 @@
 
+import 'package:bookfinder_app/screens/add_book.dart';
 import 'package:bookfinder_app/services/api_calls.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddBookPage()));},
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), 
