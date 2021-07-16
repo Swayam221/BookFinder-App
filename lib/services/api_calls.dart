@@ -33,7 +33,23 @@ class Services{
     try{
       
       final response = await http.get(
-        Uri.parse(emulatorUrl+searchRoute+query),
+        Uri.parse(emulatorUrl+addBookRoute),
+      );
+      List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
+      //print(results[0].title);
+      return results;
+    }
+    catch(err){
+      print("error");
+      return [];
+    }
+  }
+
+  static Future<List<Book>> getBooks() async{
+    try{
+      
+      final response = await http.get(
+        Uri.parse(emulatorUrl+addBookRoute),
       );
       List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
       //print(results[0].title);
