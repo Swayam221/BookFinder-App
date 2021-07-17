@@ -1,5 +1,8 @@
 import 'dart:convert';
-
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter_absolute_path/flutter_absolute_path.dart';
+import 'package:multi_image_picker/src/asset.dart';
 import 'package:bookfinder_app/models/Book.dart';
 import 'package:http/http.dart' as http;
 class Services{
@@ -8,6 +11,8 @@ class Services{
   static String searchRoute = 'books/search/';
   static String addBookRoute = 'books/';
   static String pageSize = '10';
+  String imagesUrl = 'images/';
+  Dio dio = Dio();
   //static String host = 'localhost:7000';
 
   static Future<void> addBook(String title, String author, String datePublished) async {
@@ -78,4 +83,21 @@ class Services{
       return [];
     }
   }
+
+  Future<Response> addImage(Asset image, String bookId) async {
+    String path = await FlutterAbsolutePath.getAbsolutePath(image.identifier);
+    FormData formData = FormData.fromMap({
+      "bookImg": await MultipartFile.fromFile(path),
+      "bookId": bookId
+    });
+
+    final response = await dio.post(
+      emulatorUrl + imagesUrl,
+      data: formData,
+    );
+    return response;
+  }
+
+  CachedNetworkImageProvider getVendorImage(String imageId) =>
+      CachedNetworkImageProvider(emulatorUrl+imagesUrl + imageId);
 }

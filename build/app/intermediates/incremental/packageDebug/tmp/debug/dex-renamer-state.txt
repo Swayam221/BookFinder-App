@@ -1,4 +1,4 @@
-#Sat Jul 17 11:57:22 IST 2021
+#Sat Jul 17 13:19:09 IST 2021
 base.0=C\:\\Users\\gupta\\OneDrive\\Desktop\\Flutter Projects\\Look_A_Book\\bookfinder_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
           if(bookPagination.loading)
           CircularProgressIndicator(),
         ]
-      ):Column(
+      ):searchResults.isNotEmpty?Column(
           children: [
             Flexible(
               fit: FlexFit.tight,
@@ -148,6 +148,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ]
+      ):Center(
+        child: Text("No Resutls for This Query", style: TextStyle(fontSize: 16),)
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddBookPage()));},
