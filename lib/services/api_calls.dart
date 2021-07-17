@@ -8,7 +8,8 @@ import 'package:bookfinder_app/models/Book.dart';
 import 'package:http/http.dart' as http;
 class Services{
 
-  static String emulatorUrl = 'http://10.0.2.2:7000/';
+  //static String emulatorUrl = 'http://10.0.2.2:7000/';
+  static String emulatorUrl = 'http://localhost:7000/';
   static String searchRoute = 'books/search/';
   static String addBookRoute = 'books/';
   static String pageSize = '10';

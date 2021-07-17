@@ -1,0 +1,973 @@
+define(['dart_sdk', 'packages/flutter/src/painting/image_stream.dart', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/painting/_network_image_web.dart', 'packages/flutter/src/foundation/synchronous_future.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/foundation/key.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/multi_image_picker/src/cupertino_options.dart', 'packages/multi_image_picker/src/material_options.dart', 'packages/multi_image_picker/src/exceptions.dart', 'packages/flutter/src/services/system_channels.dart', 'packages/multi_image_picker/src/metadata.dart'], (function load__packages__multi_image_picker__src__asset_thumb_provider_dart(dart_sdk, packages__flutter__src__painting__image_stream$46dart, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__painting___network_image_web$46dart, packages__flutter__src__foundation__synchronous_future$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__foundation__key$46dart, packages__flutter__src__painting__box_fit$46dart, packages__multi_image_picker__src__cupertino_options$46dart, packages__multi_image_picker__src__material_options$46dart, packages__multi_image_picker__src__exceptions$46dart, packages__flutter__src__services__system_channels$46dart, packages__multi_image_picker__src__metadata$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const typed_data = dart_sdk.typed_data;
+  const _interceptors = dart_sdk._interceptors;
+  const collection = dart_sdk.collection;
+  const io = dart_sdk.io;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const image_stream = packages__flutter__src__painting__image_stream$46dart.src__painting__image_stream;
+  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
+  const image_provider = packages__flutter__src__painting___network_image_web$46dart.src__painting__image_provider;
+  const synchronous_future = packages__flutter__src__foundation__synchronous_future$46dart.src__foundation__synchronous_future;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const key = packages__flutter__src__foundation__key$46dart.src__foundation__key;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  const cupertino_options = packages__multi_image_picker__src__cupertino_options$46dart.src__cupertino_options;
+  const material_options = packages__multi_image_picker__src__material_options$46dart.src__material_options;
+  const exceptions = packages__multi_image_picker__src__exceptions$46dart.src__exceptions;
+  const message_codec = packages__flutter__src__services__system_channels$46dart.src__services__message_codec;
+  const platform_channel = packages__flutter__src__services__system_channels$46dart.src__services__platform_channel;
+  const message_codecs = packages__flutter__src__services__system_channels$46dart.src__services__message_codecs;
+  const binding = packages__flutter__src__services__system_channels$46dart.src__services__binding;
+  const metadata$ = packages__multi_image_picker__src__metadata$46dart.src__metadata;
+  var asset_thumb_provider = Object.create(dart.library);
+  var asset_thumb = Object.create(dart.library);
+  var picker = Object.create(dart.library);
+  var multi_image_picker = Object.create(dart.library);
+  var asset$ = Object.create(dart.library);
+  var $buffer = dartx.buffer;
+  var $asUint8List = dartx.asUint8List;
+  var $runtimeType = dartx.runtimeType;
+  var $_equals = dartx._equals;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $add = dartx.add;
+  var $addAll = dartx.addAll;
+  var $_set = dartx._set;
+  var $forEach = dartx.forEach;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ImageProviderOfObject: () => (T.ImageProviderOfObject = dart.constFn(image_provider.ImageProvider$(core.Object)))(),
+    DiagnosticsPropertyOfImageProviderOfObject: () => (T.DiagnosticsPropertyOfImageProviderOfObject = dart.constFn(diagnostics.DiagnosticsProperty$(T.ImageProviderOfObject())))(),
+    SyncIterableOfDiagnosticsNode: () => (T.SyncIterableOfDiagnosticsNode = dart.constFn(_js_helper.SyncIterable$(diagnostics.DiagnosticsNode)))(),
+    IterableOfDiagnosticsNode: () => (T.IterableOfDiagnosticsNode = dart.constFn(core.Iterable$(diagnostics.DiagnosticsNode)))(),
+    VoidToIterableOfDiagnosticsNode: () => (T.VoidToIterableOfDiagnosticsNode = dart.constFn(dart.fnType(T.IterableOfDiagnosticsNode(), [])))(),
+    SynchronousFutureOfAssetThumbImageProvider: () => (T.SynchronousFutureOfAssetThumbImageProvider = dart.constFn(synchronous_future.SynchronousFuture$(asset_thumb_provider.AssetThumbImageProvider)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    StringN: () => (T.StringN = dart.constFn(dart.nullable(core.String)))(),
+    ValueKeyOfStringN: () => (T.ValueKeyOfStringN = dart.constFn(key.ValueKey$(T.StringN())))(),
+    AssetL: () => (T.AssetL = dart.constFn(dart.legacy(asset$.Asset)))(),
+    AssetToStringN: () => (T.AssetToStringN = dart.constFn(dart.fnType(T.StringN(), [asset$.Asset])))(),
+    IdentityMapOfString$dynamic: () => (T.IdentityMapOfString$dynamic = dart.constFn(_js_helper.IdentityMap$(core.String, dart.dynamic)))(),
+    JSArrayOfAsset: () => (T.JSArrayOfAsset = dart.constFn(_interceptors.JSArray$(asset$.Asset)))(),
+    intN: () => (T.intN = dart.constFn(dart.nullable(core.int)))(),
+    ListOfAsset: () => (T.ListOfAsset = dart.constFn(core.List$(asset$.Asset)))(),
+    boolN: () => (T.boolN = dart.constFn(dart.nullable(core.bool)))(),
+    FutureOrOfMap: () => (T.FutureOrOfMap = dart.constFn(async.FutureOr$(core.Map)))(),
+    LinkedHashMapOfString$dynamic: () => (T.LinkedHashMapOfString$dynamic = dart.constFn(collection.LinkedHashMap$(core.String, dart.dynamic)))(),
+    LinkedMapOfString$dynamic: () => (T.LinkedMapOfString$dynamic = dart.constFn(_js_helper.LinkedMap$(core.String, dart.dynamic)))(),
+    StringAnddynamicTovoid: () => (T.StringAnddynamicTovoid = dart.constFn(dart.fnType(dart.void, [core.String, dart.dynamic])))(),
+    MapOfString$dynamic: () => (T.MapOfString$dynamic = dart.constFn(core.Map$(core.String, dart.dynamic)))(),
+    CompleterOfByteData: () => (T.CompleterOfByteData = dart.constFn(async.Completer$(typed_data.ByteData)))(),
+    ByteDataN: () => (T.ByteDataN = dart.constFn(dart.nullable(typed_data.ByteData)))(),
+    FutureOfByteDataN: () => (T.FutureOfByteDataN = dart.constFn(async.Future$(T.ByteDataN())))(),
+    ByteDataNToFutureOfByteDataN: () => (T.ByteDataNToFutureOfByteDataN = dart.constFn(dart.fnType(T.FutureOfByteDataN(), [T.ByteDataN()])))(),
+    FutureOrOfByteData: () => (T.FutureOrOfByteData = dart.constFn(async.FutureOr$(typed_data.ByteData)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([C[3] || CT.C3], T._LocationL());
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[2] || CT.C2,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: progress_indicator._ActivityIndicatorType.prototype,
+        [_name]: "_ActivityIndicatorType.material",
+        index: 0
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: progress_indicator.CircularProgressIndicator.prototype,
+        [Widget__location]: C[11] || CT.C11,
+        [Widget_key]: null,
+        [ProgressIndicator_semanticsValue]: null,
+        [ProgressIndicator_semanticsLabel]: null,
+        [ProgressIndicator_valueColor]: null,
+        [ProgressIndicator_color]: null,
+        [ProgressIndicator_backgroundColor]: null,
+        [ProgressIndicator_value]: null,
+        [CircularProgressIndicator_strokeWidth]: 4,
+        [CircularProgressIndicator__indicatorType]: C[13] || CT.C13
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C[5] || CT.C5,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: C[10] || CT.C10,
+        [SizedBox_height]: 50,
+        [SizedBox_width]: 50
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: 0,
+        [Alignment_x]: 0
+      });
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: basic.Center.prototype,
+        [Widget__location]: C[1] || CT.C1,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: C[4] || CT.C4,
+        [Align_heightFactor]: null,
+        [Align_widthFactor]: null,
+        [Align_alignment]: C[14] || CT.C14
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "bytes",
+        [_Location_column]: 26,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 7,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 7,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "gaplessPlayback",
+        [_Location_column]: 7,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 87,
+        [_Location_file]: "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([], T.AssetL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: cupertino_options.CupertinoOptions.prototype,
+        [CupertinoOptions_autoCloseOnSelectionLimit]: null,
+        [CupertinoOptions_takePhotoIcon]: null,
+        [CupertinoOptions_selectionCharacter]: null,
+        [CupertinoOptions_selectionTextColor]: null,
+        [CupertinoOptions_selectionFillColor]: null,
+        [CupertinoOptions_selectionStrokeColor]: null,
+        [CupertinoOptions_selectionShadowColor]: null,
+        [CupertinoOptions_backgroundColor]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: material_options.MaterialOptions.prototype,
+        [MaterialOptions_autoCloseOnSelectionLimit]: null,
+        [MaterialOptions_okButtonDrawable]: null,
+        [MaterialOptions_backButtonDrawable]: null,
+        [MaterialOptions_textOnNothingSelected]: null,
+        [MaterialOptions_selectionLimitReachedText]: null,
+        [MaterialOptions_selectCircleStrokeColor]: null,
+        [MaterialOptions_useDetailsView]: null,
+        [MaterialOptions_startInAllView]: null,
+        [MaterialOptions_actionBarTitle]: null,
+        [MaterialOptions_allViewTitle]: null,
+        [MaterialOptions_actionBarTitleColor]: null,
+        [MaterialOptions_lightStatusBar]: null,
+        [MaterialOptions_statusBarColor]: null,
+        [MaterialOptions_actionBarColor]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: message_codecs.StandardMessageCodec.prototype
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: message_codecs.StandardMethodCodec.prototype,
+        [StandardMethodCodec_messageCodec]: C[26] || CT.C26
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: platform_channel.MethodChannel.prototype,
+        [MethodChannel__binaryMessenger]: null,
+        [MethodChannel_codec]: C[25] || CT.C25,
+        [MethodChannel_name]: "multi_image_picker"
+      });
+    }
+  }, false);
+  var C = Array(27).fill(void 0);
+  var I = [
+    "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb_provider.dart",
+    "package:multi_image_picker/src/asset_thumb_provider.dart",
+    "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset_thumb.dart",
+    "package:multi_image_picker/src/asset_thumb.dart",
+    "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/picker.dart",
+    "package:multi_image_picker/src/picker.dart",
+    "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/asset.dart",
+    "package:multi_image_picker/src/asset.dart"
+  ];
+  var asset$0 = dart.privateName(asset_thumb_provider, "AssetThumbImageProvider.asset");
+  var width$ = dart.privateName(asset_thumb_provider, "AssetThumbImageProvider.width");
+  var height$ = dart.privateName(asset_thumb_provider, "AssetThumbImageProvider.height");
+  var quality$ = dart.privateName(asset_thumb_provider, "AssetThumbImageProvider.quality");
+  var scale$ = dart.privateName(asset_thumb_provider, "AssetThumbImageProvider.scale");
+  var _loadAsync = dart.privateName(asset_thumb_provider, "_loadAsync");
+  asset_thumb_provider.AssetThumbImageProvider = class AssetThumbImageProvider extends image_provider.ImageProvider {
+    get asset() {
+      return this[asset$0];
+    }
+    set asset(value) {
+      super.asset = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get quality() {
+      return this[quality$];
+    }
+    set quality(value) {
+      super.quality = value;
+    }
+    get scale() {
+      return this[scale$];
+    }
+    set scale(value) {
+      super.scale = value;
+    }
+    load(key, decode) {
+      asset_thumb_provider.AssetThumbImageProvider.as(key);
+      if (key == null) dart.nullFailed(I[0], 30, 31, "key");
+      if (decode == null) dart.nullFailed(I[0], 30, 52, "decode");
+      return new image_stream.MultiFrameImageStreamCompleter.new({codec: this[_loadAsync](key), scale: key.scale, informationCollector: dart.fn(() => new (T.SyncIterableOfDiagnosticsNode()).new((function*() {
+          yield new (T.DiagnosticsPropertyOfImageProviderOfObject()).new("AssetThumbImageProvider: " + dart.str(this) + " \n Image key: " + dart.str(key), this, {style: diagnostics.DiagnosticsTreeStyle.errorProperty});
+        }).bind(this)), T.VoidToIterableOfDiagnosticsNode())});
+    }
+    [_loadAsync](key) {
+      if (key == null) dart.nullFailed(I[0], 44, 55, "key");
+      return async.async(ui.Codec, (function* _loadAsync() {
+        if (!dart.equals(key, this)) dart.assertFailed(null, I[0], 45, 12, "key == this");
+        let data = (yield key.asset.getThumbByteData(key.width, key.height, {quality: key.quality}));
+        let bytes = data[$buffer][$asUint8List]();
+        return yield ui.instantiateImageCodec(bytes);
+      }).bind(this));
+    }
+    obtainKey(configuration) {
+      if (configuration == null) dart.nullFailed(I[0], 55, 64, "configuration");
+      return new (T.SynchronousFutureOfAssetThumbImageProvider()).new(this);
+    }
+    _equals(other) {
+      if (other == null) return false;
+      if (!dart.equals(dart.runtimeType(other), this[$runtimeType])) return false;
+      let typedOther = asset_thumb_provider.AssetThumbImageProvider.as(other);
+      return this.asset.identifier == typedOther.asset.identifier && this.scale == typedOther.scale && this.width == typedOther.width && this.height == typedOther.height && this.quality == typedOther.quality;
+    }
+    get hashCode() {
+      return ui.hashValues(this.asset.identifier, this.scale, this.width, this.height, this.quality);
+    }
+    toString() {
+      return dart.str(this[$runtimeType]) + "(" + dart.str(this.asset.identifier) + ", scale: " + dart.str(this.scale) + ", " + "width: " + dart.str(this.width) + ", height: " + dart.str(this.height) + ", quality: " + dart.str(this.quality) + ")";
+    }
+  };
+  (asset_thumb_provider.AssetThumbImageProvider.new = function(asset, opts) {
+    if (asset == null) dart.nullFailed(I[0], 21, 10, "asset");
+    let width = opts && 'width' in opts ? opts.width : null;
+    if (width == null) dart.nullFailed(I[0], 22, 19, "width");
+    let height = opts && 'height' in opts ? opts.height : null;
+    if (height == null) dart.nullFailed(I[0], 23, 19, "height");
+    let quality = opts && 'quality' in opts ? opts.quality : 100;
+    if (quality == null) dart.nullFailed(I[0], 24, 10, "quality");
+    let scale = opts && 'scale' in opts ? opts.scale : 1;
+    if (scale == null) dart.nullFailed(I[0], 25, 10, "scale");
+    this[asset$0] = asset;
+    this[width$] = width;
+    this[height$] = height;
+    this[quality$] = quality;
+    this[scale$] = scale;
+    asset_thumb_provider.AssetThumbImageProvider.__proto__.new.call(this);
+    ;
+  }).prototype = asset_thumb_provider.AssetThumbImageProvider.prototype;
+  dart.addTypeTests(asset_thumb_provider.AssetThumbImageProvider);
+  dart.addTypeCaches(asset_thumb_provider.AssetThumbImageProvider);
+  dart.setMethodSignature(asset_thumb_provider.AssetThumbImageProvider, () => ({
+    __proto__: dart.getMethods(asset_thumb_provider.AssetThumbImageProvider.__proto__),
+    load: dart.fnType(image_stream.ImageStreamCompleter, [dart.nullable(core.Object), dart.fnType(async.Future$(ui.Codec), [typed_data.Uint8List], {allowUpscaling: core.bool, cacheHeight: dart.nullable(core.int), cacheWidth: dart.nullable(core.int)}, {})]),
+    [_loadAsync]: dart.fnType(async.Future$(ui.Codec), [asset_thumb_provider.AssetThumbImageProvider]),
+    obtainKey: dart.fnType(async.Future$(asset_thumb_provider.AssetThumbImageProvider), [image_provider.ImageConfiguration]),
+    _equals: dart.fnType(core.bool, [dart.dynamic]),
+    [$_equals]: dart.fnType(core.bool, [dart.dynamic])
+  }));
+  dart.setLibraryUri(asset_thumb_provider.AssetThumbImageProvider, I[1]);
+  dart.setFieldSignature(asset_thumb_provider.AssetThumbImageProvider, () => ({
+    __proto__: dart.getFields(asset_thumb_provider.AssetThumbImageProvider.__proto__),
+    asset: dart.finalFieldType(asset$.Asset),
+    width: dart.finalFieldType(core.int),
+    height: dart.finalFieldType(core.int),
+    quality: dart.finalFieldType(core.int),
+    scale: dart.finalFieldType(core.double)
+  }));
+  dart.defineExtensionMethods(asset_thumb_provider.AssetThumbImageProvider, ['_equals', 'toString']);
+  dart.defineExtensionAccessors(asset_thumb_provider.AssetThumbImageProvider, ['hashCode']);
+  var asset$1 = dart.privateName(asset_thumb, "AssetThumb.asset");
+  var width$0 = dart.privateName(asset_thumb, "AssetThumb.width");
+  var height$0 = dart.privateName(asset_thumb, "AssetThumb.height");
+  var quality$0 = dart.privateName(asset_thumb, "AssetThumb.quality");
+  var spinner$ = dart.privateName(asset_thumb, "AssetThumb.spinner");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var ProgressIndicator_semanticsValue = dart.privateName(progress_indicator, "ProgressIndicator.semanticsValue");
+  var ProgressIndicator_semanticsLabel = dart.privateName(progress_indicator, "ProgressIndicator.semanticsLabel");
+  var ProgressIndicator_valueColor = dart.privateName(progress_indicator, "ProgressIndicator.valueColor");
+  var ProgressIndicator_color = dart.privateName(progress_indicator, "ProgressIndicator.color");
+  var ProgressIndicator_backgroundColor = dart.privateName(progress_indicator, "ProgressIndicator.backgroundColor");
+  var ProgressIndicator_value = dart.privateName(progress_indicator, "ProgressIndicator.value");
+  var CircularProgressIndicator_strokeWidth = dart.privateName(progress_indicator, "CircularProgressIndicator.strokeWidth");
+  var _name = dart.privateName(progress_indicator, "_name");
+  var CircularProgressIndicator__indicatorType = dart.privateName(progress_indicator, "CircularProgressIndicator._indicatorType");
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  var Align_heightFactor = dart.privateName(basic, "Align.heightFactor");
+  var Align_widthFactor = dart.privateName(basic, "Align.widthFactor");
+  var Alignment_y = dart.privateName(alignment, "Alignment.y");
+  var Alignment_x = dart.privateName(alignment, "Alignment.x");
+  var Align_alignment = dart.privateName(basic, "Align.alignment");
+  asset_thumb.AssetThumb = class AssetThumb extends framework.StatefulWidget {
+    get asset() {
+      return this[asset$1];
+    }
+    set asset(value) {
+      super.asset = value;
+    }
+    get width() {
+      return this[width$0];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get height() {
+      return this[height$0];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get quality() {
+      return this[quality$0];
+    }
+    set quality(value) {
+      super.quality = value;
+    }
+    get spinner() {
+      return this[spinner$];
+    }
+    set spinner(value) {
+      super.spinner = value;
+    }
+    createState() {
+      return new asset_thumb._AssetThumbState.new();
+    }
+  };
+  (asset_thumb.AssetThumb.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let asset = opts && 'asset' in opts ? opts.asset : null;
+    if (asset == null) dart.nullFailed(I[2], 24, 19, "asset");
+    let width = opts && 'width' in opts ? opts.width : null;
+    if (width == null) dart.nullFailed(I[2], 25, 19, "width");
+    let height = opts && 'height' in opts ? opts.height : null;
+    if (height == null) dart.nullFailed(I[2], 26, 19, "height");
+    let quality = opts && 'quality' in opts ? opts.quality : 100;
+    if (quality == null) dart.nullFailed(I[2], 27, 10, "quality");
+    let spinner = opts && 'spinner' in opts ? opts.spinner : C[0] || CT.C0;
+    if (spinner == null) dart.nullFailed(I[2], 28, 10, "spinner");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[asset$1] = asset;
+    this[width$0] = width;
+    this[height$0] = height;
+    this[quality$0] = quality;
+    this[spinner$] = spinner;
+    asset_thumb.AssetThumb.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = asset_thumb.AssetThumb.prototype;
+  dart.addTypeTests(asset_thumb.AssetThumb);
+  dart.addTypeCaches(asset_thumb.AssetThumb);
+  dart.setMethodSignature(asset_thumb.AssetThumb, () => ({
+    __proto__: dart.getMethods(asset_thumb.AssetThumb.__proto__),
+    createState: dart.fnType(asset_thumb._AssetThumbState, [])
+  }));
+  dart.setLibraryUri(asset_thumb.AssetThumb, I[3]);
+  dart.setFieldSignature(asset_thumb.AssetThumb, () => ({
+    __proto__: dart.getFields(asset_thumb.AssetThumb.__proto__),
+    asset: dart.finalFieldType(asset$.Asset),
+    width: dart.finalFieldType(core.int),
+    height: dart.finalFieldType(core.int),
+    quality: dart.finalFieldType(core.int),
+    spinner: dart.finalFieldType(framework.Widget)
+  }));
+  var _thumbData = dart.privateName(asset_thumb, "_thumbData");
+  var _loadThumb = dart.privateName(asset_thumb, "_loadThumb");
+  asset_thumb._AssetThumbState = class _AssetThumbState extends framework.State$(asset_thumb.AssetThumb) {
+    get width() {
+      return this.widget.width;
+    }
+    get height() {
+      return this.widget.height;
+    }
+    get quality() {
+      return this.widget.quality;
+    }
+    get asset() {
+      return this.widget.asset;
+    }
+    get spinner() {
+      return this.widget.spinner;
+    }
+    initState() {
+      super.initState();
+      this[_loadThumb]();
+    }
+    didUpdateWidget(oldWidget) {
+      asset_thumb.AssetThumb.as(oldWidget);
+      if (oldWidget == null) dart.nullFailed(I[2], 57, 35, "oldWidget");
+      if (oldWidget.asset.identifier != this.widget.asset.identifier) {
+        this[_loadThumb]();
+      }
+      super.didUpdateWidget(oldWidget);
+    }
+    [_loadThumb]() {
+      return async.async(dart.void, (function* _loadThumb() {
+        this.setState(dart.fn(() => {
+          this[_thumbData] = null;
+        }, T.VoidTovoid()));
+        let thumbData = (yield this.asset.getThumbByteData(this.width, this.height, {quality: this.quality}));
+        if (dart.test(this.mounted)) {
+          this.setState(dart.fn(() => {
+            this[_thumbData] = thumbData;
+          }, T.VoidTovoid()));
+        }
+      }).bind(this));
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[2], 83, 29, "context");
+      if (this[_thumbData] == null) {
+        return this.spinner;
+      }
+      return new image.Image.memory(dart.nullCheck(this[_thumbData])[$buffer][$asUint8List](), {key: new (T.ValueKeyOfStringN()).new(this.asset.identifier), fit: box_fit.BoxFit.cover, gaplessPlayback: true, $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+    }
+  };
+  (asset_thumb._AssetThumbState.new = function() {
+    this[_thumbData] = null;
+    asset_thumb._AssetThumbState.__proto__.new.call(this);
+    ;
+  }).prototype = asset_thumb._AssetThumbState.prototype;
+  dart.addTypeTests(asset_thumb._AssetThumbState);
+  dart.addTypeCaches(asset_thumb._AssetThumbState);
+  dart.setMethodSignature(asset_thumb._AssetThumbState, () => ({
+    __proto__: dart.getMethods(asset_thumb._AssetThumbState.__proto__),
+    [_loadThumb]: dart.fnType(dart.void, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(asset_thumb._AssetThumbState, () => ({
+    __proto__: dart.getGetters(asset_thumb._AssetThumbState.__proto__),
+    width: core.int,
+    height: core.int,
+    quality: core.int,
+    asset: asset$.Asset,
+    spinner: framework.Widget
+  }));
+  dart.setLibraryUri(asset_thumb._AssetThumbState, I[3]);
+  dart.setFieldSignature(asset_thumb._AssetThumbState, () => ({
+    __proto__: dart.getFields(asset_thumb._AssetThumbState.__proto__),
+    [_thumbData]: dart.fieldType(dart.nullable(typed_data.ByteData))
+  }));
+  var CupertinoOptions_autoCloseOnSelectionLimit = dart.privateName(cupertino_options, "CupertinoOptions.autoCloseOnSelectionLimit");
+  var CupertinoOptions_takePhotoIcon = dart.privateName(cupertino_options, "CupertinoOptions.takePhotoIcon");
+  var CupertinoOptions_selectionCharacter = dart.privateName(cupertino_options, "CupertinoOptions.selectionCharacter");
+  var CupertinoOptions_selectionTextColor = dart.privateName(cupertino_options, "CupertinoOptions.selectionTextColor");
+  var CupertinoOptions_selectionFillColor = dart.privateName(cupertino_options, "CupertinoOptions.selectionFillColor");
+  var CupertinoOptions_selectionStrokeColor = dart.privateName(cupertino_options, "CupertinoOptions.selectionStrokeColor");
+  var CupertinoOptions_selectionShadowColor = dart.privateName(cupertino_options, "CupertinoOptions.selectionShadowColor");
+  var CupertinoOptions_backgroundColor = dart.privateName(cupertino_options, "CupertinoOptions.backgroundColor");
+  var MaterialOptions_autoCloseOnSelectionLimit = dart.privateName(material_options, "MaterialOptions.autoCloseOnSelectionLimit");
+  var MaterialOptions_okButtonDrawable = dart.privateName(material_options, "MaterialOptions.okButtonDrawable");
+  var MaterialOptions_backButtonDrawable = dart.privateName(material_options, "MaterialOptions.backButtonDrawable");
+  var MaterialOptions_textOnNothingSelected = dart.privateName(material_options, "MaterialOptions.textOnNothingSelected");
+  var MaterialOptions_selectionLimitReachedText = dart.privateName(material_options, "MaterialOptions.selectionLimitReachedText");
+  var MaterialOptions_selectCircleStrokeColor = dart.privateName(material_options, "MaterialOptions.selectCircleStrokeColor");
+  var MaterialOptions_useDetailsView = dart.privateName(material_options, "MaterialOptions.useDetailsView");
+  var MaterialOptions_startInAllView = dart.privateName(material_options, "MaterialOptions.startInAllView");
+  var MaterialOptions_actionBarTitle = dart.privateName(material_options, "MaterialOptions.actionBarTitle");
+  var MaterialOptions_allViewTitle = dart.privateName(material_options, "MaterialOptions.allViewTitle");
+  var MaterialOptions_actionBarTitleColor = dart.privateName(material_options, "MaterialOptions.actionBarTitleColor");
+  var MaterialOptions_lightStatusBar = dart.privateName(material_options, "MaterialOptions.lightStatusBar");
+  var MaterialOptions_statusBarColor = dart.privateName(material_options, "MaterialOptions.statusBarColor");
+  var MaterialOptions_actionBarColor = dart.privateName(material_options, "MaterialOptions.actionBarColor");
+  var MethodChannel__binaryMessenger = dart.privateName(platform_channel, "MethodChannel._binaryMessenger");
+  var StandardMethodCodec_messageCodec = dart.privateName(message_codecs, "StandardMethodCodec.messageCodec");
+  var MethodChannel_codec = dart.privateName(platform_channel, "MethodChannel.codec");
+  var MethodChannel_name = dart.privateName(platform_channel, "MethodChannel.name");
+  picker.MultiImagePicker = class MultiImagePicker extends core.Object {
+    static pickImages(opts) {
+      let maxImages = opts && 'maxImages' in opts ? opts.maxImages : null;
+      if (maxImages == null) dart.nullFailed(I[4], 36, 18, "maxImages");
+      let enableCamera = opts && 'enableCamera' in opts ? opts.enableCamera : false;
+      if (enableCamera == null) dart.nullFailed(I[4], 37, 10, "enableCamera");
+      let selectedAssets = opts && 'selectedAssets' in opts ? opts.selectedAssets : C[21] || CT.C21;
+      if (selectedAssets == null) dart.nullFailed(I[4], 38, 17, "selectedAssets");
+      let cupertinoOptions = opts && 'cupertinoOptions' in opts ? opts.cupertinoOptions : C[22] || CT.C22;
+      if (cupertinoOptions == null) dart.nullFailed(I[4], 39, 22, "cupertinoOptions");
+      let materialOptions = opts && 'materialOptions' in opts ? opts.materialOptions : C[23] || CT.C23;
+      if (materialOptions == null) dart.nullFailed(I[4], 40, 21, "materialOptions");
+      return async.async(T.ListOfAsset(), function* pickImages() {
+        if (dart.notNull(maxImages) < 0) {
+          dart.throw(new core.ArgumentError.value(maxImages, "maxImages cannot be negative"));
+        }
+        try {
+          let images = core.List.as(yield picker.MultiImagePicker._channel.invokeMethod(dart.dynamic, "pickImages", new (T.IdentityMapOfString$dynamic()).from(["maxImages", maxImages, "enableCamera", enableCamera, "iosOptions", cupertinoOptions.toJson(), "androidOptions", materialOptions.toJson(), "selectedAssets", selectedAssets[$map](T.StringN(), dart.fn(asset => {
+              if (asset == null) dart.nullFailed(I[4], 56, 24, "asset");
+              return asset.identifier;
+            }, T.AssetToStringN()))[$toList]()])));
+          let assets = T.JSArrayOfAsset().of([]);
+          for (let item of images) {
+            let asset = new asset$.Asset.new(T.StringN().as(dart.dsend(item, '_get', ["identifier"])), T.StringN().as(dart.dsend(item, '_get', ["name"])), T.intN().as(dart.dsend(item, '_get', ["width"])), T.intN().as(dart.dsend(item, '_get', ["height"])));
+            assets[$add](asset);
+          }
+          return assets;
+        } catch (e$) {
+          let e = dart.getThrown(e$);
+          if (message_codec.PlatformException.is(e)) {
+            switch (e.code) {
+              case "CANCELLED":
+              {
+                dart.throw(new exceptions.NoImagesSelectedException.new(dart.nullCheck(e.message)));
+              }
+              case "PERMISSION_DENIED":
+              {
+                dart.throw(new exceptions.PermissionDeniedException.new(dart.nullCheck(e.message)));
+              }
+              case "PERMISSION_PERMANENTLY_DENIED":
+              {
+                dart.throw(new exceptions.PermissionPermanentlyDeniedExeption.new(dart.nullCheck(e.message)));
+              }
+              default:
+              {
+                dart.throw(e);
+              }
+            }
+          } else
+            throw e$;
+        }
+      });
+    }
+    static requestThumbnail(identifier, width, height, quality) {
+      if (width == null) dart.nullFailed(I[4], 96, 31, "width");
+      if (height == null) dart.nullFailed(I[4], 96, 42, "height");
+      if (quality == null) dart.nullFailed(I[4], 96, 54, "quality");
+      return async.async(T.boolN(), function* requestThumbnail() {
+        if (dart.notNull(width) < 0) {
+          dart.throw(new core.ArgumentError.value(width, "width cannot be negative"));
+        }
+        if (dart.notNull(height) < 0) {
+          dart.throw(new core.ArgumentError.value(height, "height cannot be negative"));
+        }
+        if (dart.notNull(quality) < 0 || dart.notNull(quality) > 100) {
+          dart.throw(new core.ArgumentError.value(quality, "quality should be in range 0-100"));
+        }
+        try {
+          let ret = (yield picker.MultiImagePicker._channel.invokeMethod(core.bool, "requestThumbnail", new (T.IdentityMapOfString$dynamic()).from(["identifier", identifier, "width", width, "height", height, "quality", quality])));
+          return ret;
+        } catch (e$) {
+          let e = dart.getThrown(e$);
+          if (message_codec.PlatformException.is(e)) {
+            switch (e.code) {
+              case "ASSET_DOES_NOT_EXIST":
+              {
+                dart.throw(new exceptions.AssetNotFoundException.new(dart.nullCheck(e.message)));
+              }
+              case "PERMISSION_DENIED":
+              {
+                dart.throw(new exceptions.PermissionDeniedException.new(dart.nullCheck(e.message)));
+              }
+              case "PERMISSION_PERMANENTLY_DENIED":
+              {
+                dart.throw(new exceptions.PermissionPermanentlyDeniedExeption.new(dart.nullCheck(e.message)));
+              }
+              default:
+              {
+                dart.throw(e);
+              }
+            }
+          } else
+            throw e$;
+        }
+      });
+    }
+    static requestOriginal(identifier, quality) {
+      return async.async(T.boolN(), function* requestOriginal() {
+        try {
+          let ret = (yield picker.MultiImagePicker._channel.invokeMethod(core.bool, "requestOriginal", new (T.IdentityMapOfString$dynamic()).from(["identifier", identifier, "quality", quality])));
+          return ret;
+        } catch (e$) {
+          let e = dart.getThrown(e$);
+          if (message_codec.PlatformException.is(e)) {
+            switch (e.code) {
+              case "ASSET_DOES_NOT_EXIST":
+              {
+                dart.throw(new exceptions.AssetNotFoundException.new(dart.nullCheck(e.message)));
+              }
+              default:
+              {
+                dart.throw(e);
+              }
+            }
+          } else
+            throw e$;
+        }
+      });
+    }
+    static requestMetadata(identifier) {
+      return async.async(metadata$.Metadata, function* requestMetadata() {
+        try {
+          let value = (yield picker.MultiImagePicker._channel.invokeMethod(T.FutureOrOfMap(), "requestMetadata", new (T.IdentityMapOfString$dynamic()).from(["identifier", identifier])));
+          if (!(value != null)) dart.assertFailed(null, I[4], 168, 14, "value != null");
+          let map = collection.LinkedHashMap.from(core.Map.as(value));
+          let metadata = T.LinkedHashMapOfString$dynamic().from(map);
+          if (dart.test(io.Platform.isIOS)) {
+            metadata = picker.MultiImagePicker._normalizeMetadata(metadata);
+          }
+          return new metadata$.Metadata.fromMap(metadata);
+        } catch (e$) {
+          let e = dart.getThrown(e$);
+          if (core.Object.is(e)) {
+            dart.throw(e);
+          } else
+            throw e$;
+        }
+      });
+    }
+    static _normalizeMetadata(json) {
+      if (json == null) dart.nullFailed(I[4], 183, 71, "json");
+      let map = new (T.LinkedMapOfString$dynamic()).new();
+      json[$forEach](dart.fn((metaKey, metaValue) => {
+        if (metaKey == null) dart.nullFailed(I[4], 186, 26, "metaKey");
+        if (metaKey === "{Exif}" || metaKey === "{TIFF}") {
+          map[$addAll](T.LinkedHashMapOfString$dynamic().from(core.Map.as(metaValue)));
+        } else if (metaKey === "{GPS}") {
+          let gpsMap = new (T.LinkedMapOfString$dynamic()).new();
+          let metaMap = T.LinkedHashMapOfString$dynamic().from(core.Map.as(metaValue));
+          metaMap[$forEach](dart.fn((key, value) => {
+            if (key == null) dart.nullFailed(I[4], 192, 33, "key");
+            if (key === "GPSVersion") {
+              gpsMap[$_set]("GPSVersionID", value);
+            } else {
+              gpsMap[$_set]("GPS" + dart.str(key), value);
+            }
+          }, T.StringAnddynamicTovoid()));
+          map[$addAll](gpsMap);
+        } else {
+          map[$_set](metaKey, metaValue);
+        }
+      }, T.StringAnddynamicTovoid()));
+      return T.MapOfString$dynamic().as(map);
+    }
+  };
+  (picker.MultiImagePicker.new = function() {
+    ;
+  }).prototype = picker.MultiImagePicker.prototype;
+  dart.addTypeTests(picker.MultiImagePicker);
+  dart.addTypeCaches(picker.MultiImagePicker);
+  dart.setLibraryUri(picker.MultiImagePicker, I[5]);
+  dart.defineLazy(picker.MultiImagePicker, {
+    /*picker.MultiImagePicker._channel*/get _channel() {
+      return C[24] || CT.C24;
+    }
+  }, false);
+  var _identifier$ = dart.privateName(asset$, "_identifier");
+  var _name$ = dart.privateName(asset$, "_name");
+  var _originalWidth$ = dart.privateName(asset$, "_originalWidth");
+  var _originalHeight$ = dart.privateName(asset$, "_originalHeight");
+  var _channel = dart.privateName(asset$, "_channel");
+  var _thumbChannel = dart.privateName(asset$, "_thumbChannel");
+  var _originalChannel = dart.privateName(asset$, "_originalChannel");
+  asset$.Asset = class Asset extends core.Object {
+    get [_channel]() {
+      return "multi_image_picker/image/" + dart.str(this[_identifier$]);
+    }
+    get [_thumbChannel]() {
+      return dart.str(this[_channel]) + ".thumb";
+    }
+    get [_originalChannel]() {
+      return dart.str(this[_channel]) + ".original";
+    }
+    get originalWidth() {
+      return this[_originalWidth$];
+    }
+    get originalHeight() {
+      return this[_originalHeight$];
+    }
+    get isLandscape() {
+      return dart.nullCheck(this[_originalWidth$]) > dart.nullCheck(this[_originalHeight$]);
+    }
+    get isPortrait() {
+      return dart.nullCheck(this[_originalWidth$]) < dart.nullCheck(this[_originalHeight$]);
+    }
+    get identifier() {
+      return this[_identifier$];
+    }
+    get name() {
+      return this[_name$];
+    }
+    getThumbByteData(width, height, opts) {
+      if (width == null) dart.nullFailed(I[6], 77, 41, "width");
+      if (height == null) dart.nullFailed(I[6], 77, 52, "height");
+      let quality = opts && 'quality' in opts ? opts.quality : 100;
+      if (quality == null) dart.nullFailed(I[6], 78, 12, "quality");
+      return async.async(typed_data.ByteData, (function* getThumbByteData() {
+        if (dart.notNull(width) < 0) {
+          dart.throw(new core.ArgumentError.value(width, "width cannot be negative"));
+        }
+        if (dart.notNull(height) < 0) {
+          dart.throw(new core.ArgumentError.value(height, "height cannot be negative"));
+        }
+        if (dart.notNull(quality) < 0 || dart.notNull(quality) > 100) {
+          dart.throw(new core.ArgumentError.value(quality, "quality should be in range 0-100"));
+        }
+        let completer = T.CompleterOfByteData().new();
+        dart.nullCheck(binding.ServicesBinding.instance).defaultBinaryMessenger.setMessageHandler(this[_thumbChannel], dart.fn(message => async.async(T.ByteDataN(), (function*() {
+          completer.complete(message);
+          dart.nullCheck(binding.ServicesBinding.instance).defaultBinaryMessenger.setMessageHandler(this[_thumbChannel], null);
+          return message;
+        }).bind(this)), T.ByteDataNToFutureOfByteDataN()));
+        yield picker.MultiImagePicker.requestThumbnail(this[_identifier$], width, height, quality);
+        return T.FutureOrOfByteData().as(completer.future);
+      }).bind(this));
+    }
+    getByteData(opts) {
+      let quality = opts && 'quality' in opts ? opts.quality : 100;
+      if (quality == null) dart.nullFailed(I[6], 115, 37, "quality");
+      return async.async(typed_data.ByteData, (function* getByteData() {
+        if (dart.notNull(quality) < 0 || dart.notNull(quality) > 100) {
+          dart.throw(new core.ArgumentError.value(quality, "quality should be in range 0-100"));
+        }
+        let completer = T.CompleterOfByteData().new();
+        dart.nullCheck(binding.ServicesBinding.instance).defaultBinaryMessenger.setMessageHandler(this[_originalChannel], dart.fn(message => async.async(T.ByteDataN(), (function*() {
+          completer.complete(message);
+          dart.nullCheck(binding.ServicesBinding.instance).defaultBinaryMessenger.setMessageHandler(this[_originalChannel], null);
+          return message;
+        }).bind(this)), T.ByteDataNToFutureOfByteDataN()));
+        yield picker.MultiImagePicker.requestOriginal(this[_identifier$], quality);
+        return T.FutureOrOfByteData().as(completer.future);
+      }).bind(this));
+    }
+    get metadata() {
+      return picker.MultiImagePicker.requestMetadata(this[_identifier$]);
+    }
+    requestOriginal(opts) {
+      let quality = opts && 'quality' in opts ? opts.quality : 100;
+      if (quality == null) dart.nullFailed(I[6], 142, 41, "quality");
+      return this.getByteData({quality: quality});
+    }
+    requestThumbnail(width, height, opts) {
+      if (width == null) dart.nullFailed(I[6], 150, 9, "width");
+      if (height == null) dart.nullFailed(I[6], 151, 9, "height");
+      let quality = opts && 'quality' in opts ? opts.quality : 100;
+      if (quality == null) dart.nullFailed(I[6], 152, 9, "quality");
+      return async.async(typed_data.ByteData, (function* requestThumbnail() {
+        return this.getThumbByteData(width, height, {quality: quality});
+      }).bind(this));
+    }
+    requestMetadata() {
+      return this.metadata;
+    }
+  };
+  (asset$.Asset.new = function(_identifier, _name, _originalWidth, _originalHeight) {
+    this[_identifier$] = _identifier;
+    this[_name$] = _name;
+    this[_originalWidth$] = _originalWidth;
+    this[_originalHeight$] = _originalHeight;
+    ;
+  }).prototype = asset$.Asset.prototype;
+  dart.addTypeTests(asset$.Asset);
+  dart.addTypeCaches(asset$.Asset);
+  dart.setMethodSignature(asset$.Asset, () => ({
+    __proto__: dart.getMethods(asset$.Asset.__proto__),
+    getThumbByteData: dart.fnType(async.Future$(typed_data.ByteData), [core.int, core.int], {quality: core.int}, {}),
+    getByteData: dart.fnType(async.Future$(typed_data.ByteData), [], {quality: core.int}, {}),
+    requestOriginal: dart.fnType(async.Future$(typed_data.ByteData), [], {quality: core.int}, {}),
+    requestThumbnail: dart.fnType(async.Future$(typed_data.ByteData), [core.int, core.int], {quality: core.int}, {}),
+    requestMetadata: dart.fnType(async.Future$(metadata$.Metadata), [])
+  }));
+  dart.setGetterSignature(asset$.Asset, () => ({
+    __proto__: dart.getGetters(asset$.Asset.__proto__),
+    [_channel]: core.String,
+    [_thumbChannel]: core.String,
+    [_originalChannel]: core.String,
+    originalWidth: dart.nullable(core.int),
+    originalHeight: dart.nullable(core.int),
+    isLandscape: core.bool,
+    isPortrait: core.bool,
+    identifier: dart.nullable(core.String),
+    name: dart.nullable(core.String),
+    metadata: async.Future$(metadata$.Metadata)
+  }));
+  dart.setLibraryUri(asset$.Asset, I[7]);
+  dart.setFieldSignature(asset$.Asset, () => ({
+    __proto__: dart.getFields(asset$.Asset.__proto__),
+    [_identifier$]: dart.fieldType(dart.nullable(core.String)),
+    [_name$]: dart.fieldType(dart.nullable(core.String)),
+    [_originalWidth$]: dart.fieldType(dart.nullable(core.int)),
+    [_originalHeight$]: dart.fieldType(dart.nullable(core.int))
+  }));
+  dart.setBaseClass(asset_thumb_provider.AssetThumbImageProvider, image_provider.ImageProvider$(asset_thumb_provider.AssetThumbImageProvider));
+  dart.trackLibraries("packages/multi_image_picker/src/asset_thumb_provider.dart", {
+    "package:multi_image_picker/src/asset_thumb_provider.dart": asset_thumb_provider,
+    "package:multi_image_picker/src/asset_thumb.dart": asset_thumb,
+    "package:multi_image_picker/src/picker.dart": picker,
+    "package:multi_image_picker/multi_image_picker.dart": multi_image_picker,
+    "package:multi_image_picker/src/asset.dart": asset$
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["asset_thumb_provider.dart","asset_thumb.dart","picker.dart","asset.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/multi_image_picker/src/asset_thumb_provider.dart.lib.js"}');
+  // Exports:
+  return {
+    src__asset_thumb_provider: asset_thumb_provider,
+    src__asset_thumb: asset_thumb,
+    src__picker: picker,
+    multi_image_picker: multi_image_picker,
+    src__asset: asset$
+  };
+}));
+
+//# sourceMappingURL=asset_thumb_provider.dart.lib.js.map
