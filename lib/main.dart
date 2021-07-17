@@ -1,5 +1,8 @@
 import 'package:bookfinder_app/home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/src/change_notifier_provider.dart';
+
+import 'book_pagination.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,12 +11,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bookfinder App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      return ChangeNotifierProvider<BookPagination>(
+        create: (context) => BookPagination(),
+        child:MaterialApp(
+        title: 'Bookfinder App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage(title: 'Look A Book'),
       ),
-      home: HomePage(title: 'Look A Book'),
     );
   }
 }

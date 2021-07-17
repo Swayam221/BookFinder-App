@@ -6,7 +6,8 @@ class Services{
 
   static String emulatorUrl = 'http://10.0.2.2:7000/';
   static String searchRoute = 'books/search/';
-  static String addBookRoute = 'books';
+  static String addBookRoute = 'books/';
+  static String pageSize = '10';
   //static String host = 'localhost:7000';
 
   static Future<void> addBook(String title, String author, String datePublished) async {
@@ -61,4 +62,20 @@ class Services{
     }
   }
 
+
+  static Future<List<Book>> getBooksByPage(int page) async{
+    try{
+      
+      final response = await http.get(
+        Uri.parse(emulatorUrl+addBookRoute+page.toString()+'/'+pageSize.toString()),
+      );
+      List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
+      //print(results[0].title);
+      return results;
+    }
+    catch(err){
+      print("error");
+      return [];
+    }
+  }
 }
