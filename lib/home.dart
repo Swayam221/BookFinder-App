@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   List<Book> books = [];
   var bookPagination ;
   var gridController = ScrollController();
+  var searchController = TextEditingController();
   void _incrementCounter() {
     //Services.search('maze');
     //Services.addBook("Murder On The Orient Express", "Agatha Christie", "1934-01-01");
@@ -65,7 +66,28 @@ class _HomePageState extends State<HomePage> {
     getBooks();
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        elevation: 5,
+        title: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.white.withOpacity(0.8),
+          ),
+          child: TextField(
+            controller: searchController,
+            decoration: InputDecoration(
+              hintText: "Search",
+              border: InputBorder.none,
+              prefixIcon: Icon(Icons.search),
+            ),
+            onChanged: (val) async
+            {
+              print(searchController.text);
+              if(searchController.text.isNotEmpty)
+              {List<Book> sR = await Services.search(searchController.text);
+              print(sR);}
+            },
+          ),
+        ),
       ),
       body: Column(
           children: [

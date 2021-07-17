@@ -34,7 +34,7 @@ class Services{
     try{
       
       final response = await http.get(
-        Uri.parse(emulatorUrl+addBookRoute),
+        Uri.parse(emulatorUrl+searchRoute+query),
       );
       List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
       //print(results[0].title);
