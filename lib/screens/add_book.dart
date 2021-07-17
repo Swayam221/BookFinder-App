@@ -34,9 +34,10 @@ class _AddBookState extends State<AddBookPage>
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+        alignment: Alignment.center,
         child: Form(
           key: _formKey,
-          child: Column(
+          child: SingleChildScrollView(child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if(selectedImage!=null)
@@ -106,11 +107,12 @@ class _AddBookState extends State<AddBookPage>
                       onPressed: () async{
                         await _fetchImage();
                       },
-                      child: const Text('Add Book To Database'),
+                      child: const Text('Add Image'),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 20,),
               TextFormField(
                 controller: titleController,
                 decoration: InputDecoration(
@@ -192,7 +194,7 @@ class _AddBookState extends State<AddBookPage>
                 ),
               ),
             ],
-          ),
+          ),),
         ),
       ),
     );
