@@ -107,20 +107,20 @@ class _HomePageState extends State<HomePage> {
       body: !searching? Column(
           children: [
             Flexible(
-              fit: FlexFit.tight,
+              fit: FlexFit.loose,
               child:GridView.builder(
               controller: gridController,
-              primary: false,shrinkWrap: true,physics: BouncingScrollPhysics(),
+              primary: false,physics: BouncingScrollPhysics(),
               padding: const EdgeInsets.all(20),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                crossAxisCount: 2,
+                crossAxisCount: 2,mainAxisExtent: 250,
                 // children: books.map((i) => BookCard(title: i.title,author: i.author,publishDate: i.datePublished)).toList(),
               ),
               itemCount: bookPagination.books.length,
               itemBuilder: (context,index) {
-                return BookCard(title: bookPagination.books[index].title,author: bookPagination.books[index].author,publishDate: bookPagination.books[index].datePublished.toString().split(' ')[0]);
+                return BookCard(title: bookPagination.books[index].title,author: bookPagination.books[index].author,publishDate: bookPagination.books[index].datePublished.toString().split(' ')[0],image: bookPagination.books[index].imageId);
               },
             ),
           ),
@@ -138,12 +138,12 @@ class _HomePageState extends State<HomePage> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                crossAxisCount: 2,
+                crossAxisCount: 2,mainAxisExtent: 250,
                 // children: books.map((i) => BookCard(title: i.title,author: i.author,publishDate: i.datePublished)).toList(),
               ),
               itemCount: searchResults.length,
               itemBuilder: (context,index) {
-                return BookCard(title: searchResults[index].title,author: searchResults[index].author,publishDate: searchResults[index].datePublished.toString().split(' ')[0]);
+                return BookCard(title: searchResults[index].title,author: searchResults[index].author,publishDate: searchResults[index].datePublished.toString().split(' ')[0],image: searchResults[index].imageId);
               },
             ),
           ),

@@ -57,6 +57,7 @@ flutter:
   # assets:
   assets:
     - assets/
+    - default_book_cover_2015.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

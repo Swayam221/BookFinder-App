@@ -101,6 +101,6 @@ class Services{
     return response;
   }
 
-  CachedNetworkImageProvider getVendorImage(String imageId) =>
+  CachedNetworkImageProvider getBookImage(String imageId) =>
       CachedNetworkImageProvider(emulatorUrl+imagesUrl + imageId);
 }
