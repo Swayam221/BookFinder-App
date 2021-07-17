@@ -34,7 +34,11 @@ class _HomePageState extends State<HomePage> {
   {
     super.initState();
     //bookPagination = Provider.of<BookPagination>(context);
-
+    gridController.addListener(() {
+      if(gridController.position.pixels == gridController.position.maxScrollExtent)
+        bookPagination.getBooks();
+      }
+    );
   }
 
   Future<void> getBooks() async
@@ -57,11 +61,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     //bookPagination.getBooks();
-    gridController.addListener(() {
-      if(gridController.position.pixels == gridController.position.maxScrollExtent)
-        bookPagination.getBooks();
-      }
-    );
+    
     getBooks();
     return Scaffold(
       appBar: AppBar(
