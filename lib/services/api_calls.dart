@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_absolute_path/flutter_absolute_path.dart';
@@ -15,7 +16,7 @@ class Services{
   Dio dio = Dio();
   //static String host = 'localhost:7000';
 
-  static Future<void> addBook(String title, String author, String datePublished) async {
+  static Future<String> addBook(String title, String author, String datePublished) async {
     var body = json.encode({
       'title': title,
       'author': author,
@@ -28,10 +29,13 @@ class Services{
         body: body,
       );
       print(json.decode(response.body));
+      return json.decode(response.body)['_id'];
+      
     }
     catch(err)
     {
       print('error');
+      return '';
     }
   } 
   
@@ -84,10 +88,9 @@ class Services{
     }
   }
 
-  Future<Response> addImage(Asset image, String bookId) async {
-    String path = await FlutterAbsolutePath.getAbsolutePath(image.identifier);
+  Future<Response> addImage(File image, String bookId) async {
     FormData formData = FormData.fromMap({
-      "bookImg": await MultipartFile.fromFile(path),
+      "bookImg": await MultipartFile.fromFile(image.path),
       "bookId": bookId
     });
 

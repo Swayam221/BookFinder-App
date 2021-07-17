@@ -4,8 +4,9 @@ class Book
   String author="";
   DateTime datePublished=DateTime.now();
   String imageId = "";
-
+  String id = "";
   Book(){
+    this.id = "";
     this.title="";
     this.author="";
     this.imageId = "";
@@ -14,6 +15,7 @@ class Book
 
   Book.fromJson(Map<String,dynamic> json)
   {
+    id = json['_id'];
     imageId = json['image'];
     title=json['title'];
     author=json['author'];

@@ -88,43 +88,60 @@
 61-->C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml:39:13-30
 62
 63        <provider
-63-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:12:9-20:20
-64            android:name="com.sangcomz.fishbun.FishBunFileProvider"
-64-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:13:13-68
-65            android:authorities="com.example.bookfinder_app.fishbunfileprovider"
-65-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:14:13-71
+63-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+64            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+64-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+65            android:authorities="com.example.bookfinder_app.flutter.image_provider"
+65-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
 66            android:exported="false"
-66-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:15:13-37
+66-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
 67            android:grantUriPermissions="true" >
-67-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:16:13-47
+67-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
 68            <meta-data
-68-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:17:13-19:58
+68-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
 69                android:name="android.support.FILE_PROVIDER_PATHS"
-69-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:18:17-67
-70                android:resource="@xml/provider_paths" />
-70-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:19:17-55
+69-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+70                android:resource="@xml/flutter_image_picker_file_paths" />
+70-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
 71        </provider>
-72
-73        <activity
-73-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:22:9-25:51
-74            android:name="com.sangcomz.fishbun.ui.album.AlbumActivity"
-74-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:23:13-71
-75            android:label="@string/album"
-75-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:24:13-42
-76            android:theme="@style/FishBunTheme" />
-76-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:25:13-48
-77        <activity
-77-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:26:9-28:51
-78            android:name="com.sangcomz.fishbun.ui.picker.PickerActivity"
-78-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:27:13-73
-79            android:theme="@style/FishBunTheme" />
-79-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:28:13-48
-80        <activity
-80-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:29:9-31:54
-81            android:name="com.sangcomz.fishbun.ui.detail.DetailActivity"
-81-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:30:13-73
-82            android:theme="@style/DetailViewTheme" />
-82-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:31:13-51
-83    </application>
-84
-85</manifest>
+72        <provider
+72-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:12:9-20:20
+73            android:name="com.sangcomz.fishbun.FishBunFileProvider"
+73-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:13:13-68
+74            android:authorities="com.example.bookfinder_app.fishbunfileprovider"
+74-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:14:13-71
+75            android:exported="false"
+75-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:15:13-37
+76            android:grantUriPermissions="true" >
+76-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:16:13-47
+77            <meta-data
+77-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+78                android:name="android.support.FILE_PROVIDER_PATHS"
+78-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+79                android:resource="@xml/provider_paths" />
+79-->[:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+80        </provider>
+81
+82        <activity
+82-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:22:9-25:51
+83            android:name="com.sangcomz.fishbun.ui.album.AlbumActivity"
+83-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:23:13-71
+84            android:label="@string/album"
+84-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:24:13-42
+85            android:theme="@style/FishBunTheme" />
+85-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:25:13-48
+86        <activity
+86-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:26:9-28:51
+87            android:name="com.sangcomz.fishbun.ui.picker.PickerActivity"
+87-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:27:13-73
+88            android:theme="@style/FishBunTheme" />
+88-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:28:13-48
+89        <activity
+89-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:29:9-31:54
+90            android:name="com.sangcomz.fishbun.ui.detail.DetailActivity"
+90-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:30:13-73
+91            android:theme="@style/DetailViewTheme" />
+91-->[com.sangcomz:FishBun:0.11.2] C:\Users\gupta\.gradle\caches\transforms-2\files-2.1\964d33c2c2e431651e8444baf8fdaeb6\jetified-FishBun-0.11.2\AndroidManifest.xml:31:13-51
+92    </application>
+93
+94</manifest>

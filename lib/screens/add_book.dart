@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:bookfinder_app/services/api_calls.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:multi_image_picker/multi_image_picker.dart';
 
 class AddBookPage extends StatefulWidget{
 
@@ -15,6 +19,11 @@ class _AddBookState extends State<AddBookPage>
   var authorController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   var date;
+  dynamic image;
+  dynamic selectedImage;
+  List<Asset> temp1 = [];
+  List<Asset>  temp2 =[];
+  final ImagePicker _picker = ImagePicker();
   @override
   Widget build(BuildContext context)
   {
@@ -30,6 +39,78 @@ class _AddBookState extends State<AddBookPage>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              if(selectedImage!=null)
+              Column(
+                children: [
+                  Image.file(File(selectedImage.path),height: 150,width: 100,),
+                  SizedBox(height: 10,),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: Stack(
+                      children: <Widget>[
+                        Positioned.fill(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: <Color>[
+                                  Color(0xFFE57373),
+                                  Color(0xFFEF5350),
+                                  Color(0xFFEF5950),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.all(16.0),
+                            primary: Colors.white,
+                            textStyle: const TextStyle(fontSize: 20),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              selectedImage = image = null;
+                            });
+                          },
+                          child: const Text('Remove Book Cover'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              if(selectedImage==null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned.fill(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF0D47A1),
+                              Color(0xFF1976D2),
+                              Color(0xFF42A5F5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.all(16.0),
+                        primary: Colors.white,
+                        textStyle: const TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () async{
+                        await _fetchImage();
+                      },
+                      child: const Text('Add Book To Database'),
+                    ),
+                  ],
+                ),
+              ),
               TextFormField(
                 controller: titleController,
                 decoration: InputDecoration(
@@ -92,7 +173,13 @@ class _AddBookState extends State<AddBookPage>
                         print(titleController.text);
                         if(_formKey.currentState!.validate())
                         {
-                          await Services.addBook(titleController.text,authorController.text,date);
+                          var response = await Services.addBook(titleController.text,authorController.text,date);
+                          if(selectedImage!=null)
+                          {
+                            print(response);
+                            await Services().addImage(File(selectedImage.path), response);
+                            print(response);
+                          }
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text("Book Added to Database Successfully"),
                           ));
@@ -109,6 +196,27 @@ class _AddBookState extends State<AddBookPage>
         ),
       ),
     );
+  }
+
+  Future<void> _fetchImage() async {
+    try {
+      image = await _picker.pickImage(
+        source: ImageSource.gallery,
+      );
+      setState(() {
+        selectedImage = image;
+      });
+    } on Exception catch (e) {
+      print("fasdjkj");
+      print(e.toString());
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+
+    setState(() {});
   }
 
   void help()
