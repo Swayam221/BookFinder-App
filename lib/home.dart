@@ -23,6 +23,8 @@ class _HomePageState extends State<HomePage> {
   var bookPagination ;
   var gridController = ScrollController();
   var searchController = TextEditingController();
+  List<Book> searchResults = [];
+  var searching = false;
   void _incrementCounter() {
     //Services.search('maze');
     //Services.addBook("Murder On The Orient Express", "Agatha Christie", "1934-01-01");
@@ -83,13 +85,26 @@ class _HomePageState extends State<HomePage> {
             {
               print(searchController.text);
               if(searchController.text.isNotEmpty)
-              {List<Book> sR = await Services.search(searchController.text);
-              print(sR);}
+              {
+                setState(() {
+                  searching=true;
+                });
+                List<Book> sR = await Services.search(searchController.text);
+                setState(() {
+                  searchResults = sR;
+                });
+              }
+              else {
+                setState(() {
+                  searching = false;  
+                });
+                
+              }
             },
           ),
         ),
       ),
-      body: Column(
+      body: !searching? Column(
           children: [
             Flexible(
               fit: FlexFit.tight,
@@ -111,6 +126,27 @@ class _HomePageState extends State<HomePage> {
           ),
           if(bookPagination.loading)
           CircularProgressIndicator(),
+        ]
+      ):Column(
+          children: [
+            Flexible(
+              fit: FlexFit.tight,
+              child:GridView.builder(
+              controller: gridController,
+              primary: false,shrinkWrap: true,physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(20),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
+                // children: books.map((i) => BookCard(title: i.title,author: i.author,publishDate: i.datePublished)).toList(),
+              ),
+              itemCount: searchResults.length,
+              itemBuilder: (context,index) {
+                return BookCard(title: searchResults[index].title,author: searchResults[index].author,publishDate: searchResults[index].datePublished.toString().split(' ')[0]);
+              },
+            ),
+          ),
         ]
       ),
       floatingActionButton: FloatingActionButton(
