@@ -27,6 +27,14 @@ class _AddBookState extends State<AddBookPage>
   List<Asset>  temp2 =[];
   bool  loading = false;
   final ImagePicker _picker = ImagePicker();
+
+  @override
+  void initState()
+  {
+    super.initState();
+    loading = false;
+  }
+
   @override
   Widget build(BuildContext context)
   {
@@ -149,7 +157,7 @@ class _AddBookState extends State<AddBookPage>
                   labelText: 'Date of Publication',
                 ),
                 mode: DateTimeFieldPickerMode.date,
-                autovalidateMode: AutovalidateMode.always,
+                //autovalidateMode: AutovalidateMode.always,
                 validator: (e) => (e==null || e.compareTo(DateTime.now())>0 )?'please enter a valid date': null,
                 onDateSelected: (DateTime value) {
                   date = value.toString();

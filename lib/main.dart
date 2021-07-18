@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       return ChangeNotifierProvider<BookPagination>(
         create: (context) => BookPagination(),
         child:MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Bookfinder App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
