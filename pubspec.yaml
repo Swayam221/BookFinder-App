@@ -32,7 +32,7 @@ dependencies:
   date_field: ^2.0.1
   provider: ^5.0.0
   multi_image_picker: ^4.8.01
-  #flutter_absolute_path: ^1.0.6
+  flutter_absolute_path: ^1.0.6
   dio: ^4.0.0
   cached_network_image: ^3.1.0
   image_picker: ^0.8.2
