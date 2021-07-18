@@ -115,7 +115,7 @@ class _AddBookState extends State<AddBookPage>
                             content: Text("Cannot Add Image From Web App. Please Use the Android App for uploading an Image")));
                         }
                       },
-                      child: const Text('Add Image'),
+                      child: const Text('Add Image For Cover'),
                     ),
                   ],
                 ),
@@ -184,10 +184,23 @@ class _AddBookState extends State<AddBookPage>
                         if(_formKey.currentState!.validate())
                         {
                           var response = await Services.addBook(titleController.text,authorController.text,date);
-                          if(selectedImage!=null)
+                          if(response=='')
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text("An error occured while uploading book details."),
+                          ));
+                          if(selectedImage!=null && response!='')
                           {
                             print(response);
+                            try{
+                              
                             await Services().addImage(File(selectedImage.path), response);
+                            }
+                            catch(err)
+                            {
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text("An error occured while uploading image."),
+                              ));
+                            }
                             print(response);
                           }
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
