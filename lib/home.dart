@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                crossAxisCount: 2,mainAxisExtent: 400,
+                crossAxisCount: !kIsWeb?2:4,mainAxisExtent: 400,
                 // children: books.map((i) => BookCard(title: i.title,author: i.author,publishDate: i.datePublished)).toList(),
               ),
               itemCount: searchResults.length,
