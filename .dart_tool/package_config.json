@@ -116,12 +116,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_absolute_path",
-      "rootUri": "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_absolute_path-1.0.6",
-      "packageUri": "lib/",
-      "languageVersion": "2.1"
-    },
-    {
       "name": "flutter_blurhash",
       "rootUri": "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.6.0",
       "packageUri": "lib/",
@@ -398,7 +392,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-18T04:04:48.621853Z",
+  "generated": "2021-07-18T10:28:52.953245Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

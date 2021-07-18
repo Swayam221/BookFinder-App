@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 2.1.62
 # min_api: 19
-# pg_map_id: 9730490
+# pg_map_id: aec6e1d
 # common_typos_disable
 androidx.activity.Cancellable -> androidx.activity.a:
 androidx.activity.ComponentActivity -> androidx.activity.ComponentActivity:
@@ -14510,20 +14510,6 @@ com.google.common.util.concurrent.internal.InternalFutureFailureAccess -> b.a.b.
     java.lang.Throwable tryInternalFastPathGetFailure() -> b
 com.google.common.util.concurrent.internal.InternalFutures -> b.a.b.b.a.i.b:
     java.lang.Throwable tryInternalFastPathGetFailure(com.google.common.util.concurrent.internal.InternalFutureFailureAccess) -> a
-com.kasem.flutter_absolute_path.FileDirectory -> b.b.a.a:
-    com.kasem.flutter_absolute_path.FileDirectory INSTANCE -> a
-    java.lang.String getAbsolutePath(android.content.Context,android.net.Uri) -> a
-    java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[]) -> b
-    boolean isDownloadsDocument(android.net.Uri) -> c
-    boolean isExternalStorageDocument(android.net.Uri) -> d
-    boolean isMediaDocument(android.net.Uri) -> e
-com.kasem.flutter_absolute_path.FlutterAbsolutePathPlugin -> b.b.a.b:
-    android.content.Context context -> a
-    com.kasem.flutter_absolute_path.FlutterAbsolutePathPlugin$Companion Companion -> b
-    void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-com.kasem.flutter_absolute_path.FlutterAbsolutePathPlugin$Companion -> b.b.a.b$a:
-    void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar) -> a
 com.mr.flutter.plugin.filepicker.FileInfo -> com.mr.flutter.plugin.filepicker.a:
     java.lang.String path -> a
     long size -> c
@@ -14592,15 +14578,15 @@ com.mr.flutter.plugin.filepicker.FilePickerPlugin -> com.mr.flutter.plugin.filep
     androidx.lifecycle.Lifecycle lifecycle -> e
     com.mr.flutter.plugin.filepicker.FilePickerDelegate delegate -> b
     com.mr.flutter.plugin.filepicker.FilePickerDelegate access$100(com.mr.flutter.plugin.filepicker.FilePickerPlugin) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    java.lang.String resolveType(java.lang.String) -> c
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> f
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
-    void onDetachedFromActivityForConfigChanges() -> j
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> b
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
+    void onDetachedFromActivity() -> d
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
+    void onDetachedFromActivityForConfigChanges() -> g
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
+    java.lang.String resolveType(java.lang.String) -> i
+    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> j
     void tearDown() -> k
 com.mr.flutter.plugin.filepicker.FilePickerPlugin$1 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$a:
     com.mr.flutter.plugin.filepicker.FilePickerPlugin this$0 -> a
@@ -15175,7 +15161,7 @@ com.sangcomz.fishbun.util.UiUtil -> com.sangcomz.fishbun.util.f:
     int getDimension(android.content.Context,int) -> a
     boolean isLandscape(android.content.Context) -> b
     void setStatusBarColor(android.app.Activity,int) -> c
-com.tekartik.sqflite.Database -> b.c.a.a:
+com.tekartik.sqflite.Database -> b.b.a.a:
     android.database.sqlite.SQLiteDatabase sqliteDatabase -> e
     boolean inTransaction -> f
     int logLevel -> d
@@ -15190,12 +15176,12 @@ com.tekartik.sqflite.Database -> b.c.a.a:
     android.database.sqlite.SQLiteDatabase getWritableDatabase() -> f
     void open() -> g
     void openReadOnly() -> h
-com.tekartik.sqflite.Database$1 -> b.c.a.a$a:
-com.tekartik.sqflite.LogLevel -> b.c.a.b:
+com.tekartik.sqflite.Database$1 -> b.b.a.a$a:
+com.tekartik.sqflite.LogLevel -> b.b.a.b:
     java.lang.Integer getLogLevel(io.flutter.plugin.common.MethodCall) -> a
     boolean hasSqlLevel(int) -> b
     boolean hasVerboseLevel(int) -> c
-com.tekartik.sqflite.SqflitePlugin -> b.c.a.c:
+com.tekartik.sqflite.SqflitePlugin -> b.b.a.c:
     android.content.Context context -> a
     java.lang.Object openCloseLocker -> h
     java.lang.String databasesPath -> i
@@ -15228,14 +15214,14 @@ com.tekartik.sqflite.SqflitePlugin -> b.c.a.c:
     java.lang.String toString(java.lang.Object) -> Q
     boolean update(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> R
     boolean access$100(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    int access$1000() -> c
+    int access$1000() -> b
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
     boolean access$200(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    boolean access$300(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> f
+    boolean access$300(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
     boolean access$400(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> g
-    com.tekartik.sqflite.Database access$500(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
+    com.tekartik.sqflite.Database access$500(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> i
     java.lang.Object access$600() -> j
     void access$700(com.tekartik.sqflite.SqflitePlugin,java.lang.Exception,com.tekartik.sqflite.operation.Operation,com.tekartik.sqflite.Database) -> k
     java.lang.Object access$800() -> l
@@ -15253,32 +15239,32 @@ com.tekartik.sqflite.SqflitePlugin -> b.c.a.c:
     com.tekartik.sqflite.SqlCommand getSqlCommand(io.flutter.plugin.common.MethodCall) -> x
     void handleException(java.lang.Exception,com.tekartik.sqflite.operation.Operation,com.tekartik.sqflite.Database) -> y
     boolean insert(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> z
-com.tekartik.sqflite.SqflitePlugin$1 -> b.c.a.c$a:
+com.tekartik.sqflite.SqflitePlugin$1 -> b.b.a.c$a:
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> c
     com.tekartik.sqflite.Database val$database -> d
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     io.flutter.plugin.common.MethodCall val$call -> b
-com.tekartik.sqflite.SqflitePlugin$2 -> b.c.a.c$b:
+com.tekartik.sqflite.SqflitePlugin$2 -> b.b.a.c$b:
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> c
     com.tekartik.sqflite.Database val$database -> d
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     io.flutter.plugin.common.MethodCall val$call -> b
-com.tekartik.sqflite.SqflitePlugin$3 -> b.c.a.c$c:
+com.tekartik.sqflite.SqflitePlugin$3 -> b.b.a.c$c:
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> c
     com.tekartik.sqflite.Database val$database -> d
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     io.flutter.plugin.common.MethodCall val$call -> b
-com.tekartik.sqflite.SqflitePlugin$4 -> b.c.a.c$d:
+com.tekartik.sqflite.SqflitePlugin$4 -> b.b.a.c$d:
     com.tekartik.sqflite.Database val$database -> b
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> d
     io.flutter.plugin.common.MethodCall val$call -> c
-com.tekartik.sqflite.SqflitePlugin$5 -> b.c.a.c$e:
+com.tekartik.sqflite.SqflitePlugin$5 -> b.b.a.c$e:
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> c
     com.tekartik.sqflite.Database val$database -> d
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     io.flutter.plugin.common.MethodCall val$call -> b
-com.tekartik.sqflite.SqflitePlugin$6 -> b.c.a.c$f:
+com.tekartik.sqflite.SqflitePlugin$6 -> b.b.a.c$f:
     java.lang.Boolean val$readOnly -> e
     com.tekartik.sqflite.Database val$database -> f
     int val$databaseId -> i
@@ -15288,33 +15274,33 @@ com.tekartik.sqflite.SqflitePlugin$6 -> b.c.a.c$f:
     java.lang.String val$path -> c
     boolean val$inMemory -> b
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> d
-com.tekartik.sqflite.SqflitePlugin$7 -> b.c.a.c$g:
+com.tekartik.sqflite.SqflitePlugin$7 -> b.b.a.c$g:
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> c
     com.tekartik.sqflite.Database val$database -> b
     com.tekartik.sqflite.SqflitePlugin this$0 -> d
-com.tekartik.sqflite.SqflitePlugin$8 -> b.c.a.c$h:
+com.tekartik.sqflite.SqflitePlugin$8 -> b.b.a.c$h:
     com.tekartik.sqflite.Database val$openedDatabase -> b
     java.lang.String val$path -> c
     com.tekartik.sqflite.SqflitePlugin this$0 -> e
     com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> d
-com.tekartik.sqflite.SqflitePlugin$BgResult -> b.c.a.c$i:
+com.tekartik.sqflite.SqflitePlugin$BgResult -> b.b.a.c$i:
     android.os.Handler handler -> a
     io.flutter.plugin.common.MethodChannel$Result result -> b
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
     void notImplemented() -> c
     io.flutter.plugin.common.MethodChannel$Result access$1100(com.tekartik.sqflite.SqflitePlugin$BgResult) -> d
-com.tekartik.sqflite.SqflitePlugin$BgResult$1 -> b.c.a.c$i$a:
+com.tekartik.sqflite.SqflitePlugin$BgResult$1 -> b.b.a.c$i$a:
     com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> c
     java.lang.Object val$results -> b
-com.tekartik.sqflite.SqflitePlugin$BgResult$2 -> b.c.a.c$i$b:
+com.tekartik.sqflite.SqflitePlugin$BgResult$2 -> b.b.a.c$i$b:
     java.lang.Object val$data -> d
     java.lang.String val$errorMessage -> c
     com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> e
     java.lang.String val$errorCode -> b
-com.tekartik.sqflite.SqflitePlugin$BgResult$3 -> b.c.a.c$i$c:
+com.tekartik.sqflite.SqflitePlugin$BgResult$3 -> b.b.a.c$i$c:
     com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> b
-com.tekartik.sqflite.SqlCommand -> b.c.a.d:
+com.tekartik.sqflite.SqlCommand -> b.b.a.d:
     java.util.List rawArguments -> b
     java.lang.String sql -> a
     java.util.Map fixMap(java.util.Map) -> a
@@ -15328,15 +15314,15 @@ com.tekartik.sqflite.SqlCommand -> b.c.a.d:
     com.tekartik.sqflite.SqlCommand sanitizeForQuery() -> i
     java.lang.String toString(java.lang.Object) -> j
     java.lang.Object toValue(java.lang.Object) -> k
-com.tekartik.sqflite.dev.Debug -> b.c.a.e.a:
+com.tekartik.sqflite.dev.Debug -> b.b.a.e.a:
     boolean LOGV -> a
     boolean _EXTRA_LOGV -> b
     boolean EXTRA_LOGV -> c
-com.tekartik.sqflite.operation.BaseOperation -> b.c.a.f.a:
+com.tekartik.sqflite.operation.BaseOperation -> b.b.a.f.a:
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
     com.tekartik.sqflite.operation.OperationResult getOperationResult() -> k
-com.tekartik.sqflite.operation.BaseReadOperation -> b.c.a.f.b:
+com.tekartik.sqflite.operation.BaseReadOperation -> b.b.a.f.b:
     com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
     boolean getNoResult() -> e
     java.lang.Boolean getInTransaction() -> f
@@ -15344,7 +15330,7 @@ com.tekartik.sqflite.operation.BaseReadOperation -> b.c.a.f.b:
     boolean getContinueOnError() -> h
     java.lang.String getSql() -> i
     java.util.List getSqlArguments() -> j
-com.tekartik.sqflite.operation.BatchOperation -> b.c.a.f.c:
+com.tekartik.sqflite.operation.BatchOperation -> b.b.a.f.c:
     java.util.Map map -> a
     com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult operationResult -> b
     boolean noResult -> c
@@ -15357,14 +15343,14 @@ com.tekartik.sqflite.operation.BatchOperation -> b.c.a.f.c:
     void handleError(io.flutter.plugin.common.MethodChannel$Result) -> o
     void handleErrorContinue(java.util.List) -> p
     void handleSuccess(java.util.List) -> q
-com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult -> b.c.a.f.c$a:
+com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult -> b.b.a.f.c$a:
     java.lang.Object errorData -> d
     java.lang.Object result -> a
     java.lang.String errorMessage -> c
     java.lang.String errorCode -> b
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
-com.tekartik.sqflite.operation.ExecuteOperation -> b.c.a.f.d:
+com.tekartik.sqflite.operation.ExecuteOperation -> b.b.a.f.d:
     com.tekartik.sqflite.SqlCommand command -> a
     java.lang.Boolean inTransaction -> c
     io.flutter.plugin.common.MethodChannel$Result result -> b
@@ -15373,26 +15359,26 @@ com.tekartik.sqflite.operation.ExecuteOperation -> b.c.a.f.d:
     java.lang.Object getArgument(java.lang.String) -> c
     com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
     java.lang.Boolean getInTransaction() -> f
-com.tekartik.sqflite.operation.MethodCallOperation -> b.c.a.f.e:
+com.tekartik.sqflite.operation.MethodCallOperation -> b.b.a.f.e:
     io.flutter.plugin.common.MethodCall methodCall -> a
     com.tekartik.sqflite.operation.MethodCallOperation$Result result -> b
     java.lang.Object getArgument(java.lang.String) -> c
     com.tekartik.sqflite.operation.OperationResult getOperationResult() -> k
-com.tekartik.sqflite.operation.MethodCallOperation$Result -> b.c.a.f.e$a:
+com.tekartik.sqflite.operation.MethodCallOperation$Result -> b.b.a.f.e$a:
     io.flutter.plugin.common.MethodChannel$Result result -> a
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
-com.tekartik.sqflite.operation.Operation -> b.c.a.f.f:
+com.tekartik.sqflite.operation.Operation -> b.b.a.f.f:
     java.lang.Object getArgument(java.lang.String) -> c
     com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
     boolean getNoResult() -> e
     java.lang.Boolean getInTransaction() -> f
-com.tekartik.sqflite.operation.OperationResult -> b.c.a.f.g:
+com.tekartik.sqflite.operation.OperationResult -> b.b.a.f.g:
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
-com.tekartik.sqflite.operation.SqlErrorInfo -> b.c.a.f.h:
+com.tekartik.sqflite.operation.SqlErrorInfo -> b.b.a.f.h:
     java.util.Map getMap(com.tekartik.sqflite.operation.Operation) -> a
-com.vitanov.multiimagepicker.MultiImagePickerPlugin -> b.d.a.a:
+com.vitanov.multiimagepicker.MultiImagePickerPlugin -> b.c.a.a:
     android.content.Context context -> c
     io.flutter.plugin.common.BinaryMessenger messenger -> d
     io.flutter.plugin.common.MethodCall methodCall -> f
@@ -15401,15 +15387,15 @@ com.vitanov.multiimagepicker.MultiImagePickerPlugin -> b.d.a.a:
     android.app.Activity activity -> b
     boolean uriExists(java.lang.String) -> A
     boolean onActivityResult(int,int,android.content.Intent) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    android.graphics.Bitmap access$000(android.content.Context,android.net.Uri) -> c
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void clearMethodCallAndResult() -> f
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
-    void onDetachedFromActivityForConfigChanges() -> j
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> b
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
+    void onDetachedFromActivity() -> d
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
+    void onDetachedFromActivityForConfigChanges() -> g
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
+    android.graphics.Bitmap access$000(android.content.Context,android.net.Uri) -> i
+    void clearMethodCallAndResult() -> j
     void finishWithAlreadyActiveError(io.flutter.plugin.common.MethodChannel$Result) -> k
     void finishWithError(java.lang.String,java.lang.String) -> l
     void finishWithSuccess() -> m
@@ -15426,14 +15412,14 @@ com.vitanov.multiimagepicker.MultiImagePickerPlugin -> b.d.a.a:
     void onAttachedToEngine(android.content.Context,io.flutter.plugin.common.BinaryMessenger,android.app.Activity) -> x
     void presentPicker(int,boolean,java.util.ArrayList,java.util.HashMap) -> y
     boolean setPendingMethodCallAndResult(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> z
-com.vitanov.multiimagepicker.MultiImagePickerPlugin$GetImageTask -> b.d.a.a$a:
+com.vitanov.multiimagepicker.MultiImagePickerPlugin$GetImageTask -> b.c.a.a$a:
     io.flutter.plugin.common.BinaryMessenger messenger -> b
     int quality -> d
     java.lang.ref.WeakReference activityReference -> a
     java.lang.String identifier -> c
     java.nio.ByteBuffer doInBackground(java.lang.String[]) -> a
     void onPostExecute(java.nio.ByteBuffer) -> b
-com.vitanov.multiimagepicker.MultiImagePickerPlugin$GetThumbnailTask -> b.d.a.a$b:
+com.vitanov.multiimagepicker.MultiImagePickerPlugin$GetThumbnailTask -> b.c.a.a$b:
     int quality -> f
     io.flutter.plugin.common.BinaryMessenger messenger -> b
     int width -> d
@@ -15933,17 +15919,15 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineActivit
     java.lang.Object getLifecycle() -> a
     void addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> b
     void addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
-    void addOnUserLeaveHintListener(io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener) -> d
+    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> d
     android.app.Activity getActivity() -> e
-    void addOnNewIntentListener(io.flutter.plugin.common.PluginRegistry$NewIntentListener) -> f
-    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> g
-    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> h
-    boolean onActivityResult(int,int,android.content.Intent) -> i
-    void onNewIntent(android.content.Intent) -> j
-    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> k
-    void onRestoreInstanceState(android.os.Bundle) -> l
-    void onSaveInstanceState(android.os.Bundle) -> m
-    void onUserLeaveHint() -> n
+    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> f
+    boolean onActivityResult(int,int,android.content.Intent) -> g
+    void onNewIntent(android.content.Intent) -> h
+    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> i
+    void onRestoreInstanceState(android.os.Bundle) -> j
+    void onSaveInstanceState(android.os.Bundle) -> k
+    void onUserLeaveHint() -> l
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding -> io.flutter.embedding.engine.c$d:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding -> io.flutter.embedding.engine.c$e:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineServicePluginBinding -> io.flutter.embedding.engine.c$f:
@@ -16085,8 +16069,8 @@ io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorTyp
     io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType CLIP_RECT -> b
     io.flutter.embedding.engine.mutatorsstack.FlutterMutatorsStack$FlutterMutatorType CLIP_RRECT -> c
 io.flutter.embedding.engine.plugins.FlutterPlugin -> io.flutter.embedding.engine.h.a:
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
 io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets -> io.flutter.embedding.engine.h.a$a:
 io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding -> io.flutter.embedding.engine.h.a$b:
     android.content.Context applicationContext -> a
@@ -16096,10 +16080,10 @@ io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding -> io.flu
 io.flutter.embedding.engine.plugins.PluginRegistry -> io.flutter.embedding.engine.h.b:
     void add(io.flutter.embedding.engine.plugins.FlutterPlugin) -> h
 io.flutter.embedding.engine.plugins.activity.ActivityAware -> io.flutter.embedding.engine.h.c.a:
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromActivityForConfigChanges() -> j
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> b
+    void onDetachedFromActivity() -> d
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> e
+    void onDetachedFromActivityForConfigChanges() -> g
 io.flutter.embedding.engine.plugins.activity.ActivityControlSurface -> io.flutter.embedding.engine.h.c.b:
     boolean onActivityResult(int,int,android.content.Intent) -> a
     void onNewIntent(android.content.Intent) -> b
@@ -16113,11 +16097,9 @@ io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding -> io.flutter
     java.lang.Object getLifecycle() -> a
     void addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> b
     void addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
-    void addOnUserLeaveHintListener(io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener) -> d
+    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> d
     android.app.Activity getActivity() -> e
-    void addOnNewIntentListener(io.flutter.plugin.common.PluginRegistry$NewIntentListener) -> f
-    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> g
-    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> h
+    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> f
 io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding$OnSaveInstanceStateListener -> io.flutter.embedding.engine.h.c.c$a:
     void onRestoreInstanceState(android.os.Bundle) -> c
     void onSaveInstanceState(android.os.Bundle) -> d
@@ -16135,43 +16117,7 @@ io.flutter.embedding.engine.plugins.service.ServiceAware -> io.flutter.embedding
     void onAttachedToService(io.flutter.embedding.engine.plugins.service.ServicePluginBinding) -> a
     void onDetachedFromService() -> b
 io.flutter.embedding.engine.plugins.service.ServicePluginBinding -> io.flutter.embedding.engine.h.f.b:
-io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry -> io.flutter.embedding.engine.h.g.a:
-    java.util.Map pluginMap -> b
-    io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$ShimRegistrarAggregate shimRegistrarAggregate -> c
-    io.flutter.embedding.engine.FlutterEngine flutterEngine -> a
-    io.flutter.plugin.common.PluginRegistry$Registrar registrarFor(java.lang.String) -> a
-io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$1 -> io.flutter.embedding.engine.h.g.a$a:
-io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry$ShimRegistrarAggregate -> io.flutter.embedding.engine.h.g.a$b:
-    io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding activityPluginBinding -> c
-    io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding flutterPluginBinding -> b
-    java.util.Set shimRegistrars -> a
-    void addPlugin(io.flutter.embedding.engine.plugins.shim.ShimRegistrar) -> a
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
-    void onDetachedFromActivityForConfigChanges() -> j
-io.flutter.embedding.engine.plugins.shim.ShimRegistrar -> io.flutter.embedding.engine.h.g.b:
-    java.util.Set activityResultListeners -> c
-    java.util.Set newIntentListeners -> d
-    java.util.Set userLeaveHintListeners -> e
-    java.util.Set viewDestroyListeners -> a
-    io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding pluginBinding -> f
-    java.util.Set requestPermissionsResultListeners -> b
-    io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding activityPluginBinding -> g
-    android.content.Context context() -> a
-    io.flutter.plugin.common.PluginRegistry$Registrar addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> b
-    io.flutter.plugin.common.PluginRegistry$Registrar addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    io.flutter.plugin.common.BinaryMessenger messenger() -> f
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
-    void onDetachedFromActivityForConfigChanges() -> j
-    void addExistingListenersToActivityPluginBinding() -> k
-io.flutter.embedding.engine.plugins.util.GeneratedPluginRegister -> io.flutter.embedding.engine.h.h.a:
+io.flutter.embedding.engine.plugins.util.GeneratedPluginRegister -> io.flutter.embedding.engine.h.g.a:
     void registerGeneratedPlugins(io.flutter.embedding.engine.FlutterEngine) -> a
 io.flutter.embedding.engine.renderer.FlutterRenderer -> io.flutter.embedding.engine.renderer.a:
     io.flutter.embedding.engine.FlutterJNI flutterJNI -> a
@@ -16273,7 +16219,7 @@ io.flutter.embedding.engine.systemchannels.DeferredComponentChannel -> io.flutte
     void setDeferredComponentManager(io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager) -> c
 io.flutter.embedding.engine.systemchannels.DeferredComponentChannel$1 -> io.flutter.embedding.engine.i.c$a:
     io.flutter.embedding.engine.systemchannels.DeferredComponentChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.KeyEventChannel -> io.flutter.embedding.engine.i.d:
     io.flutter.embedding.engine.systemchannels.KeyEventChannel$EventResponseHandler eventResponseHandler -> a
     io.flutter.plugin.common.BasicMessageChannel channel -> b
@@ -16305,7 +16251,7 @@ io.flutter.embedding.engine.systemchannels.LocalizationChannel -> io.flutter.emb
     void setLocalizationMessageHandler(io.flutter.embedding.engine.systemchannels.LocalizationChannel$LocalizationMessageHandler) -> c
 io.flutter.embedding.engine.systemchannels.LocalizationChannel$1 -> io.flutter.embedding.engine.i.f$a:
     io.flutter.embedding.engine.systemchannels.LocalizationChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.LocalizationChannel$LocalizationMessageHandler -> io.flutter.embedding.engine.i.f$b:
     java.lang.String getStringResource(java.lang.String,java.lang.String) -> a
 io.flutter.embedding.engine.systemchannels.MouseCursorChannel -> io.flutter.embedding.engine.i.g:
@@ -16316,7 +16262,7 @@ io.flutter.embedding.engine.systemchannels.MouseCursorChannel -> io.flutter.embe
     void setMethodHandler(io.flutter.embedding.engine.systemchannels.MouseCursorChannel$MouseCursorMethodHandler) -> b
 io.flutter.embedding.engine.systemchannels.MouseCursorChannel$1 -> io.flutter.embedding.engine.i.g$a:
     io.flutter.embedding.engine.systemchannels.MouseCursorChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.MouseCursorChannel$MouseCursorMethodHandler -> io.flutter.embedding.engine.i.g$b:
     void activateSystemCursor(java.lang.String) -> a
 io.flutter.embedding.engine.systemchannels.NavigationChannel -> io.flutter.embedding.engine.i.h:
@@ -16340,7 +16286,7 @@ io.flutter.embedding.engine.systemchannels.PlatformChannel -> io.flutter.embeddi
     void setPlatformMessageHandler(io.flutter.embedding.engine.systemchannels.PlatformChannel$PlatformMessageHandler) -> j
 io.flutter.embedding.engine.systemchannels.PlatformChannel$1 -> io.flutter.embedding.engine.i.i$a:
     io.flutter.embedding.engine.systemchannels.PlatformChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.PlatformChannel$2 -> io.flutter.embedding.engine.i.i$b:
     int[] $SwitchMap$io$flutter$embedding$engine$systemchannels$PlatformChannel$SystemUiOverlay -> b
     int[] $SwitchMap$io$flutter$embedding$engine$systemchannels$PlatformChannel$DeviceOrientation -> a
@@ -16417,12 +16363,12 @@ io.flutter.embedding.engine.systemchannels.PlatformViewsChannel -> io.flutter.em
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel$1 -> io.flutter.embedding.engine.i.j$a:
     io.flutter.embedding.engine.systemchannels.PlatformViewsChannel this$0 -> a
     void clearFocus(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    void create(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> c
-    void dispose(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> d
-    void resize(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> e
-    void setDirection(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> f
-    void touch(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
+    void create(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void dispose(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> c
+    void resize(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> d
+    void setDirection(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> e
+    void touch(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> f
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel$1$1 -> io.flutter.embedding.engine.i.j$a$a:
     io.flutter.plugin.common.MethodChannel$Result val$result -> b
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel$PlatformViewCreationRequest -> io.flutter.embedding.engine.i.j$b:
@@ -16488,7 +16434,7 @@ io.flutter.embedding.engine.systemchannels.RestorationChannel$1 -> io.flutter.em
     void notImplemented() -> c
 io.flutter.embedding.engine.systemchannels.RestorationChannel$2 -> io.flutter.embedding.engine.i.k$b:
     io.flutter.embedding.engine.systemchannels.RestorationChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.SettingsChannel -> io.flutter.embedding.engine.i.l:
     io.flutter.plugin.common.BasicMessageChannel channel -> a
     io.flutter.embedding.engine.systemchannels.SettingsChannel$MessageBuilder startMessage() -> a
@@ -16528,7 +16474,7 @@ io.flutter.embedding.engine.systemchannels.TextInputChannel -> io.flutter.embedd
     void updateEditingStateWithTag(int,java.util.HashMap) -> o
 io.flutter.embedding.engine.systemchannels.TextInputChannel$1 -> io.flutter.embedding.engine.i.n$a:
     io.flutter.embedding.engine.systemchannels.TextInputChannel this$0 -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.embedding.engine.systemchannels.TextInputChannel$Configuration -> io.flutter.embedding.engine.i.n$b:
     java.lang.String actionLabel -> g
     java.lang.Integer inputAction -> f
@@ -16705,7 +16651,7 @@ io.flutter.plugin.common.MethodChannel$IncomingResultHandler -> c.a.c.a.j$b:
     io.flutter.plugin.common.MethodChannel this$0 -> b
     void reply(java.nio.ByteBuffer) -> a
 io.flutter.plugin.common.MethodChannel$MethodCallHandler -> c.a.c.a.j$c:
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
 io.flutter.plugin.common.MethodChannel$Result -> c.a.c.a.j$d:
     void success(java.lang.Object) -> a
     void error(java.lang.String,java.lang.String,java.lang.Object) -> b
@@ -16722,16 +16668,12 @@ io.flutter.plugin.common.PluginRegistry$ActivityResultListener -> c.a.c.a.l:
 io.flutter.plugin.common.PluginRegistry$NewIntentListener -> c.a.c.a.m:
     boolean onNewIntent(android.content.Intent) -> b
 io.flutter.plugin.common.PluginRegistry$Registrar -> c.a.c.a.n:
-    android.content.Context context() -> a
     io.flutter.plugin.common.PluginRegistry$Registrar addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> b
     io.flutter.plugin.common.PluginRegistry$Registrar addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
-    io.flutter.plugin.common.BinaryMessenger messenger() -> f
 io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener -> c.a.c.a.o:
 io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener -> c.a.c.a.p:
     void onUserLeaveHint() -> e
-io.flutter.plugin.common.PluginRegistry$ViewDestroyListener -> c.a.c.a.q:
-    boolean onViewDestroy(io.flutter.view.FlutterNativeView) -> a
-io.flutter.plugin.common.StandardMessageCodec -> c.a.c.a.r:
+io.flutter.plugin.common.StandardMessageCodec -> c.a.c.a.q:
     java.nio.charset.Charset UTF8 -> c
     io.flutter.plugin.common.StandardMessageCodec INSTANCE -> a
     boolean LITTLE_ENDIAN -> b
@@ -16750,9 +16692,9 @@ io.flutter.plugin.common.StandardMessageCodec -> c.a.c.a.r:
     void writeLong(java.io.ByteArrayOutputStream,long) -> m
     void writeSize(java.io.ByteArrayOutputStream,int) -> n
     void writeValue(java.io.ByteArrayOutputStream,java.lang.Object) -> o
-io.flutter.plugin.common.StandardMessageCodec$ExposedByteArrayOutputStream -> c.a.c.a.r$a:
+io.flutter.plugin.common.StandardMessageCodec$ExposedByteArrayOutputStream -> c.a.c.a.q$a:
     byte[] buffer() -> a
-io.flutter.plugin.common.StandardMethodCodec -> c.a.c.a.s:
+io.flutter.plugin.common.StandardMethodCodec -> c.a.c.a.r:
     io.flutter.plugin.common.StandardMessageCodec messageCodec -> a
     io.flutter.plugin.common.StandardMethodCodec INSTANCE -> b
     java.nio.ByteBuffer encodeSuccessEnvelope(java.lang.Object) -> a
@@ -16762,7 +16704,7 @@ io.flutter.plugin.common.StandardMethodCodec -> c.a.c.a.s:
     java.nio.ByteBuffer encodeMethodCall(io.flutter.plugin.common.MethodCall) -> e
     java.nio.ByteBuffer encodeErrorEnvelope(java.lang.String,java.lang.String,java.lang.Object) -> f
     java.lang.String getStackTrace(java.lang.Throwable) -> g
-io.flutter.plugin.common.StringCodec -> c.a.c.a.t:
+io.flutter.plugin.common.StringCodec -> c.a.c.a.s:
     java.nio.charset.Charset UTF8 -> a
     io.flutter.plugin.common.StringCodec INSTANCE -> b
     java.lang.Object decodeMessage(java.nio.ByteBuffer) -> a
@@ -17165,8 +17107,8 @@ io.flutter.plugin.platform.VirtualDisplayController$OneTimeOnDrawListener -> io.
 io.flutter.plugin.platform.VirtualDisplayController$OneTimeOnDrawListener$1 -> io.flutter.plugin.platform.k$b$a:
     io.flutter.plugin.platform.VirtualDisplayController$OneTimeOnDrawListener this$0 -> b
 io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin -> io.flutter.plugins.a.a:
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
 io.flutter.plugins.imagepicker.CameraDevice -> io.flutter.plugins.imagepicker.a:
     io.flutter.plugins.imagepicker.CameraDevice FRONT -> c
     io.flutter.plugins.imagepicker.CameraDevice[] $VALUES -> d
@@ -17281,15 +17223,15 @@ io.flutter.plugins.imagepicker.ImagePickerPlugin -> io.flutter.plugins.imagepick
     io.flutter.plugin.common.MethodChannel channel -> a
     android.app.Application application -> e
     io.flutter.plugins.imagepicker.ImagePickerDelegate access$000(io.flutter.plugins.imagepicker.ImagePickerPlugin) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    io.flutter.plugins.imagepicker.ImagePickerDelegate constructDelegate(android.app.Activity) -> c
-    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> f
-    void onDetachedFromActivity() -> g
-    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
-    void onDetachedFromActivityForConfigChanges() -> j
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> b
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
+    void onDetachedFromActivity() -> d
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
+    void onDetachedFromActivityForConfigChanges() -> g
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
+    io.flutter.plugins.imagepicker.ImagePickerDelegate constructDelegate(android.app.Activity) -> i
+    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> j
     void tearDown() -> k
 io.flutter.plugins.imagepicker.ImagePickerPlugin$LifeCycleObserver -> io.flutter.plugins.imagepicker.ImagePickerPlugin$LifeCycleObserver:
     io.flutter.plugins.imagepicker.ImagePickerPlugin this$0 -> b
@@ -17354,14 +17296,14 @@ io.flutter.plugins.pathprovider.PathProviderPlugin -> io.flutter.plugins.b.h:
     java.util.concurrent.Executor executor -> d
     io.flutter.plugin.common.MethodChannel channel -> b
     void executeInBackground(java.util.concurrent.Callable,io.flutter.plugin.common.MethodChannel$Result) -> a
-    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> b
-    java.lang.String getApplicationSupportDirectory() -> c
+    java.lang.String getApplicationSupportDirectory() -> b
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> c
     java.lang.String getPathProviderApplicationDocumentsDirectory() -> d
-    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
-    java.util.List getPathProviderExternalCacheDirectories() -> f
+    java.util.List getPathProviderExternalCacheDirectories() -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> f
     java.util.List getPathProviderExternalStorageDirectories(java.lang.String) -> g
-    java.lang.String getPathProviderStorageDirectory() -> h
-    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> h
+    java.lang.String getPathProviderStorageDirectory() -> i
     java.lang.String getPathProviderTemporaryDirectory() -> j
     void lambda$executeInBackground$0(com.google.common.util.concurrent.SettableFuture,java.util.concurrent.Callable) -> k
     java.lang.String lambda$onMethodCall$1() -> l
@@ -17698,101 +17640,62 @@ io.flutter.view.AccessibilityViewEmbedder$ReflectionAccessors -> io.flutter.view
 io.flutter.view.AccessibilityViewEmbedder$ViewAndId -> io.flutter.view.AccessibilityViewEmbedder$c:
     android.view.View view -> a
     int id -> b
-io.flutter.view.FlutterNativeView -> io.flutter.view.d:
-io.flutter.view.TextureRegistry -> io.flutter.view.e:
+io.flutter.view.TextureRegistry -> io.flutter.view.d:
     io.flutter.view.TextureRegistry$SurfaceTextureEntry createSurfaceTexture() -> a
-io.flutter.view.TextureRegistry$SurfaceTextureEntry -> io.flutter.view.e$a:
+io.flutter.view.TextureRegistry$SurfaceTextureEntry -> io.flutter.view.d$a:
     void release() -> a
     long id() -> b
     android.graphics.SurfaceTexture surfaceTexture() -> c
-io.flutter.view.VsyncWaiter -> io.flutter.view.f:
+io.flutter.view.VsyncWaiter -> io.flutter.view.e:
     android.view.WindowManager windowManager -> a
     io.flutter.view.VsyncWaiter instance -> c
     io.flutter.embedding.engine.FlutterJNI$AsyncWaitForVsyncDelegate asyncWaitForVsyncDelegate -> b
     android.view.WindowManager access$000(io.flutter.view.VsyncWaiter) -> a
     io.flutter.view.VsyncWaiter getInstance(android.view.WindowManager) -> b
     void init() -> c
-io.flutter.view.VsyncWaiter$1 -> io.flutter.view.f$a:
+io.flutter.view.VsyncWaiter$1 -> io.flutter.view.e$a:
     io.flutter.view.VsyncWaiter this$0 -> a
     void asyncWaitForVsync(long) -> a
-io.flutter.view.VsyncWaiter$1$1 -> io.flutter.view.f$a$a:
+io.flutter.view.VsyncWaiter$1$1 -> io.flutter.view.e$a$a:
     long val$cookie -> a
     io.flutter.view.VsyncWaiter$1 this$1 -> b
-kotlin.ExceptionsKt -> d.a:
-    void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
-kotlin.ExceptionsKt__ExceptionsKt -> d.b:
-    void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
-kotlin.KotlinNullPointerException -> d.c:
-kotlin.TypeCastException -> d.d:
-kotlin.Unit -> d.e:
+kotlin.KotlinNullPointerException -> d.a:
+kotlin.TypeCastException -> d.b:
+kotlin.Unit -> d.c:
     kotlin.Unit INSTANCE -> a
-kotlin.collections.ArraysKt -> d.f.a:
-    char single(char[]) -> a
-    java.lang.Object singleOrNull(java.lang.Object[]) -> b
-kotlin.collections.ArraysKt__ArraysJVMKt -> d.f.b:
-kotlin.collections.ArraysKt__ArraysKt -> d.f.c:
-kotlin.collections.ArraysKt___ArraysJvmKt -> d.f.d:
-kotlin.collections.ArraysKt___ArraysKt -> d.f.e:
-    char single(char[]) -> a
-    java.lang.Object singleOrNull(java.lang.Object[]) -> b
-kotlin.collections.CollectionsKt -> d.f.f:
-    java.util.List listOf(java.lang.Object) -> a
-    java.util.List emptyList() -> b
-    java.util.List take(java.lang.Iterable,int) -> f
-kotlin.collections.CollectionsKt__CollectionsJVMKt -> d.f.g:
-    java.util.List listOf(java.lang.Object) -> a
-kotlin.collections.CollectionsKt__CollectionsKt -> d.f.h:
-    java.util.List emptyList() -> b
-    java.util.List optimizeReadOnlyList(java.util.List) -> c
-kotlin.collections.CollectionsKt__IterablesKt -> d.f.i:
-kotlin.collections.CollectionsKt__IteratorsJVMKt -> d.f.j:
-kotlin.collections.CollectionsKt__IteratorsKt -> d.f.k:
-kotlin.collections.CollectionsKt__MutableCollectionsJVMKt -> d.f.l:
-kotlin.collections.CollectionsKt__MutableCollectionsKt -> d.f.m:
-kotlin.collections.CollectionsKt__ReversedViewsKt -> d.f.n:
-kotlin.collections.CollectionsKt___CollectionsJvmKt -> d.f.o:
-kotlin.collections.CollectionsKt___CollectionsKt -> d.f.p:
-    java.lang.Object first(java.lang.Iterable) -> d
-    java.lang.Object first(java.util.List) -> e
-    java.util.List take(java.lang.Iterable,int) -> f
-    java.util.Collection toCollection(java.lang.Iterable,java.util.Collection) -> g
-    java.util.List toList(java.lang.Iterable) -> h
-    java.util.List toMutableList(java.lang.Iterable) -> i
-    java.util.List toMutableList(java.util.Collection) -> j
-kotlin.collections.EmptyIterator -> d.f.q:
+kotlin.collections.CollectionsKt -> d.d.a:
+    java.util.List emptyList() -> a
+kotlin.collections.CollectionsKt__CollectionsJVMKt -> d.d.b:
+kotlin.collections.CollectionsKt__CollectionsKt -> d.d.c:
+    java.util.List emptyList() -> a
+kotlin.collections.CollectionsKt__IterablesKt -> d.d.d:
+kotlin.collections.CollectionsKt__IteratorsJVMKt -> d.d.e:
+kotlin.collections.CollectionsKt__IteratorsKt -> d.d.f:
+kotlin.collections.CollectionsKt__MutableCollectionsJVMKt -> d.d.g:
+kotlin.collections.CollectionsKt__MutableCollectionsKt -> d.d.h:
+kotlin.collections.CollectionsKt__ReversedViewsKt -> d.d.i:
+kotlin.collections.CollectionsKt___CollectionsJvmKt -> d.d.j:
+kotlin.collections.CollectionsKt___CollectionsKt -> d.d.k:
+kotlin.collections.EmptyIterator -> d.d.l:
     kotlin.collections.EmptyIterator INSTANCE -> b
     java.lang.Void next() -> a
     java.lang.Void previous() -> b
-kotlin.collections.EmptyList -> d.f.r:
+kotlin.collections.EmptyList -> d.d.m:
     kotlin.collections.EmptyList INSTANCE -> b
     boolean contains(java.lang.Void) -> a
     java.lang.Void get(int) -> b
     int getSize() -> c
     int indexOf(java.lang.Void) -> d
     int lastIndexOf(java.lang.Void) -> e
-kotlin.internal.PlatformImplementations -> d.g.a:
-    void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
-kotlin.internal.PlatformImplementations$ReflectAddSuppressedMethod -> d.g.a$a:
-    java.lang.reflect.Method method -> a
-kotlin.internal.PlatformImplementationsKt -> d.g.b:
-    kotlin.internal.PlatformImplementations IMPLEMENTATIONS -> a
-    int getJavaVersion() -> a
-kotlin.internal.jdk7.JDK7PlatformImplementations -> d.g.c.a:
-    void addSuppressed(java.lang.Throwable,java.lang.Throwable) -> a
-kotlin.io.ByteStreamsKt -> d.h.a:
-    long copyTo(java.io.InputStream,java.io.OutputStream,int) -> a
-    long copyTo$default(java.io.InputStream,java.io.OutputStream,int,int,java.lang.Object) -> b
-kotlin.io.CloseableKt -> d.h.b:
-    void closeFinally(java.io.Closeable,java.lang.Throwable) -> a
-kotlin.jvm.functions.Function0 -> d.i.a.a:
+kotlin.jvm.functions.Function0 -> d.e.a.a:
     java.lang.Object invoke() -> a
-kotlin.jvm.internal.CollectionToArray -> d.i.b.a:
+kotlin.jvm.internal.CollectionToArray -> d.e.b.a:
     java.lang.Object[] EMPTY -> a
     java.lang.Object[] toArray(java.util.Collection) -> a
     java.lang.Object[] toArray(java.util.Collection,java.lang.Object[]) -> b
-kotlin.jvm.internal.DefaultConstructorMarker -> d.i.b.b:
-kotlin.jvm.internal.FunctionBase -> d.i.b.c:
-kotlin.jvm.internal.Intrinsics -> d.i.b.d:
+kotlin.jvm.internal.DefaultConstructorMarker -> d.e.b.b:
+kotlin.jvm.internal.FunctionBase -> d.e.b.c:
+kotlin.jvm.internal.Intrinsics -> d.e.b.d:
     boolean areEqual(java.lang.Object,java.lang.Object) -> a
     void checkExpressionValueIsNotNull(java.lang.Object,java.lang.String) -> b
     void checkParameterIsNotNull(java.lang.Object,java.lang.String) -> c
@@ -17800,44 +17703,13 @@ kotlin.jvm.internal.Intrinsics -> d.i.b.d:
     java.lang.Throwable sanitizeStackTrace(java.lang.Throwable,java.lang.String) -> e
     void throwNpe() -> f
     void throwParameterIsNullException(java.lang.String) -> g
-kotlin.jvm.internal.Lambda -> d.i.b.e:
-kotlin.jvm.internal.Reflection -> d.i.b.f:
+kotlin.jvm.internal.Lambda -> d.e.b.e:
+kotlin.jvm.internal.Reflection -> d.e.b.f:
     kotlin.jvm.internal.ReflectionFactory factory -> a
     java.lang.String renderLambdaToString(kotlin.jvm.internal.Lambda) -> a
-kotlin.jvm.internal.ReflectionFactory -> d.i.b.g:
+kotlin.jvm.internal.ReflectionFactory -> d.e.b.g:
     java.lang.String renderLambdaToString(kotlin.jvm.internal.FunctionBase) -> a
     java.lang.String renderLambdaToString(kotlin.jvm.internal.Lambda) -> b
-kotlin.ranges.RangesKt -> d.j.a:
-    int coerceAtLeast(int,int) -> a
-    int coerceAtMost(int,int) -> b
-kotlin.ranges.RangesKt__RangesJVMKt -> d.j.b:
-kotlin.ranges.RangesKt__RangesKt -> d.j.c:
-kotlin.ranges.RangesKt___RangesKt -> d.j.d:
-    int coerceAtLeast(int,int) -> a
-    int coerceAtMost(int,int) -> b
-kotlin.text.CharsKt__CharJVMKt -> d.k.a:
-kotlin.text.CharsKt__CharKt -> d.k.b:
-    boolean equals(char,char,boolean) -> a
-kotlin.text.Regex -> d.k.c:
+kotlin.text.Regex -> d.f.a:
     java.util.regex.Pattern nativePattern -> b
     boolean matches(java.lang.CharSequence) -> a
-    java.util.List split(java.lang.CharSequence,int) -> b
-kotlin.text.StringsKt -> d.k.d:
-    boolean equals(java.lang.String,java.lang.String,boolean) -> a
-    int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object) -> d
-kotlin.text.StringsKt__IndentKt -> d.k.e:
-kotlin.text.StringsKt__RegexExtensionsJVMKt -> d.k.f:
-kotlin.text.StringsKt__RegexExtensionsKt -> d.k.g:
-kotlin.text.StringsKt__StringBuilderJVMKt -> d.k.h:
-kotlin.text.StringsKt__StringBuilderKt -> d.k.i:
-kotlin.text.StringsKt__StringNumberConversionsJVMKt -> d.k.j:
-kotlin.text.StringsKt__StringNumberConversionsKt -> d.k.k:
-kotlin.text.StringsKt__StringsJVMKt -> d.k.l:
-    boolean equals(java.lang.String,java.lang.String,boolean) -> a
-kotlin.text.StringsKt__StringsKt -> d.k.m:
-    int getLastIndex(java.lang.CharSequence) -> b
-    int indexOf(java.lang.CharSequence,char,int,boolean) -> c
-    int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object) -> d
-    int indexOfAny(java.lang.CharSequence,char[],int,boolean) -> e
-kotlin.text.StringsKt___StringsJvmKt -> d.k.n:
-kotlin.text.StringsKt___StringsKt -> d.k.o:
