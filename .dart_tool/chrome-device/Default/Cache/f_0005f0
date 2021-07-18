@@ -1,0 +1,669 @@
+define(['dart_sdk', 'packages/bookfinder_app/services/api_calls.dart', 'packages/flutter/src/material/card.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/flutter/src/painting/image_stream.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/rendering/paragraph.dart', 'packages/cached_network_image/src/image_provider/cached_network_image_provider.dart'], (function load__packages__bookfinder_app__Widgets__book_card_dart(dart_sdk, packages__bookfinder_app__services__api_calls$46dart, packages__flutter__src__material__card$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__flutter__src__painting__image_stream$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__rendering__paragraph$46dart, packages__cached_network_image__src__image_provider__cached_network_image_provider$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const api_calls = packages__bookfinder_app__services__api_calls$46dart.services__api_calls;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const image_stream = packages__flutter__src__painting__image_stream$46dart.src__painting__image_stream;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const paragraph = packages__flutter__src__rendering__paragraph$46dart.src__rendering__paragraph;
+  const cached_network_image_provider = packages__cached_network_image__src__image_provider__cached_network_image_provider$46dart.src__image_provider__cached_network_image_provider;
+  var book_card = Object.create(dart.library);
+  var $add = dartx.add;
+  var $toString = dartx.toString;
+  var $split = dartx.split;
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    ImageChunkEventN: () => (T.ImageChunkEventN = dart.constFn(dart.nullable(image_stream.ImageChunkEvent)))(),
+    BuildContextAndWidgetAndImageChunkEventNToWidget: () => (T.BuildContextAndWidgetAndImageChunkEventNToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext, framework.Widget, T.ImageChunkEventN()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 19,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "image",
+        [_Location_column]: 13,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 31,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "loadingBuilder",
+        [_Location_column]: 13,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 23,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 53,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13, C[14] || CT.C14], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 37,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 43,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 71,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 130,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLines",
+        [_Location_column]: 161,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 26,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 26,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27], T._LocationL());
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 51,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 79,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 26,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.constList([C[35] || CT.C35], T._LocationL());
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[34] || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 26,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.constList([C[38] || CT.C38], T._LocationL());
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[37] || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 50,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 88,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.constList([C[41] || CT.C41, C[42] || CT.C42], T._LocationL());
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[40] || CT.C40,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 26,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.constList([C[45] || CT.C45], T._LocationL());
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[44] || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.constList([C[48] || CT.C48, C[49] || CT.C49], T._LocationL());
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[47] || CT.C47,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53], T._LocationL());
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[51] || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 20,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.constList([C[56] || CT.C56], T._LocationL());
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[55] || CT.C55,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C[58] = dart.constList([C[59] || CT.C59, C[60] || CT.C60, C[61] || CT.C61], T._LocationL());
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[58] || CT.C58,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 20,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.constList([C[64] || CT.C64], T._LocationL());
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[63] || CT.C63,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart"
+      });
+    }
+  }, false);
+  var C = Array(65).fill(void 0);
+  var I = [
+    "file:///C:/Users/gupta/OneDrive/Desktop/Flutter%20Projects/Look_A_Book/bookfinder_app/lib/Widgets/book_card.dart",
+    "package:bookfinder_app/Widgets/book_card.dart"
+  ];
+  var title$ = dart.privateName(book_card, "BookCard.title");
+  var author$ = dart.privateName(book_card, "BookCard.author");
+  var publishDate$ = dart.privateName(book_card, "BookCard.publishDate");
+  var image$ = dart.privateName(book_card, "BookCard.image");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  book_card.BookCard = class BookCard extends framework.StatelessWidget {
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    get author() {
+      return this[author$];
+    }
+    set author(value) {
+      super.author = value;
+    }
+    get publishDate() {
+      return this[publishDate$];
+    }
+    set publishDate(value) {
+      super.publishDate = value;
+    }
+    get image() {
+      return this[image$];
+    }
+    set image(value) {
+      super.image = value;
+    }
+    getImage() {
+      return new api_calls.Services.new().getBookImage(core.String.as(this.image));
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 18, 29, "context");
+      return new card.Card.new({child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.max, crossAxisAlignment: flex.CrossAxisAlignment.center, children: (() => {
+            let t0 = T.JSArrayOfWidget().of([]);
+            if (this.image != null) t0[$add](new image.Image.new({image: this.getImage(), width: 120.0, loadingBuilder: dart.fn((context, child, loadingProgress) => {
+                if (context == null) dart.nullFailed(I[0], 28, 43, "context");
+                if (child == null) dart.nullFailed(I[0], 28, 59, "child");
+                if (loadingProgress == null) {
+                  return child;
+                }
+                return new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new({value: loadingProgress.expectedTotalBytes != null ? dart.notNull(loadingProgress.cumulativeBytesLoaded) / dart.nullCheck(loadingProgress.expectedTotalBytes) : null, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3});
+              }, T.BuildContextAndWidgetAndImageChunkEventNToWidget()), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}));
+            if (this.image == null) t0[$add](new image.Image.asset("default_book_cover_2015.png", {width: 120.0, $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}));
+            t0[$add](new basic.Flexible.new({child: new container.Container.new({padding: new edge_insets.EdgeInsets.all(8.0), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidget().of([new basic.Flexible.new({child: new text.Text.new(core.String.as(this.title), {textAlign: ui.TextAlign.center, style: new text_style.TextStyle.new({fontSize: 18.0, fontWeight: ui.FontWeight.bold}), overflow: paragraph.TextOverflow.visible, maxLines: 3, $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), new basic.SizedBox.new({height: 8.0, $creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), new basic.Flexible.new({child: new text.Text.new("by\n" + dart.notNull(core.String.as(this.author)), {textAlign: ui.TextAlign.center, style: new text_style.TextStyle.new({fontSize: 14.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[33] || CT.C33}), new basic.SizedBox.new({height: 8.0, $creationLocationd_0dea112b090073317d4: C[36] || CT.C36}), new basic.Flexible.new({child: new text.Text.new("published: " + dart.notNull(dart.toString(this.publishDate)[$split](" ")[$_get](0)), {textAlign: ui.TextAlign.center, $creationLocationd_0dea112b090073317d4: C[39] || CT.C39}), $creationLocationd_0dea112b090073317d4: C[43] || CT.C43})]), $creationLocationd_0dea112b090073317d4: C[46] || CT.C46}), $creationLocationd_0dea112b090073317d4: C[50] || CT.C50}), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54}));
+            return t0;
+          })(), $creationLocationd_0dea112b090073317d4: C[57] || CT.C57}), $creationLocationd_0dea112b090073317d4: C[62] || CT.C62});
+    }
+  };
+  (book_card.BookCard.new = function(opts) {
+    let title = opts && 'title' in opts ? opts.title : null;
+    let author = opts && 'author' in opts ? opts.author : null;
+    let publishDate = opts && 'publishDate' in opts ? opts.publishDate : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[title$] = title;
+    this[author$] = author;
+    this[publishDate$] = publishDate;
+    this[image$] = image;
+    book_card.BookCard.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = book_card.BookCard.prototype;
+  dart.addTypeTests(book_card.BookCard);
+  dart.addTypeCaches(book_card.BookCard);
+  dart.setMethodSignature(book_card.BookCard, () => ({
+    __proto__: dart.getMethods(book_card.BookCard.__proto__),
+    getImage: dart.fnType(cached_network_image_provider.CachedNetworkImageProvider, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(book_card.BookCard, I[1]);
+  dart.setFieldSignature(book_card.BookCard, () => ({
+    __proto__: dart.getFields(book_card.BookCard.__proto__),
+    title: dart.finalFieldType(dart.dynamic),
+    author: dart.finalFieldType(dart.dynamic),
+    publishDate: dart.finalFieldType(dart.dynamic),
+    image: dart.finalFieldType(dart.dynamic)
+  }));
+  dart.trackLibraries("packages/bookfinder_app/Widgets/book_card.dart", {
+    "package:bookfinder_app/Widgets/book_card.dart": book_card
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["book_card.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAMQ;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;;AAKJ,YAAO,AAAW,0DAAa;IACjC;;UAE0B;AACxB,YAAO,2BACE,oCAEsB,2CACY,0CAC7B;;AACR,gBAAG,oBACH,qCACS,wBAAkB,uBACT,SAAc,SAAgB,OAAwB;oBAAxC;oBAAgB;AAC5C,oBAAI,AAAgB,eAAD;AACjB,wBAAO,MAAK;;AAEd,sBAAO,8BACE,6DACE,AAAgB,AAAmB,eAApB,8BACsB,aAAtC,AAAgB,eAAD,0BAA2D,eAAlC,AAAgB,eAAD,uBACvD;;AAKd,gBAAG,AAAK,oBACF,+BAAM,uCAAqC;AACjD,oDAAgB,sCACM,+BAAI,aACjB,yCACgC,yCAC3B,wBAER,+BAAe,iCAAK,yBAA2B,4BAAc,wCAAoB,kBAA0B,gCAA6B,0CAAkB,yHAC1J,gCAAiB,gEACjB,+BAAe,kBAAK,AAAM,qCAAC,2BAA4B,4BAAc,wCAAoB,kBAA0B,4IACnH,gCAAiB,gEACjB,+BAAe,kBAAK,AAAa,6BAAa,AAAW,AAAU,cAAjC,0BAA6B,YAAK,iBAAwB;;;IAO1G;;;QAjDe;QAAW;QAAY;QAAiB;;IAAxC;IAAW;IAAY;IAAiB;AAAvD;;EAA8D","file":"../../../../../../../../../packages/bookfinder_app/Widgets/book_card.dart.lib.js"}');
+  // Exports:
+  return {
+    Widgets__book_card: book_card
+  };
+}));
+
+//# sourceMappingURL=book_card.dart.lib.js.map

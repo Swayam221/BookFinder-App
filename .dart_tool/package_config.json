@@ -104,6 +104,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "file_picker",
+      "rootUri": "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///C:/flutter_windows_1.22.4-stable/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -392,7 +398,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-17T10:00:02.334840Z",
+  "generated": "2021-07-18T04:04:48.621853Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

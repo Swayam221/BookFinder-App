@@ -2,6 +2,7 @@
 import 'package:bookfinder_app/book_pagination.dart';
 import 'package:bookfinder_app/screens/add_book.dart';
 import 'package:bookfinder_app/services/api_calls.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -115,7 +116,7 @@ class _HomePageState extends State<HomePage> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                crossAxisCount: 2,mainAxisExtent: 400,
+                crossAxisCount: !kIsWeb?2:4,mainAxisExtent: 400,
                 // children: books.map((i) => BookCard(title: i.title,author: i.author,publishDate: i.datePublished)).toList(),
               ),
               itemCount: bookPagination.books.length,

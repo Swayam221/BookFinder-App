@@ -1,8 +1,10 @@
 import 'dart:io';
+import 'package:http/http.dart' as http;
 
 import 'package:bookfinder_app/services/api_calls.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
@@ -43,7 +45,7 @@ class _AddBookState extends State<AddBookPage>
               if(selectedImage!=null)
               Column(
                 children: [
-                  Image.file(File(selectedImage.path),height: 150,width: 100,),
+                  !kIsWeb?Image.file(File(selectedImage.path),height: 150,width: 100,):Image.network(selectedImage.path,height: 150,width: 100,),
                   SizedBox(height: 10,),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4),
@@ -105,7 +107,13 @@ class _AddBookState extends State<AddBookPage>
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       onPressed: () async{
+                        if(!kIsWeb)
                         await _fetchImage();
+                        else
+                        {
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text("Cannot Add Image From Web App. Please Use the Android App for uploading an Image")));
+                        }
                       },
                       child: const Text('Add Image'),
                     ),

@@ -1,0 +1,1485 @@
+define(['dart_sdk'], (function load__packages__multi_image_picker__src__metadata_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var metadata = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $toInt = dartx.toInt;
+  var $toString = dartx.toString;
+  var $toDouble = dartx.toDouble;
+  var $join = dartx.join;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ListN: () => (T.ListN = dart.constFn(dart.nullable(core.List)))(),
+    intN: () => (T.intN = dart.constFn(dart.nullable(core.int)))(),
+    dynamicTointN: () => (T.dynamicTointN = dart.constFn(dart.fnType(T.intN(), [dart.dynamic])))(),
+    doubleN: () => (T.doubleN = dart.constFn(dart.nullable(core.double)))(),
+    dynamicTodoubleN: () => (T.dynamicTodoubleN = dart.constFn(dart.fnType(T.doubleN(), [dart.dynamic])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var I = [
+    "file:///C:/flutter_windows_1.22.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.8.01/lib/src/metadata.dart",
+    "package:multi_image_picker/src/metadata.dart"
+  ];
+  var exif = dart.privateName(metadata, "Metadata.exif");
+  var gps = dart.privateName(metadata, "Metadata.gps");
+  var device = dart.privateName(metadata, "Metadata.device");
+  metadata.Metadata = class Metadata extends core.Object {
+    get exif() {
+      return this[exif];
+    }
+    set exif(value) {
+      super.exif = value;
+    }
+    get gps() {
+      return this[gps];
+    }
+    set gps(value) {
+      super.gps = value;
+    }
+    get device() {
+      return this[device];
+    }
+    set device(value) {
+      super.device = value;
+    }
+  };
+  (metadata.Metadata.fromMap = function(json) {
+    if (json == null) dart.nullFailed(I[0], 11, 24, "json");
+    this[exif] = new metadata.ExifMetadata.fromMap(json);
+    this[gps] = new metadata.GpsMetadata.fromMap(json);
+    this[device] = new metadata.DeviceMetadata.fromMap(json);
+    ;
+  }).prototype = metadata.Metadata.prototype;
+  dart.addTypeTests(metadata.Metadata);
+  dart.addTypeCaches(metadata.Metadata);
+  dart.setLibraryUri(metadata.Metadata, I[1]);
+  dart.setFieldSignature(metadata.Metadata, () => ({
+    __proto__: dart.getFields(metadata.Metadata.__proto__),
+    exif: dart.finalFieldType(metadata.ExifMetadata),
+    gps: dart.finalFieldType(metadata.GpsMetadata),
+    device: dart.finalFieldType(metadata.DeviceMetadata)
+  }));
+  var imageWidth$ = dart.privateName(metadata, "ExifMetadata.imageWidth");
+  var imageLength$ = dart.privateName(metadata, "ExifMetadata.imageLength");
+  var bitsPerSample$ = dart.privateName(metadata, "ExifMetadata.bitsPerSample");
+  var compression$ = dart.privateName(metadata, "ExifMetadata.compression");
+  var photometricInterpretation$ = dart.privateName(metadata, "ExifMetadata.photometricInterpretation");
+  var orientation$ = dart.privateName(metadata, "ExifMetadata.orientation");
+  var samplesPerPixel$ = dart.privateName(metadata, "ExifMetadata.samplesPerPixel");
+  var planarConfiguration$ = dart.privateName(metadata, "ExifMetadata.planarConfiguration");
+  var ycbCrSubSampling$ = dart.privateName(metadata, "ExifMetadata.ycbCrSubSampling");
+  var ycbCrPositioning$ = dart.privateName(metadata, "ExifMetadata.ycbCrPositioning");
+  var xResolution$ = dart.privateName(metadata, "ExifMetadata.xResolution");
+  var yResolution$ = dart.privateName(metadata, "ExifMetadata.yResolution");
+  var resolutionUnit$ = dart.privateName(metadata, "ExifMetadata.resolutionUnit");
+  var stripOffsets$ = dart.privateName(metadata, "ExifMetadata.stripOffsets");
+  var rowsPerStrip$ = dart.privateName(metadata, "ExifMetadata.rowsPerStrip");
+  var stripByteCounts$ = dart.privateName(metadata, "ExifMetadata.stripByteCounts");
+  var jpegInterchangeFormat$ = dart.privateName(metadata, "ExifMetadata.jpegInterchangeFormat");
+  var jpegInterchangeFormatLength$ = dart.privateName(metadata, "ExifMetadata.jpegInterchangeFormatLength");
+  var transferFunction$ = dart.privateName(metadata, "ExifMetadata.transferFunction");
+  var whitePoint$ = dart.privateName(metadata, "ExifMetadata.whitePoint");
+  var primaryChromaticities$ = dart.privateName(metadata, "ExifMetadata.primaryChromaticities");
+  var ycbCrCoefficients$ = dart.privateName(metadata, "ExifMetadata.ycbCrCoefficients");
+  var referenceBlackWhite$ = dart.privateName(metadata, "ExifMetadata.referenceBlackWhite");
+  var dateTime$ = dart.privateName(metadata, "ExifMetadata.dateTime");
+  var imageDescription$ = dart.privateName(metadata, "ExifMetadata.imageDescription");
+  var artist$ = dart.privateName(metadata, "ExifMetadata.artist");
+  var copyright$ = dart.privateName(metadata, "ExifMetadata.copyright");
+  var exifVersion$ = dart.privateName(metadata, "ExifMetadata.exifVersion");
+  var flashpixVersion$ = dart.privateName(metadata, "ExifMetadata.flashpixVersion");
+  var colorSpace$ = dart.privateName(metadata, "ExifMetadata.colorSpace");
+  var gamma$ = dart.privateName(metadata, "ExifMetadata.gamma");
+  var pixelXDimension$ = dart.privateName(metadata, "ExifMetadata.pixelXDimension");
+  var pixelYDimension$ = dart.privateName(metadata, "ExifMetadata.pixelYDimension");
+  var componentsConfiguration$ = dart.privateName(metadata, "ExifMetadata.componentsConfiguration");
+  var compressedBitsPerPixel$ = dart.privateName(metadata, "ExifMetadata.compressedBitsPerPixel");
+  var userComment$ = dart.privateName(metadata, "ExifMetadata.userComment");
+  var relatedSoundFile$ = dart.privateName(metadata, "ExifMetadata.relatedSoundFile");
+  var dateTimeOriginal$ = dart.privateName(metadata, "ExifMetadata.dateTimeOriginal");
+  var dateTimeDigitized$ = dart.privateName(metadata, "ExifMetadata.dateTimeDigitized");
+  var subSecTime$ = dart.privateName(metadata, "ExifMetadata.subSecTime");
+  var subSecTimeOriginal$ = dart.privateName(metadata, "ExifMetadata.subSecTimeOriginal");
+  var subSecTimeDigitized$ = dart.privateName(metadata, "ExifMetadata.subSecTimeDigitized");
+  var exposureTime$ = dart.privateName(metadata, "ExifMetadata.exposureTime");
+  var fNumber$ = dart.privateName(metadata, "ExifMetadata.fNumber");
+  var exposureProgram$ = dart.privateName(metadata, "ExifMetadata.exposureProgram");
+  var spectralSensitivity$ = dart.privateName(metadata, "ExifMetadata.spectralSensitivity");
+  var photographicSensitivity$ = dart.privateName(metadata, "ExifMetadata.photographicSensitivity");
+  var oecf$ = dart.privateName(metadata, "ExifMetadata.oecf");
+  var sensitivityType$ = dart.privateName(metadata, "ExifMetadata.sensitivityType");
+  var standardOutputSensitivity$ = dart.privateName(metadata, "ExifMetadata.standardOutputSensitivity");
+  var recommendedExposureIndex$ = dart.privateName(metadata, "ExifMetadata.recommendedExposureIndex");
+  var isoSpeed$ = dart.privateName(metadata, "ExifMetadata.isoSpeed");
+  var isoSpeedLatitudeyyy$ = dart.privateName(metadata, "ExifMetadata.isoSpeedLatitudeyyy");
+  var isoSpeedLatitudezzz$ = dart.privateName(metadata, "ExifMetadata.isoSpeedLatitudezzz");
+  var shutterSpeedValue$ = dart.privateName(metadata, "ExifMetadata.shutterSpeedValue");
+  var apertureValue$ = dart.privateName(metadata, "ExifMetadata.apertureValue");
+  var brightnessValue$ = dart.privateName(metadata, "ExifMetadata.brightnessValue");
+  var exposureBiasValue$ = dart.privateName(metadata, "ExifMetadata.exposureBiasValue");
+  var maxApertureValue$ = dart.privateName(metadata, "ExifMetadata.maxApertureValue");
+  var subjectDistance$ = dart.privateName(metadata, "ExifMetadata.subjectDistance");
+  var meteringMode$ = dart.privateName(metadata, "ExifMetadata.meteringMode");
+  var lightSource$ = dart.privateName(metadata, "ExifMetadata.lightSource");
+  var flash$ = dart.privateName(metadata, "ExifMetadata.flash");
+  var subjectArea$ = dart.privateName(metadata, "ExifMetadata.subjectArea");
+  var focalLength$ = dart.privateName(metadata, "ExifMetadata.focalLength");
+  var flashEnergy$ = dart.privateName(metadata, "ExifMetadata.flashEnergy");
+  var spatialFrequencyResponse$ = dart.privateName(metadata, "ExifMetadata.spatialFrequencyResponse");
+  var focalPlaneXResolution$ = dart.privateName(metadata, "ExifMetadata.focalPlaneXResolution");
+  var focalPlaneYResolution$ = dart.privateName(metadata, "ExifMetadata.focalPlaneYResolution");
+  var focalPlaneResolutionUnit$ = dart.privateName(metadata, "ExifMetadata.focalPlaneResolutionUnit");
+  var subjectLocation$ = dart.privateName(metadata, "ExifMetadata.subjectLocation");
+  var exposureIndex$ = dart.privateName(metadata, "ExifMetadata.exposureIndex");
+  var sensingMethod$ = dart.privateName(metadata, "ExifMetadata.sensingMethod");
+  var fileSource$ = dart.privateName(metadata, "ExifMetadata.fileSource");
+  var sceneType$ = dart.privateName(metadata, "ExifMetadata.sceneType");
+  var cfaPattern$ = dart.privateName(metadata, "ExifMetadata.cfaPattern");
+  var customRendered$ = dart.privateName(metadata, "ExifMetadata.customRendered");
+  var exposureMode$ = dart.privateName(metadata, "ExifMetadata.exposureMode");
+  var whiteBalance$ = dart.privateName(metadata, "ExifMetadata.whiteBalance");
+  var digitalZoomRatio$ = dart.privateName(metadata, "ExifMetadata.digitalZoomRatio");
+  var focalLengthIn35mmFilm$ = dart.privateName(metadata, "ExifMetadata.focalLengthIn35mmFilm");
+  var sceneCaptureType$ = dart.privateName(metadata, "ExifMetadata.sceneCaptureType");
+  var gainControl$ = dart.privateName(metadata, "ExifMetadata.gainControl");
+  var contrast$ = dart.privateName(metadata, "ExifMetadata.contrast");
+  var saturation$ = dart.privateName(metadata, "ExifMetadata.saturation");
+  var sharpness$ = dart.privateName(metadata, "ExifMetadata.sharpness");
+  var deviceSettingDescription$ = dart.privateName(metadata, "ExifMetadata.deviceSettingDescription");
+  var subjectDistanceRange$ = dart.privateName(metadata, "ExifMetadata.subjectDistanceRange");
+  var imageUniqueID$ = dart.privateName(metadata, "ExifMetadata.imageUniqueID");
+  metadata.ExifMetadata = class ExifMetadata extends core.Object {
+    get imageWidth() {
+      return this[imageWidth$];
+    }
+    set imageWidth(value) {
+      super.imageWidth = value;
+    }
+    get imageLength() {
+      return this[imageLength$];
+    }
+    set imageLength(value) {
+      super.imageLength = value;
+    }
+    get bitsPerSample() {
+      return this[bitsPerSample$];
+    }
+    set bitsPerSample(value) {
+      super.bitsPerSample = value;
+    }
+    get compression() {
+      return this[compression$];
+    }
+    set compression(value) {
+      super.compression = value;
+    }
+    get photometricInterpretation() {
+      return this[photometricInterpretation$];
+    }
+    set photometricInterpretation(value) {
+      super.photometricInterpretation = value;
+    }
+    get orientation() {
+      return this[orientation$];
+    }
+    set orientation(value) {
+      super.orientation = value;
+    }
+    get samplesPerPixel() {
+      return this[samplesPerPixel$];
+    }
+    set samplesPerPixel(value) {
+      super.samplesPerPixel = value;
+    }
+    get planarConfiguration() {
+      return this[planarConfiguration$];
+    }
+    set planarConfiguration(value) {
+      super.planarConfiguration = value;
+    }
+    get ycbCrSubSampling() {
+      return this[ycbCrSubSampling$];
+    }
+    set ycbCrSubSampling(value) {
+      super.ycbCrSubSampling = value;
+    }
+    get ycbCrPositioning() {
+      return this[ycbCrPositioning$];
+    }
+    set ycbCrPositioning(value) {
+      super.ycbCrPositioning = value;
+    }
+    get xResolution() {
+      return this[xResolution$];
+    }
+    set xResolution(value) {
+      super.xResolution = value;
+    }
+    get yResolution() {
+      return this[yResolution$];
+    }
+    set yResolution(value) {
+      super.yResolution = value;
+    }
+    get resolutionUnit() {
+      return this[resolutionUnit$];
+    }
+    set resolutionUnit(value) {
+      super.resolutionUnit = value;
+    }
+    get stripOffsets() {
+      return this[stripOffsets$];
+    }
+    set stripOffsets(value) {
+      super.stripOffsets = value;
+    }
+    get rowsPerStrip() {
+      return this[rowsPerStrip$];
+    }
+    set rowsPerStrip(value) {
+      super.rowsPerStrip = value;
+    }
+    get stripByteCounts() {
+      return this[stripByteCounts$];
+    }
+    set stripByteCounts(value) {
+      super.stripByteCounts = value;
+    }
+    get jpegInterchangeFormat() {
+      return this[jpegInterchangeFormat$];
+    }
+    set jpegInterchangeFormat(value) {
+      super.jpegInterchangeFormat = value;
+    }
+    get jpegInterchangeFormatLength() {
+      return this[jpegInterchangeFormatLength$];
+    }
+    set jpegInterchangeFormatLength(value) {
+      super.jpegInterchangeFormatLength = value;
+    }
+    get transferFunction() {
+      return this[transferFunction$];
+    }
+    set transferFunction(value) {
+      super.transferFunction = value;
+    }
+    get whitePoint() {
+      return this[whitePoint$];
+    }
+    set whitePoint(value) {
+      super.whitePoint = value;
+    }
+    get primaryChromaticities() {
+      return this[primaryChromaticities$];
+    }
+    set primaryChromaticities(value) {
+      super.primaryChromaticities = value;
+    }
+    get ycbCrCoefficients() {
+      return this[ycbCrCoefficients$];
+    }
+    set ycbCrCoefficients(value) {
+      super.ycbCrCoefficients = value;
+    }
+    get referenceBlackWhite() {
+      return this[referenceBlackWhite$];
+    }
+    set referenceBlackWhite(value) {
+      super.referenceBlackWhite = value;
+    }
+    get dateTime() {
+      return this[dateTime$];
+    }
+    set dateTime(value) {
+      super.dateTime = value;
+    }
+    get imageDescription() {
+      return this[imageDescription$];
+    }
+    set imageDescription(value) {
+      super.imageDescription = value;
+    }
+    get artist() {
+      return this[artist$];
+    }
+    set artist(value) {
+      super.artist = value;
+    }
+    get copyright() {
+      return this[copyright$];
+    }
+    set copyright(value) {
+      super.copyright = value;
+    }
+    get exifVersion() {
+      return this[exifVersion$];
+    }
+    set exifVersion(value) {
+      super.exifVersion = value;
+    }
+    get flashpixVersion() {
+      return this[flashpixVersion$];
+    }
+    set flashpixVersion(value) {
+      super.flashpixVersion = value;
+    }
+    get colorSpace() {
+      return this[colorSpace$];
+    }
+    set colorSpace(value) {
+      super.colorSpace = value;
+    }
+    get gamma() {
+      return this[gamma$];
+    }
+    set gamma(value) {
+      super.gamma = value;
+    }
+    get pixelXDimension() {
+      return this[pixelXDimension$];
+    }
+    set pixelXDimension(value) {
+      super.pixelXDimension = value;
+    }
+    get pixelYDimension() {
+      return this[pixelYDimension$];
+    }
+    set pixelYDimension(value) {
+      super.pixelYDimension = value;
+    }
+    get componentsConfiguration() {
+      return this[componentsConfiguration$];
+    }
+    set componentsConfiguration(value) {
+      super.componentsConfiguration = value;
+    }
+    get compressedBitsPerPixel() {
+      return this[compressedBitsPerPixel$];
+    }
+    set compressedBitsPerPixel(value) {
+      super.compressedBitsPerPixel = value;
+    }
+    get userComment() {
+      return this[userComment$];
+    }
+    set userComment(value) {
+      super.userComment = value;
+    }
+    get relatedSoundFile() {
+      return this[relatedSoundFile$];
+    }
+    set relatedSoundFile(value) {
+      super.relatedSoundFile = value;
+    }
+    get dateTimeOriginal() {
+      return this[dateTimeOriginal$];
+    }
+    set dateTimeOriginal(value) {
+      super.dateTimeOriginal = value;
+    }
+    get dateTimeDigitized() {
+      return this[dateTimeDigitized$];
+    }
+    set dateTimeDigitized(value) {
+      super.dateTimeDigitized = value;
+    }
+    get subSecTime() {
+      return this[subSecTime$];
+    }
+    set subSecTime(value) {
+      super.subSecTime = value;
+    }
+    get subSecTimeOriginal() {
+      return this[subSecTimeOriginal$];
+    }
+    set subSecTimeOriginal(value) {
+      super.subSecTimeOriginal = value;
+    }
+    get subSecTimeDigitized() {
+      return this[subSecTimeDigitized$];
+    }
+    set subSecTimeDigitized(value) {
+      super.subSecTimeDigitized = value;
+    }
+    get exposureTime() {
+      return this[exposureTime$];
+    }
+    set exposureTime(value) {
+      super.exposureTime = value;
+    }
+    get fNumber() {
+      return this[fNumber$];
+    }
+    set fNumber(value) {
+      super.fNumber = value;
+    }
+    get exposureProgram() {
+      return this[exposureProgram$];
+    }
+    set exposureProgram(value) {
+      super.exposureProgram = value;
+    }
+    get spectralSensitivity() {
+      return this[spectralSensitivity$];
+    }
+    set spectralSensitivity(value) {
+      super.spectralSensitivity = value;
+    }
+    get photographicSensitivity() {
+      return this[photographicSensitivity$];
+    }
+    set photographicSensitivity(value) {
+      super.photographicSensitivity = value;
+    }
+    get oecf() {
+      return this[oecf$];
+    }
+    set oecf(value) {
+      super.oecf = value;
+    }
+    get sensitivityType() {
+      return this[sensitivityType$];
+    }
+    set sensitivityType(value) {
+      super.sensitivityType = value;
+    }
+    get standardOutputSensitivity() {
+      return this[standardOutputSensitivity$];
+    }
+    set standardOutputSensitivity(value) {
+      super.standardOutputSensitivity = value;
+    }
+    get recommendedExposureIndex() {
+      return this[recommendedExposureIndex$];
+    }
+    set recommendedExposureIndex(value) {
+      super.recommendedExposureIndex = value;
+    }
+    get isoSpeed() {
+      return this[isoSpeed$];
+    }
+    set isoSpeed(value) {
+      super.isoSpeed = value;
+    }
+    get isoSpeedLatitudeyyy() {
+      return this[isoSpeedLatitudeyyy$];
+    }
+    set isoSpeedLatitudeyyy(value) {
+      super.isoSpeedLatitudeyyy = value;
+    }
+    get isoSpeedLatitudezzz() {
+      return this[isoSpeedLatitudezzz$];
+    }
+    set isoSpeedLatitudezzz(value) {
+      super.isoSpeedLatitudezzz = value;
+    }
+    get shutterSpeedValue() {
+      return this[shutterSpeedValue$];
+    }
+    set shutterSpeedValue(value) {
+      super.shutterSpeedValue = value;
+    }
+    get apertureValue() {
+      return this[apertureValue$];
+    }
+    set apertureValue(value) {
+      super.apertureValue = value;
+    }
+    get brightnessValue() {
+      return this[brightnessValue$];
+    }
+    set brightnessValue(value) {
+      super.brightnessValue = value;
+    }
+    get exposureBiasValue() {
+      return this[exposureBiasValue$];
+    }
+    set exposureBiasValue(value) {
+      super.exposureBiasValue = value;
+    }
+    get maxApertureValue() {
+      return this[maxApertureValue$];
+    }
+    set maxApertureValue(value) {
+      super.maxApertureValue = value;
+    }
+    get subjectDistance() {
+      return this[subjectDistance$];
+    }
+    set subjectDistance(value) {
+      super.subjectDistance = value;
+    }
+    get meteringMode() {
+      return this[meteringMode$];
+    }
+    set meteringMode(value) {
+      super.meteringMode = value;
+    }
+    get lightSource() {
+      return this[lightSource$];
+    }
+    set lightSource(value) {
+      super.lightSource = value;
+    }
+    get flash() {
+      return this[flash$];
+    }
+    set flash(value) {
+      super.flash = value;
+    }
+    get subjectArea() {
+      return this[subjectArea$];
+    }
+    set subjectArea(value) {
+      super.subjectArea = value;
+    }
+    get focalLength() {
+      return this[focalLength$];
+    }
+    set focalLength(value) {
+      super.focalLength = value;
+    }
+    get flashEnergy() {
+      return this[flashEnergy$];
+    }
+    set flashEnergy(value) {
+      super.flashEnergy = value;
+    }
+    get spatialFrequencyResponse() {
+      return this[spatialFrequencyResponse$];
+    }
+    set spatialFrequencyResponse(value) {
+      super.spatialFrequencyResponse = value;
+    }
+    get focalPlaneXResolution() {
+      return this[focalPlaneXResolution$];
+    }
+    set focalPlaneXResolution(value) {
+      super.focalPlaneXResolution = value;
+    }
+    get focalPlaneYResolution() {
+      return this[focalPlaneYResolution$];
+    }
+    set focalPlaneYResolution(value) {
+      super.focalPlaneYResolution = value;
+    }
+    get focalPlaneResolutionUnit() {
+      return this[focalPlaneResolutionUnit$];
+    }
+    set focalPlaneResolutionUnit(value) {
+      super.focalPlaneResolutionUnit = value;
+    }
+    get subjectLocation() {
+      return this[subjectLocation$];
+    }
+    set subjectLocation(value) {
+      super.subjectLocation = value;
+    }
+    get exposureIndex() {
+      return this[exposureIndex$];
+    }
+    set exposureIndex(value) {
+      super.exposureIndex = value;
+    }
+    get sensingMethod() {
+      return this[sensingMethod$];
+    }
+    set sensingMethod(value) {
+      super.sensingMethod = value;
+    }
+    get fileSource() {
+      return this[fileSource$];
+    }
+    set fileSource(value) {
+      super.fileSource = value;
+    }
+    get sceneType() {
+      return this[sceneType$];
+    }
+    set sceneType(value) {
+      super.sceneType = value;
+    }
+    get cfaPattern() {
+      return this[cfaPattern$];
+    }
+    set cfaPattern(value) {
+      super.cfaPattern = value;
+    }
+    get customRendered() {
+      return this[customRendered$];
+    }
+    set customRendered(value) {
+      super.customRendered = value;
+    }
+    get exposureMode() {
+      return this[exposureMode$];
+    }
+    set exposureMode(value) {
+      super.exposureMode = value;
+    }
+    get whiteBalance() {
+      return this[whiteBalance$];
+    }
+    set whiteBalance(value) {
+      super.whiteBalance = value;
+    }
+    get digitalZoomRatio() {
+      return this[digitalZoomRatio$];
+    }
+    set digitalZoomRatio(value) {
+      super.digitalZoomRatio = value;
+    }
+    get focalLengthIn35mmFilm() {
+      return this[focalLengthIn35mmFilm$];
+    }
+    set focalLengthIn35mmFilm(value) {
+      super.focalLengthIn35mmFilm = value;
+    }
+    get sceneCaptureType() {
+      return this[sceneCaptureType$];
+    }
+    set sceneCaptureType(value) {
+      super.sceneCaptureType = value;
+    }
+    get gainControl() {
+      return this[gainControl$];
+    }
+    set gainControl(value) {
+      super.gainControl = value;
+    }
+    get contrast() {
+      return this[contrast$];
+    }
+    set contrast(value) {
+      super.contrast = value;
+    }
+    get saturation() {
+      return this[saturation$];
+    }
+    set saturation(value) {
+      super.saturation = value;
+    }
+    get sharpness() {
+      return this[sharpness$];
+    }
+    set sharpness(value) {
+      super.sharpness = value;
+    }
+    get deviceSettingDescription() {
+      return this[deviceSettingDescription$];
+    }
+    set deviceSettingDescription(value) {
+      super.deviceSettingDescription = value;
+    }
+    get subjectDistanceRange() {
+      return this[subjectDistanceRange$];
+    }
+    set subjectDistanceRange(value) {
+      super.subjectDistanceRange = value;
+    }
+    get imageUniqueID() {
+      return this[imageUniqueID$];
+    }
+    set imageUniqueID(value) {
+      super.imageUniqueID = value;
+    }
+  };
+  (metadata.ExifMetadata.new = function(imageWidth, imageLength, bitsPerSample, compression, photometricInterpretation, orientation, samplesPerPixel, planarConfiguration, ycbCrSubSampling, ycbCrPositioning, xResolution, yResolution, resolutionUnit, stripOffsets, rowsPerStrip, stripByteCounts, jpegInterchangeFormat, jpegInterchangeFormatLength, transferFunction, whitePoint, primaryChromaticities, ycbCrCoefficients, referenceBlackWhite, dateTime, imageDescription, artist, copyright, exifVersion, flashpixVersion, colorSpace, gamma, pixelXDimension, pixelYDimension, componentsConfiguration, compressedBitsPerPixel, userComment, relatedSoundFile, dateTimeOriginal, dateTimeDigitized, subSecTime, subSecTimeOriginal, subSecTimeDigitized, exposureTime, fNumber, exposureProgram, spectralSensitivity, photographicSensitivity, oecf, sensitivityType, standardOutputSensitivity, recommendedExposureIndex, isoSpeed, isoSpeedLatitudeyyy, isoSpeedLatitudezzz, shutterSpeedValue, apertureValue, brightnessValue, exposureBiasValue, maxApertureValue, subjectDistance, meteringMode, lightSource, flash, subjectArea, focalLength, flashEnergy, spatialFrequencyResponse, focalPlaneXResolution, focalPlaneYResolution, focalPlaneResolutionUnit, subjectLocation, exposureIndex, sensingMethod, fileSource, sceneType, cfaPattern, customRendered, exposureMode, whiteBalance, digitalZoomRatio, focalLengthIn35mmFilm, sceneCaptureType, gainControl, contrast, saturation, sharpness, deviceSettingDescription, subjectDistanceRange, imageUniqueID) {
+    this[imageWidth$] = imageWidth;
+    this[imageLength$] = imageLength;
+    this[bitsPerSample$] = bitsPerSample;
+    this[compression$] = compression;
+    this[photometricInterpretation$] = photometricInterpretation;
+    this[orientation$] = orientation;
+    this[samplesPerPixel$] = samplesPerPixel;
+    this[planarConfiguration$] = planarConfiguration;
+    this[ycbCrSubSampling$] = ycbCrSubSampling;
+    this[ycbCrPositioning$] = ycbCrPositioning;
+    this[xResolution$] = xResolution;
+    this[yResolution$] = yResolution;
+    this[resolutionUnit$] = resolutionUnit;
+    this[stripOffsets$] = stripOffsets;
+    this[rowsPerStrip$] = rowsPerStrip;
+    this[stripByteCounts$] = stripByteCounts;
+    this[jpegInterchangeFormat$] = jpegInterchangeFormat;
+    this[jpegInterchangeFormatLength$] = jpegInterchangeFormatLength;
+    this[transferFunction$] = transferFunction;
+    this[whitePoint$] = whitePoint;
+    this[primaryChromaticities$] = primaryChromaticities;
+    this[ycbCrCoefficients$] = ycbCrCoefficients;
+    this[referenceBlackWhite$] = referenceBlackWhite;
+    this[dateTime$] = dateTime;
+    this[imageDescription$] = imageDescription;
+    this[artist$] = artist;
+    this[copyright$] = copyright;
+    this[exifVersion$] = exifVersion;
+    this[flashpixVersion$] = flashpixVersion;
+    this[colorSpace$] = colorSpace;
+    this[gamma$] = gamma;
+    this[pixelXDimension$] = pixelXDimension;
+    this[pixelYDimension$] = pixelYDimension;
+    this[componentsConfiguration$] = componentsConfiguration;
+    this[compressedBitsPerPixel$] = compressedBitsPerPixel;
+    this[userComment$] = userComment;
+    this[relatedSoundFile$] = relatedSoundFile;
+    this[dateTimeOriginal$] = dateTimeOriginal;
+    this[dateTimeDigitized$] = dateTimeDigitized;
+    this[subSecTime$] = subSecTime;
+    this[subSecTimeOriginal$] = subSecTimeOriginal;
+    this[subSecTimeDigitized$] = subSecTimeDigitized;
+    this[exposureTime$] = exposureTime;
+    this[fNumber$] = fNumber;
+    this[exposureProgram$] = exposureProgram;
+    this[spectralSensitivity$] = spectralSensitivity;
+    this[photographicSensitivity$] = photographicSensitivity;
+    this[oecf$] = oecf;
+    this[sensitivityType$] = sensitivityType;
+    this[standardOutputSensitivity$] = standardOutputSensitivity;
+    this[recommendedExposureIndex$] = recommendedExposureIndex;
+    this[isoSpeed$] = isoSpeed;
+    this[isoSpeedLatitudeyyy$] = isoSpeedLatitudeyyy;
+    this[isoSpeedLatitudezzz$] = isoSpeedLatitudezzz;
+    this[shutterSpeedValue$] = shutterSpeedValue;
+    this[apertureValue$] = apertureValue;
+    this[brightnessValue$] = brightnessValue;
+    this[exposureBiasValue$] = exposureBiasValue;
+    this[maxApertureValue$] = maxApertureValue;
+    this[subjectDistance$] = subjectDistance;
+    this[meteringMode$] = meteringMode;
+    this[lightSource$] = lightSource;
+    this[flash$] = flash;
+    this[subjectArea$] = subjectArea;
+    this[focalLength$] = focalLength;
+    this[flashEnergy$] = flashEnergy;
+    this[spatialFrequencyResponse$] = spatialFrequencyResponse;
+    this[focalPlaneXResolution$] = focalPlaneXResolution;
+    this[focalPlaneYResolution$] = focalPlaneYResolution;
+    this[focalPlaneResolutionUnit$] = focalPlaneResolutionUnit;
+    this[subjectLocation$] = subjectLocation;
+    this[exposureIndex$] = exposureIndex;
+    this[sensingMethod$] = sensingMethod;
+    this[fileSource$] = fileSource;
+    this[sceneType$] = sceneType;
+    this[cfaPattern$] = cfaPattern;
+    this[customRendered$] = customRendered;
+    this[exposureMode$] = exposureMode;
+    this[whiteBalance$] = whiteBalance;
+    this[digitalZoomRatio$] = digitalZoomRatio;
+    this[focalLengthIn35mmFilm$] = focalLengthIn35mmFilm;
+    this[sceneCaptureType$] = sceneCaptureType;
+    this[gainControl$] = gainControl;
+    this[contrast$] = contrast;
+    this[saturation$] = saturation;
+    this[sharpness$] = sharpness;
+    this[deviceSettingDescription$] = deviceSettingDescription;
+    this[subjectDistanceRange$] = subjectDistanceRange;
+    this[imageUniqueID$] = imageUniqueID;
+    ;
+  }).prototype = metadata.ExifMetadata.prototype;
+  (metadata.ExifMetadata.fromMap = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26, t0$27, t0$28, t0$29, t0$30, t0$31, t0$32, t0$33, t0$34, t0$35, t0$36, t0$37, t0$38, t0$39, t0$40, t0$41, t0$42, t0$43, t0$44, t0$45, t0$46, t0$47, t0$48, t0$49, t0$50, t0$51, t0$52, t0$53, t0$54, t0$55, t0$56, t0$57, t0$58, t0$59, t0$60, t0$61, t0$62, t0$63, t0$64, t0$65, t0$66, t0$67, t0$68, t0$69, t0$70, t0$71, t0$72, t0$73, t0$74, t0$75, t0$76, t0$77, t0$78, t0$79, t0$80, t0$81, t0$82, t0$83, t0$84, t0$85, t0$86;
+    if (json == null) dart.nullFailed(I[0], 545, 28, "json");
+    this[imageWidth$] = metadata._castAsDouble((t0 = json[$_get]("ImageWidth"), t0 == null ? null : t0));
+    this[imageLength$] = metadata._castAsDouble((t0$ = json[$_get]("ImageLength"), t0$ == null ? null : t0$));
+    this[bitsPerSample$] = metadata._castAsInt((t0$0 = json[$_get]("BitsPerSample"), t0$0 == null ? null : t0$0));
+    this[compression$] = metadata._castAsInt((t0$1 = json[$_get]("Compression"), t0$1 == null ? null : t0$1));
+    this[photometricInterpretation$] = metadata._castAsInt((t0$2 = json[$_get]("PhotometricInterpretation"), t0$2 == null ? null : t0$2));
+    this[orientation$] = metadata._castAsInt((t0$3 = json[$_get]("Orientation"), t0$3 == null ? null : t0$3));
+    this[samplesPerPixel$] = metadata._castAsInt((t0$4 = json[$_get]("SamplesPerPixel"), t0$4 == null ? null : t0$4));
+    this[planarConfiguration$] = metadata._castAsInt((t0$5 = json[$_get]("PlanarConfiguration"), t0$5 == null ? null : t0$5));
+    this[ycbCrSubSampling$] = metadata._castAsInt((t0$6 = json[$_get]("YCbCrSubSampling"), t0$6 == null ? null : t0$6));
+    this[ycbCrPositioning$] = metadata._castAsInt((t0$7 = json[$_get]("YCbCrPositioning"), t0$7 == null ? null : t0$7));
+    this[xResolution$] = metadata._castAsDouble((t0$8 = json[$_get]("XResolution"), t0$8 == null ? null : t0$8));
+    this[yResolution$] = metadata._castAsDouble((t0$9 = json[$_get]("YResolution"), t0$9 == null ? null : t0$9));
+    this[resolutionUnit$] = metadata._castAsInt((t0$10 = json[$_get]("ResolutionUnit"), t0$10 == null ? null : t0$10));
+    this[stripOffsets$] = metadata._castAsDouble((t0$11 = json[$_get]("StripOffsets"), t0$11 == null ? null : t0$11));
+    this[rowsPerStrip$] = metadata._castAsDouble((t0$12 = json[$_get]("RowsPerStrip"), t0$12 == null ? null : t0$12));
+    this[stripByteCounts$] = metadata._castAsDouble((t0$13 = json[$_get]("StripByteCounts"), t0$13 == null ? null : t0$13));
+    this[jpegInterchangeFormat$] = metadata._castAsDouble((t0$14 = json[$_get]("JPEGInterchangeFormat"), t0$14 == null ? null : t0$14));
+    this[jpegInterchangeFormatLength$] = metadata._castAsDouble((t0$15 = json[$_get]("JPEGInterchangeFormatLength"), t0$15 == null ? null : t0$15));
+    this[transferFunction$] = metadata._castAsInt((t0$16 = json[$_get]("TransferFunction"), t0$16 == null ? null : t0$16));
+    this[whitePoint$] = metadata._castAsDouble((t0$17 = json[$_get]("WhitePoint"), t0$17 == null ? null : t0$17));
+    this[primaryChromaticities$] = metadata._castAsDouble((t0$18 = json[$_get]("PrimaryChromaticities"), t0$18 == null ? null : t0$18));
+    this[ycbCrCoefficients$] = metadata._castAsDouble((t0$19 = json[$_get]("YCbCrCoefficients"), t0$19 == null ? null : t0$19));
+    this[referenceBlackWhite$] = metadata._castAsDouble((t0$20 = json[$_get]("ReferenceBlackWhite"), t0$20 == null ? null : t0$20));
+    this[dateTime$] = metadata._castAsString((t0$21 = json[$_get]("DateTime"), t0$21 == null ? null : t0$21));
+    this[imageDescription$] = metadata._castAsString((t0$22 = json[$_get]("ImageDescription"), t0$22 == null ? null : t0$22));
+    this[artist$] = metadata._castAsString((t0$23 = json[$_get]("Artist"), t0$23 == null ? null : t0$23));
+    this[copyright$] = metadata._castAsString((t0$24 = json[$_get]("Copyright"), t0$24 == null ? null : t0$24));
+    this[exifVersion$] = metadata._castAsString((t0$25 = json[$_get]("ExifVersion"), t0$25 == null ? null : t0$25));
+    this[flashpixVersion$] = metadata._castAsString((t0$26 = json[$_get]("FlashpixVersion"), t0$26 == null ? null : t0$26));
+    this[colorSpace$] = metadata._castAsInt((t0$27 = json[$_get]("ColorSpace"), t0$27 == null ? null : t0$27));
+    this[gamma$] = metadata._castAsDouble((t0$28 = json[$_get]("Gamma"), t0$28 == null ? null : t0$28));
+    this[pixelXDimension$] = metadata._castAsDouble((t0$29 = json[$_get]("PixelXDimension"), t0$29 == null ? null : t0$29));
+    this[pixelYDimension$] = metadata._castAsDouble((t0$30 = json[$_get]("PixelYDimension"), t0$30 == null ? null : t0$30));
+    this[componentsConfiguration$] = metadata._castAsString((t0$31 = json[$_get]("ComponentsConfiguration"), t0$31 == null ? null : t0$31));
+    this[compressedBitsPerPixel$] = metadata._castAsDouble((t0$32 = json[$_get]("CompressedBitsPerPixel"), t0$32 == null ? null : t0$32));
+    this[userComment$] = metadata._castAsString((t0$33 = json[$_get]("UserComment"), t0$33 == null ? null : t0$33));
+    this[relatedSoundFile$] = metadata._castAsString((t0$34 = json[$_get]("RelatedSoundFile"), t0$34 == null ? null : t0$34));
+    this[dateTimeOriginal$] = metadata._castAsString((t0$35 = json[$_get]("DateTimeOriginal"), t0$35 == null ? null : t0$35));
+    this[dateTimeDigitized$] = metadata._castAsString((t0$36 = json[$_get]("DateTimeDigitized"), t0$36 == null ? null : t0$36));
+    this[subSecTime$] = metadata._castAsString((t0$37 = json[$_get]("SubSecTime"), t0$37 == null ? null : t0$37));
+    this[subSecTimeOriginal$] = metadata._castAsString((t0$38 = json[$_get]("SubSecTimeOriginal"), t0$38 == null ? null : t0$38));
+    this[subSecTimeDigitized$] = metadata._castAsString((t0$39 = json[$_get]("SubSecTimeDigitized"), t0$39 == null ? null : t0$39));
+    this[exposureTime$] = metadata._castAsDouble((t0$40 = json[$_get]("ExposureTime"), t0$40 == null ? null : t0$40));
+    this[fNumber$] = metadata._castAsDouble((t0$41 = json[$_get]("FNumber"), t0$41 == null ? null : t0$41));
+    this[exposureProgram$] = metadata._castAsInt((t0$42 = json[$_get]("ExposureProgram"), t0$42 == null ? null : t0$42));
+    this[spectralSensitivity$] = metadata._castAsString((t0$43 = json[$_get]("SpectralSensitivity"), t0$43 == null ? null : t0$43));
+    this[photographicSensitivity$] = metadata._castAsInt((t0$44 = json[$_get]("PhotographicSensitivity"), t0$44 == null ? null : t0$44));
+    this[oecf$] = metadata._castAsString((t0$45 = json[$_get]("OECF"), t0$45 == null ? null : t0$45));
+    this[sensitivityType$] = metadata._castAsInt((t0$46 = json[$_get]("SensitivityType"), t0$46 == null ? null : t0$46));
+    this[standardOutputSensitivity$] = metadata._castAsDouble((t0$47 = json[$_get]("StandardOutputSensitivity"), t0$47 == null ? null : t0$47));
+    this[recommendedExposureIndex$] = metadata._castAsDouble((t0$48 = json[$_get]("RecommendedExposureIndex"), t0$48 == null ? null : t0$48));
+    this[isoSpeed$] = metadata._castAsDouble((t0$49 = json[$_get]("ISOSpeed"), t0$49 == null ? null : t0$49));
+    this[isoSpeedLatitudeyyy$] = metadata._castAsDouble((t0$50 = json[$_get]("ISOSpeedLatitudeyyy"), t0$50 == null ? null : t0$50));
+    this[isoSpeedLatitudezzz$] = metadata._castAsDouble((t0$51 = json[$_get]("ISOSpeedLatitudezzz"), t0$51 == null ? null : t0$51));
+    this[shutterSpeedValue$] = metadata._castAsDouble((t0$52 = json[$_get]("ShutterSpeedValue"), t0$52 == null ? null : t0$52));
+    this[apertureValue$] = metadata._castAsDouble((t0$53 = json[$_get]("ApertureValue"), t0$53 == null ? null : t0$53));
+    this[brightnessValue$] = metadata._castAsDouble((t0$54 = json[$_get]("BrightnessValue"), t0$54 == null ? null : t0$54));
+    this[exposureBiasValue$] = metadata._castAsDouble((t0$55 = json[$_get]("ExposureBiasValue"), t0$55 == null ? null : t0$55));
+    this[maxApertureValue$] = metadata._castAsDouble((t0$56 = json[$_get]("MaxApertureValue"), t0$56 == null ? null : t0$56));
+    this[subjectDistance$] = metadata._castAsDouble((t0$57 = json[$_get]("SubjectDistance"), t0$57 == null ? null : t0$57));
+    this[meteringMode$] = metadata._castAsInt((t0$58 = json[$_get]("MeteringMode"), t0$58 == null ? null : t0$58));
+    this[lightSource$] = metadata._castAsInt((t0$59 = json[$_get]("LightSource"), t0$59 == null ? null : t0$59));
+    this[flash$] = metadata._castAsInt((t0$60 = json[$_get]("Flash"), t0$60 == null ? null : t0$60));
+    this[subjectArea$] = metadata._castAsIntMap(T.ListN().as((t0$61 = json[$_get]("SubjectArea"), t0$61 == null ? null : t0$61)));
+    this[focalLength$] = metadata._castAsDouble((t0$62 = json[$_get]("FocalLength"), t0$62 == null ? null : t0$62));
+    this[flashEnergy$] = metadata._castAsDouble((t0$63 = json[$_get]("FlashEnergy"), t0$63 == null ? null : t0$63));
+    this[spatialFrequencyResponse$] = metadata._castAsString((t0$64 = json[$_get]("SpatialFrequencyResponse"), t0$64 == null ? null : t0$64));
+    this[focalPlaneXResolution$] = metadata._castAsDouble((t0$65 = json[$_get]("FocalPlaneXResolution"), t0$65 == null ? null : t0$65));
+    this[focalPlaneYResolution$] = metadata._castAsDouble((t0$66 = json[$_get]("FocalPlaneYResolution"), t0$66 == null ? null : t0$66));
+    this[focalPlaneResolutionUnit$] = metadata._castAsInt((t0$67 = json[$_get]("FocalPlaneResolutionUnit"), t0$67 == null ? null : t0$67));
+    this[subjectLocation$] = metadata._castAsInt((t0$68 = json[$_get]("SubjectLocation"), t0$68 == null ? null : t0$68));
+    this[exposureIndex$] = metadata._castAsDouble((t0$69 = json[$_get]("ExposureIndex"), t0$69 == null ? null : t0$69));
+    this[sensingMethod$] = metadata._castAsInt((t0$70 = json[$_get]("SensingMethod"), t0$70 == null ? null : t0$70));
+    this[fileSource$] = metadata._castAsString((t0$71 = json[$_get]("FileSource"), t0$71 == null ? null : t0$71));
+    this[sceneType$] = metadata._castAsString((t0$72 = json[$_get]("SceneType"), t0$72 == null ? null : t0$72));
+    this[cfaPattern$] = metadata._castAsString((t0$73 = json[$_get]("CFAPattern"), t0$73 == null ? null : t0$73));
+    this[customRendered$] = metadata._castAsInt((t0$74 = json[$_get]("CustomRendered"), t0$74 == null ? null : t0$74));
+    this[exposureMode$] = metadata._castAsInt((t0$75 = json[$_get]("ExposureMode"), t0$75 == null ? null : t0$75));
+    this[whiteBalance$] = metadata._castAsInt((t0$76 = json[$_get]("WhiteBalance"), t0$76 == null ? null : t0$76));
+    this[digitalZoomRatio$] = metadata._castAsDouble((t0$77 = json[$_get]("DigitalZoomRatio"), t0$77 == null ? null : t0$77));
+    this[focalLengthIn35mmFilm$] = metadata._castAsInt((t0$78 = json[$_get]("FocalLengthIn35mmFilm"), t0$78 == null ? null : t0$78));
+    this[sceneCaptureType$] = metadata._castAsInt((t0$79 = json[$_get]("SceneCaptureType"), t0$79 == null ? null : t0$79));
+    this[gainControl$] = metadata._castAsInt((t0$80 = json[$_get]("GainControl"), t0$80 == null ? null : t0$80));
+    this[contrast$] = metadata._castAsInt((t0$81 = json[$_get]("Contrast"), t0$81 == null ? null : t0$81));
+    this[saturation$] = metadata._castAsInt((t0$82 = json[$_get]("Saturation"), t0$82 == null ? null : t0$82));
+    this[sharpness$] = metadata._castAsInt((t0$83 = json[$_get]("Sharpness"), t0$83 == null ? null : t0$83));
+    this[deviceSettingDescription$] = metadata._castAsString((t0$84 = json[$_get]("DeviceSettingDescription"), t0$84 == null ? null : t0$84));
+    this[subjectDistanceRange$] = metadata._castAsInt((t0$85 = json[$_get]("SubjectDistanceRange"), t0$85 == null ? null : t0$85));
+    this[imageUniqueID$] = metadata._castAsString((t0$86 = json[$_get]("ImageUniqueID"), t0$86 == null ? null : t0$86));
+    ;
+  }).prototype = metadata.ExifMetadata.prototype;
+  dart.addTypeTests(metadata.ExifMetadata);
+  dart.addTypeCaches(metadata.ExifMetadata);
+  dart.setLibraryUri(metadata.ExifMetadata, I[1]);
+  dart.setFieldSignature(metadata.ExifMetadata, () => ({
+    __proto__: dart.getFields(metadata.ExifMetadata.__proto__),
+    imageWidth: dart.finalFieldType(dart.nullable(core.double)),
+    imageLength: dart.finalFieldType(dart.nullable(core.double)),
+    bitsPerSample: dart.finalFieldType(dart.nullable(core.int)),
+    compression: dart.finalFieldType(dart.nullable(core.int)),
+    photometricInterpretation: dart.finalFieldType(dart.nullable(core.int)),
+    orientation: dart.finalFieldType(dart.nullable(core.int)),
+    samplesPerPixel: dart.finalFieldType(dart.nullable(core.int)),
+    planarConfiguration: dart.finalFieldType(dart.nullable(core.int)),
+    ycbCrSubSampling: dart.finalFieldType(dart.nullable(core.int)),
+    ycbCrPositioning: dart.finalFieldType(dart.nullable(core.int)),
+    xResolution: dart.finalFieldType(dart.nullable(core.double)),
+    yResolution: dart.finalFieldType(dart.nullable(core.double)),
+    resolutionUnit: dart.finalFieldType(dart.nullable(core.int)),
+    stripOffsets: dart.finalFieldType(dart.nullable(core.double)),
+    rowsPerStrip: dart.finalFieldType(dart.nullable(core.double)),
+    stripByteCounts: dart.finalFieldType(dart.nullable(core.double)),
+    jpegInterchangeFormat: dart.finalFieldType(dart.nullable(core.double)),
+    jpegInterchangeFormatLength: dart.finalFieldType(dart.nullable(core.double)),
+    transferFunction: dart.finalFieldType(dart.nullable(core.int)),
+    whitePoint: dart.finalFieldType(dart.nullable(core.double)),
+    primaryChromaticities: dart.finalFieldType(dart.nullable(core.double)),
+    ycbCrCoefficients: dart.finalFieldType(dart.nullable(core.double)),
+    referenceBlackWhite: dart.finalFieldType(dart.nullable(core.double)),
+    dateTime: dart.finalFieldType(dart.nullable(core.String)),
+    imageDescription: dart.finalFieldType(dart.nullable(core.String)),
+    artist: dart.finalFieldType(dart.nullable(core.String)),
+    copyright: dart.finalFieldType(dart.nullable(core.String)),
+    exifVersion: dart.finalFieldType(dart.nullable(core.String)),
+    flashpixVersion: dart.finalFieldType(dart.nullable(core.String)),
+    colorSpace: dart.finalFieldType(dart.nullable(core.int)),
+    gamma: dart.finalFieldType(dart.nullable(core.double)),
+    pixelXDimension: dart.finalFieldType(dart.nullable(core.double)),
+    pixelYDimension: dart.finalFieldType(dart.nullable(core.double)),
+    componentsConfiguration: dart.finalFieldType(dart.nullable(core.String)),
+    compressedBitsPerPixel: dart.finalFieldType(dart.nullable(core.double)),
+    userComment: dart.finalFieldType(dart.nullable(core.String)),
+    relatedSoundFile: dart.finalFieldType(dart.nullable(core.String)),
+    dateTimeOriginal: dart.finalFieldType(dart.nullable(core.String)),
+    dateTimeDigitized: dart.finalFieldType(dart.nullable(core.String)),
+    subSecTime: dart.finalFieldType(dart.nullable(core.String)),
+    subSecTimeOriginal: dart.finalFieldType(dart.nullable(core.String)),
+    subSecTimeDigitized: dart.finalFieldType(dart.nullable(core.String)),
+    exposureTime: dart.finalFieldType(dart.nullable(core.double)),
+    fNumber: dart.finalFieldType(dart.nullable(core.double)),
+    exposureProgram: dart.finalFieldType(dart.nullable(core.int)),
+    spectralSensitivity: dart.finalFieldType(dart.nullable(core.String)),
+    photographicSensitivity: dart.finalFieldType(dart.nullable(core.int)),
+    oecf: dart.finalFieldType(dart.nullable(core.String)),
+    sensitivityType: dart.finalFieldType(dart.nullable(core.int)),
+    standardOutputSensitivity: dart.finalFieldType(dart.nullable(core.double)),
+    recommendedExposureIndex: dart.finalFieldType(dart.nullable(core.double)),
+    isoSpeed: dart.finalFieldType(dart.nullable(core.double)),
+    isoSpeedLatitudeyyy: dart.finalFieldType(dart.nullable(core.double)),
+    isoSpeedLatitudezzz: dart.finalFieldType(dart.nullable(core.double)),
+    shutterSpeedValue: dart.finalFieldType(dart.nullable(core.double)),
+    apertureValue: dart.finalFieldType(dart.nullable(core.double)),
+    brightnessValue: dart.finalFieldType(dart.nullable(core.double)),
+    exposureBiasValue: dart.finalFieldType(dart.nullable(core.double)),
+    maxApertureValue: dart.finalFieldType(dart.nullable(core.double)),
+    subjectDistance: dart.finalFieldType(dart.nullable(core.double)),
+    meteringMode: dart.finalFieldType(dart.nullable(core.int)),
+    lightSource: dart.finalFieldType(dart.nullable(core.int)),
+    flash: dart.finalFieldType(dart.nullable(core.int)),
+    subjectArea: dart.finalFieldType(dart.nullable(core.List$(dart.nullable(core.int)))),
+    focalLength: dart.finalFieldType(dart.nullable(core.double)),
+    flashEnergy: dart.finalFieldType(dart.nullable(core.double)),
+    spatialFrequencyResponse: dart.finalFieldType(dart.nullable(core.String)),
+    focalPlaneXResolution: dart.finalFieldType(dart.nullable(core.double)),
+    focalPlaneYResolution: dart.finalFieldType(dart.nullable(core.double)),
+    focalPlaneResolutionUnit: dart.finalFieldType(dart.nullable(core.int)),
+    subjectLocation: dart.finalFieldType(dart.nullable(core.int)),
+    exposureIndex: dart.finalFieldType(dart.nullable(core.double)),
+    sensingMethod: dart.finalFieldType(dart.nullable(core.int)),
+    fileSource: dart.finalFieldType(dart.nullable(core.String)),
+    sceneType: dart.finalFieldType(dart.nullable(core.String)),
+    cfaPattern: dart.finalFieldType(dart.nullable(core.String)),
+    customRendered: dart.finalFieldType(dart.nullable(core.int)),
+    exposureMode: dart.finalFieldType(dart.nullable(core.int)),
+    whiteBalance: dart.finalFieldType(dart.nullable(core.int)),
+    digitalZoomRatio: dart.finalFieldType(dart.nullable(core.double)),
+    focalLengthIn35mmFilm: dart.finalFieldType(dart.nullable(core.int)),
+    sceneCaptureType: dart.finalFieldType(dart.nullable(core.int)),
+    gainControl: dart.finalFieldType(dart.nullable(core.int)),
+    contrast: dart.finalFieldType(dart.nullable(core.int)),
+    saturation: dart.finalFieldType(dart.nullable(core.int)),
+    sharpness: dart.finalFieldType(dart.nullable(core.int)),
+    deviceSettingDescription: dart.finalFieldType(dart.nullable(core.String)),
+    subjectDistanceRange: dart.finalFieldType(dart.nullable(core.int)),
+    imageUniqueID: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  var gpsVersionID$ = dart.privateName(metadata, "GpsMetadata.gpsVersionID");
+  var gpsLatitudeRef$ = dart.privateName(metadata, "GpsMetadata.gpsLatitudeRef");
+  var gpsLatitude$ = dart.privateName(metadata, "GpsMetadata.gpsLatitude");
+  var gpsLongitudeRef$ = dart.privateName(metadata, "GpsMetadata.gpsLongitudeRef");
+  var gpsLongitude$ = dart.privateName(metadata, "GpsMetadata.gpsLongitude");
+  var gpsAltitudeRef$ = dart.privateName(metadata, "GpsMetadata.gpsAltitudeRef");
+  var gpsAltitude$ = dart.privateName(metadata, "GpsMetadata.gpsAltitude");
+  var gpsTimeStamp$ = dart.privateName(metadata, "GpsMetadata.gpsTimeStamp");
+  var gpsSatellites$ = dart.privateName(metadata, "GpsMetadata.gpsSatellites");
+  var gpsStatus$ = dart.privateName(metadata, "GpsMetadata.gpsStatus");
+  var gpsMeasureMode$ = dart.privateName(metadata, "GpsMetadata.gpsMeasureMode");
+  var gpsDOP$ = dart.privateName(metadata, "GpsMetadata.gpsDOP");
+  var gpsSpeedRef$ = dart.privateName(metadata, "GpsMetadata.gpsSpeedRef");
+  var gpsSpeed$ = dart.privateName(metadata, "GpsMetadata.gpsSpeed");
+  var gpsTrackRef$ = dart.privateName(metadata, "GpsMetadata.gpsTrackRef");
+  var gpsTrack$ = dart.privateName(metadata, "GpsMetadata.gpsTrack");
+  var gpsImgDirectionRef$ = dart.privateName(metadata, "GpsMetadata.gpsImgDirectionRef");
+  var gpsImgDirection$ = dart.privateName(metadata, "GpsMetadata.gpsImgDirection");
+  var gpsMapDatum$ = dart.privateName(metadata, "GpsMetadata.gpsMapDatum");
+  var gpsDestLatitudeRef$ = dart.privateName(metadata, "GpsMetadata.gpsDestLatitudeRef");
+  var gpsDestLatitude$ = dart.privateName(metadata, "GpsMetadata.gpsDestLatitude");
+  var gpsDestLongitudeRef$ = dart.privateName(metadata, "GpsMetadata.gpsDestLongitudeRef");
+  var gpsDestLongitude$ = dart.privateName(metadata, "GpsMetadata.gpsDestLongitude");
+  var gpsDestBearingRef$ = dart.privateName(metadata, "GpsMetadata.gpsDestBearingRef");
+  var gpsDestBearing$ = dart.privateName(metadata, "GpsMetadata.gpsDestBearing");
+  var gpsDestDistanceRef$ = dart.privateName(metadata, "GpsMetadata.gpsDestDistanceRef");
+  var gpsDestDistance$ = dart.privateName(metadata, "GpsMetadata.gpsDestDistance");
+  var gpsProcessingMethod$ = dart.privateName(metadata, "GpsMetadata.gpsProcessingMethod");
+  var gpsAreaInformation$ = dart.privateName(metadata, "GpsMetadata.gpsAreaInformation");
+  var gpsDateStamp$ = dart.privateName(metadata, "GpsMetadata.gpsDateStamp");
+  var gpsDifferential$ = dart.privateName(metadata, "GpsMetadata.gpsDifferential");
+  var gpsHPositioningError$ = dart.privateName(metadata, "GpsMetadata.gpsHPositioningError");
+  var interoperabilityIndex$ = dart.privateName(metadata, "GpsMetadata.interoperabilityIndex");
+  metadata.GpsMetadata = class GpsMetadata extends core.Object {
+    get gpsVersionID() {
+      return this[gpsVersionID$];
+    }
+    set gpsVersionID(value) {
+      super.gpsVersionID = value;
+    }
+    get gpsLatitudeRef() {
+      return this[gpsLatitudeRef$];
+    }
+    set gpsLatitudeRef(value) {
+      super.gpsLatitudeRef = value;
+    }
+    get gpsLatitude() {
+      return this[gpsLatitude$];
+    }
+    set gpsLatitude(value) {
+      super.gpsLatitude = value;
+    }
+    get gpsLongitudeRef() {
+      return this[gpsLongitudeRef$];
+    }
+    set gpsLongitudeRef(value) {
+      super.gpsLongitudeRef = value;
+    }
+    get gpsLongitude() {
+      return this[gpsLongitude$];
+    }
+    set gpsLongitude(value) {
+      super.gpsLongitude = value;
+    }
+    get gpsAltitudeRef() {
+      return this[gpsAltitudeRef$];
+    }
+    set gpsAltitudeRef(value) {
+      super.gpsAltitudeRef = value;
+    }
+    get gpsAltitude() {
+      return this[gpsAltitude$];
+    }
+    set gpsAltitude(value) {
+      super.gpsAltitude = value;
+    }
+    get gpsTimeStamp() {
+      return this[gpsTimeStamp$];
+    }
+    set gpsTimeStamp(value) {
+      super.gpsTimeStamp = value;
+    }
+    get gpsSatellites() {
+      return this[gpsSatellites$];
+    }
+    set gpsSatellites(value) {
+      super.gpsSatellites = value;
+    }
+    get gpsStatus() {
+      return this[gpsStatus$];
+    }
+    set gpsStatus(value) {
+      super.gpsStatus = value;
+    }
+    get gpsMeasureMode() {
+      return this[gpsMeasureMode$];
+    }
+    set gpsMeasureMode(value) {
+      super.gpsMeasureMode = value;
+    }
+    get gpsDOP() {
+      return this[gpsDOP$];
+    }
+    set gpsDOP(value) {
+      super.gpsDOP = value;
+    }
+    get gpsSpeedRef() {
+      return this[gpsSpeedRef$];
+    }
+    set gpsSpeedRef(value) {
+      super.gpsSpeedRef = value;
+    }
+    get gpsSpeed() {
+      return this[gpsSpeed$];
+    }
+    set gpsSpeed(value) {
+      super.gpsSpeed = value;
+    }
+    get gpsTrackRef() {
+      return this[gpsTrackRef$];
+    }
+    set gpsTrackRef(value) {
+      super.gpsTrackRef = value;
+    }
+    get gpsTrack() {
+      return this[gpsTrack$];
+    }
+    set gpsTrack(value) {
+      super.gpsTrack = value;
+    }
+    get gpsImgDirectionRef() {
+      return this[gpsImgDirectionRef$];
+    }
+    set gpsImgDirectionRef(value) {
+      super.gpsImgDirectionRef = value;
+    }
+    get gpsImgDirection() {
+      return this[gpsImgDirection$];
+    }
+    set gpsImgDirection(value) {
+      super.gpsImgDirection = value;
+    }
+    get gpsMapDatum() {
+      return this[gpsMapDatum$];
+    }
+    set gpsMapDatum(value) {
+      super.gpsMapDatum = value;
+    }
+    get gpsDestLatitudeRef() {
+      return this[gpsDestLatitudeRef$];
+    }
+    set gpsDestLatitudeRef(value) {
+      super.gpsDestLatitudeRef = value;
+    }
+    get gpsDestLatitude() {
+      return this[gpsDestLatitude$];
+    }
+    set gpsDestLatitude(value) {
+      super.gpsDestLatitude = value;
+    }
+    get gpsDestLongitudeRef() {
+      return this[gpsDestLongitudeRef$];
+    }
+    set gpsDestLongitudeRef(value) {
+      super.gpsDestLongitudeRef = value;
+    }
+    get gpsDestLongitude() {
+      return this[gpsDestLongitude$];
+    }
+    set gpsDestLongitude(value) {
+      super.gpsDestLongitude = value;
+    }
+    get gpsDestBearingRef() {
+      return this[gpsDestBearingRef$];
+    }
+    set gpsDestBearingRef(value) {
+      super.gpsDestBearingRef = value;
+    }
+    get gpsDestBearing() {
+      return this[gpsDestBearing$];
+    }
+    set gpsDestBearing(value) {
+      super.gpsDestBearing = value;
+    }
+    get gpsDestDistanceRef() {
+      return this[gpsDestDistanceRef$];
+    }
+    set gpsDestDistanceRef(value) {
+      super.gpsDestDistanceRef = value;
+    }
+    get gpsDestDistance() {
+      return this[gpsDestDistance$];
+    }
+    set gpsDestDistance(value) {
+      super.gpsDestDistance = value;
+    }
+    get gpsProcessingMethod() {
+      return this[gpsProcessingMethod$];
+    }
+    set gpsProcessingMethod(value) {
+      super.gpsProcessingMethod = value;
+    }
+    get gpsAreaInformation() {
+      return this[gpsAreaInformation$];
+    }
+    set gpsAreaInformation(value) {
+      super.gpsAreaInformation = value;
+    }
+    get gpsDateStamp() {
+      return this[gpsDateStamp$];
+    }
+    set gpsDateStamp(value) {
+      super.gpsDateStamp = value;
+    }
+    get gpsDifferential() {
+      return this[gpsDifferential$];
+    }
+    set gpsDifferential(value) {
+      super.gpsDifferential = value;
+    }
+    get gpsHPositioningError() {
+      return this[gpsHPositioningError$];
+    }
+    set gpsHPositioningError(value) {
+      super.gpsHPositioningError = value;
+    }
+    get interoperabilityIndex() {
+      return this[interoperabilityIndex$];
+    }
+    set interoperabilityIndex(value) {
+      super.interoperabilityIndex = value;
+    }
+  };
+  (metadata.GpsMetadata.new = function(gpsVersionID, gpsLatitudeRef, gpsLatitude, gpsLongitudeRef, gpsLongitude, gpsAltitudeRef, gpsAltitude, gpsTimeStamp, gpsSatellites, gpsStatus, gpsMeasureMode, gpsDOP, gpsSpeedRef, gpsSpeed, gpsTrackRef, gpsTrack, gpsImgDirectionRef, gpsImgDirection, gpsMapDatum, gpsDestLatitudeRef, gpsDestLatitude, gpsDestLongitudeRef, gpsDestLongitude, gpsDestBearingRef, gpsDestBearing, gpsDestDistanceRef, gpsDestDistance, gpsProcessingMethod, gpsAreaInformation, gpsDateStamp, gpsDifferential, gpsHPositioningError, interoperabilityIndex) {
+    this[gpsVersionID$] = gpsVersionID;
+    this[gpsLatitudeRef$] = gpsLatitudeRef;
+    this[gpsLatitude$] = gpsLatitude;
+    this[gpsLongitudeRef$] = gpsLongitudeRef;
+    this[gpsLongitude$] = gpsLongitude;
+    this[gpsAltitudeRef$] = gpsAltitudeRef;
+    this[gpsAltitude$] = gpsAltitude;
+    this[gpsTimeStamp$] = gpsTimeStamp;
+    this[gpsSatellites$] = gpsSatellites;
+    this[gpsStatus$] = gpsStatus;
+    this[gpsMeasureMode$] = gpsMeasureMode;
+    this[gpsDOP$] = gpsDOP;
+    this[gpsSpeedRef$] = gpsSpeedRef;
+    this[gpsSpeed$] = gpsSpeed;
+    this[gpsTrackRef$] = gpsTrackRef;
+    this[gpsTrack$] = gpsTrack;
+    this[gpsImgDirectionRef$] = gpsImgDirectionRef;
+    this[gpsImgDirection$] = gpsImgDirection;
+    this[gpsMapDatum$] = gpsMapDatum;
+    this[gpsDestLatitudeRef$] = gpsDestLatitudeRef;
+    this[gpsDestLatitude$] = gpsDestLatitude;
+    this[gpsDestLongitudeRef$] = gpsDestLongitudeRef;
+    this[gpsDestLongitude$] = gpsDestLongitude;
+    this[gpsDestBearingRef$] = gpsDestBearingRef;
+    this[gpsDestBearing$] = gpsDestBearing;
+    this[gpsDestDistanceRef$] = gpsDestDistanceRef;
+    this[gpsDestDistance$] = gpsDestDistance;
+    this[gpsProcessingMethod$] = gpsProcessingMethod;
+    this[gpsAreaInformation$] = gpsAreaInformation;
+    this[gpsDateStamp$] = gpsDateStamp;
+    this[gpsDifferential$] = gpsDifferential;
+    this[gpsHPositioningError$] = gpsHPositioningError;
+    this[interoperabilityIndex$] = interoperabilityIndex;
+    ;
+  }).prototype = metadata.GpsMetadata.prototype;
+  (metadata.GpsMetadata.fromMap = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26, t0$27, t0$28, t0$29, t0$30;
+    if (json == null) dart.nullFailed(I[0], 831, 27, "json");
+    this[gpsVersionID$] = metadata._castAsString((t0 = json[$_get]("GPSVersionID"), t0 == null ? null : t0));
+    this[gpsLatitudeRef$] = metadata._castAsString((t0$ = json[$_get]("GPSLatitudeRef"), t0$ == null ? null : t0$));
+    this[gpsLatitude$] = metadata._castAsDouble((t0$0 = json[$_get]("GPSLatitude"), t0$0 == null ? null : t0$0));
+    this[gpsLongitudeRef$] = metadata._castAsString((t0$1 = json[$_get]("GPSLongitudeRef"), t0$1 == null ? null : t0$1));
+    this[gpsLongitude$] = metadata._castAsDouble((t0$2 = json[$_get]("GPSLongitude"), t0$2 == null ? null : t0$2));
+    this[gpsAltitudeRef$] = metadata._castAsString((t0$3 = json[$_get]("GPSAltitudeRef"), t0$3 == null ? null : t0$3));
+    this[gpsAltitude$] = metadata._castAsDouble((t0$4 = json[$_get]("GPSAltitude"), t0$4 == null ? null : t0$4));
+    this[gpsTimeStamp$] = metadata._castAsString((t0$5 = json[$_get]("GPSTimeStamp"), t0$5 == null ? null : t0$5));
+    this[gpsSatellites$] = metadata._castAsString((t0$6 = json[$_get]("GPSSatellites"), t0$6 == null ? null : t0$6));
+    this[gpsStatus$] = metadata._castAsString((t0$7 = json[$_get]("GPSStatus"), t0$7 == null ? null : t0$7));
+    this[gpsMeasureMode$] = metadata._castAsString((t0$8 = json[$_get]("GPSMeasureMode"), t0$8 == null ? null : t0$8));
+    this[gpsDOP$] = metadata._castAsDouble((t0$9 = json[$_get]("GPSDOP"), t0$9 == null ? null : t0$9));
+    this[gpsSpeedRef$] = metadata._castAsString((t0$10 = json[$_get]("GPSSpeedRef"), t0$10 == null ? null : t0$10));
+    this[gpsSpeed$] = metadata._castAsDouble((t0$11 = json[$_get]("GPSSpeed"), t0$11 == null ? null : t0$11));
+    this[gpsTrackRef$] = metadata._castAsString((t0$12 = json[$_get]("GPSTrackRef"), t0$12 == null ? null : t0$12));
+    this[gpsTrack$] = metadata._castAsDouble((t0$13 = json[$_get]("GPSTrack"), t0$13 == null ? null : t0$13));
+    this[gpsImgDirectionRef$] = metadata._castAsString((t0$14 = json[$_get]("GPSImgDirectionRef"), t0$14 == null ? null : t0$14));
+    this[gpsImgDirection$] = metadata._castAsString((t0$15 = json[$_get]("GPSImgDirection"), t0$15 == null ? null : t0$15));
+    this[gpsMapDatum$] = metadata._castAsString((t0$16 = json[$_get]("GPSMapDatum"), t0$16 == null ? null : t0$16));
+    this[gpsDestLatitudeRef$] = metadata._castAsString((t0$17 = json[$_get]("GPSDestLatitudeRef"), t0$17 == null ? null : t0$17));
+    this[gpsDestLatitude$] = metadata._castAsDouble((t0$18 = json[$_get]("GPSDestLatitude"), t0$18 == null ? null : t0$18));
+    this[gpsDestLongitudeRef$] = metadata._castAsString((t0$19 = json[$_get]("GPSDestLongitudeRef"), t0$19 == null ? null : t0$19));
+    this[gpsDestLongitude$] = metadata._castAsDouble((t0$20 = json[$_get]("GPSDestLongitude"), t0$20 == null ? null : t0$20));
+    this[gpsDestBearingRef$] = metadata._castAsString((t0$21 = json[$_get]("GPSDestBearingRef"), t0$21 == null ? null : t0$21));
+    this[gpsDestBearing$] = metadata._castAsDouble((t0$22 = json[$_get]("GPSDestBearing"), t0$22 == null ? null : t0$22));
+    this[gpsDestDistanceRef$] = metadata._castAsString((t0$23 = json[$_get]("GPSDestDistanceRef"), t0$23 == null ? null : t0$23));
+    this[gpsDestDistance$] = metadata._castAsDouble((t0$24 = json[$_get]("GPSDestDistance"), t0$24 == null ? null : t0$24));
+    this[gpsProcessingMethod$] = metadata._castAsString((t0$25 = json[$_get]("GPSProcessingMethod"), t0$25 == null ? null : t0$25));
+    this[gpsAreaInformation$] = metadata._castAsString((t0$26 = json[$_get]("GPSAreaInformation"), t0$26 == null ? null : t0$26));
+    this[gpsDateStamp$] = metadata._castAsString((t0$27 = json[$_get]("GPSDateStamp"), t0$27 == null ? null : t0$27));
+    this[gpsDifferential$] = metadata._castAsInt((t0$28 = json[$_get]("GPSDifferential"), t0$28 == null ? null : t0$28));
+    this[gpsHPositioningError$] = metadata._castAsDouble((t0$29 = json[$_get]("GPSHPositioningError"), t0$29 == null ? null : t0$29));
+    this[interoperabilityIndex$] = metadata._castAsString((t0$30 = json[$_get]("InteroperabilityIndex"), t0$30 == null ? null : t0$30));
+    ;
+  }).prototype = metadata.GpsMetadata.prototype;
+  dart.addTypeTests(metadata.GpsMetadata);
+  dart.addTypeCaches(metadata.GpsMetadata);
+  dart.setLibraryUri(metadata.GpsMetadata, I[1]);
+  dart.setFieldSignature(metadata.GpsMetadata, () => ({
+    __proto__: dart.getFields(metadata.GpsMetadata.__proto__),
+    gpsVersionID: dart.finalFieldType(dart.nullable(core.String)),
+    gpsLatitudeRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsLatitude: dart.finalFieldType(dart.nullable(core.double)),
+    gpsLongitudeRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsLongitude: dart.finalFieldType(dart.nullable(core.double)),
+    gpsAltitudeRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsAltitude: dart.finalFieldType(dart.nullable(core.double)),
+    gpsTimeStamp: dart.finalFieldType(dart.nullable(core.String)),
+    gpsSatellites: dart.finalFieldType(dart.nullable(core.String)),
+    gpsStatus: dart.finalFieldType(dart.nullable(core.String)),
+    gpsMeasureMode: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDOP: dart.finalFieldType(dart.nullable(core.double)),
+    gpsSpeedRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsSpeed: dart.finalFieldType(dart.nullable(core.double)),
+    gpsTrackRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsTrack: dart.finalFieldType(dart.nullable(core.double)),
+    gpsImgDirectionRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsImgDirection: dart.finalFieldType(dart.nullable(core.String)),
+    gpsMapDatum: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDestLatitudeRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDestLatitude: dart.finalFieldType(dart.nullable(core.double)),
+    gpsDestLongitudeRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDestLongitude: dart.finalFieldType(dart.nullable(core.double)),
+    gpsDestBearingRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDestBearing: dart.finalFieldType(dart.nullable(core.double)),
+    gpsDestDistanceRef: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDestDistance: dart.finalFieldType(dart.nullable(core.double)),
+    gpsProcessingMethod: dart.finalFieldType(dart.nullable(core.String)),
+    gpsAreaInformation: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDateStamp: dart.finalFieldType(dart.nullable(core.String)),
+    gpsDifferential: dart.finalFieldType(dart.nullable(core.int)),
+    gpsHPositioningError: dart.finalFieldType(dart.nullable(core.double)),
+    interoperabilityIndex: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  var make$ = dart.privateName(metadata, "DeviceMetadata.make");
+  var model$ = dart.privateName(metadata, "DeviceMetadata.model");
+  var software$ = dart.privateName(metadata, "DeviceMetadata.software");
+  var makerNote$ = dart.privateName(metadata, "DeviceMetadata.makerNote");
+  var cameraOwnerName$ = dart.privateName(metadata, "DeviceMetadata.cameraOwnerName");
+  var bodySerialNumber$ = dart.privateName(metadata, "DeviceMetadata.bodySerialNumber");
+  var lensSpecification$ = dart.privateName(metadata, "DeviceMetadata.lensSpecification");
+  var lensMake$ = dart.privateName(metadata, "DeviceMetadata.lensMake");
+  var lensModel$ = dart.privateName(metadata, "DeviceMetadata.lensModel");
+  var lensSerialNumber$ = dart.privateName(metadata, "DeviceMetadata.lensSerialNumber");
+  metadata.DeviceMetadata = class DeviceMetadata extends core.Object {
+    get make() {
+      return this[make$];
+    }
+    set make(value) {
+      super.make = value;
+    }
+    get model() {
+      return this[model$];
+    }
+    set model(value) {
+      super.model = value;
+    }
+    get software() {
+      return this[software$];
+    }
+    set software(value) {
+      super.software = value;
+    }
+    get makerNote() {
+      return this[makerNote$];
+    }
+    set makerNote(value) {
+      super.makerNote = value;
+    }
+    get cameraOwnerName() {
+      return this[cameraOwnerName$];
+    }
+    set cameraOwnerName(value) {
+      super.cameraOwnerName = value;
+    }
+    get bodySerialNumber() {
+      return this[bodySerialNumber$];
+    }
+    set bodySerialNumber(value) {
+      super.bodySerialNumber = value;
+    }
+    get lensSpecification() {
+      return this[lensSpecification$];
+    }
+    set lensSpecification(value) {
+      super.lensSpecification = value;
+    }
+    get lensMake() {
+      return this[lensMake$];
+    }
+    set lensMake(value) {
+      super.lensMake = value;
+    }
+    get lensModel() {
+      return this[lensModel$];
+    }
+    set lensModel(value) {
+      super.lensModel = value;
+    }
+    get lensSerialNumber() {
+      return this[lensSerialNumber$];
+    }
+    set lensSerialNumber(value) {
+      super.lensSerialNumber = value;
+    }
+  };
+  (metadata.DeviceMetadata.new = function(make, model, software, makerNote, cameraOwnerName, bodySerialNumber, lensSpecification, lensMake, lensModel, lensSerialNumber) {
+    this[make$] = make;
+    this[model$] = model;
+    this[software$] = software;
+    this[makerNote$] = makerNote;
+    this[cameraOwnerName$] = cameraOwnerName;
+    this[bodySerialNumber$] = bodySerialNumber;
+    this[lensSpecification$] = lensSpecification;
+    this[lensMake$] = lensMake;
+    this[lensModel$] = lensModel;
+    this[lensSerialNumber$] = lensSerialNumber;
+    ;
+  }).prototype = metadata.DeviceMetadata.prototype;
+  (metadata.DeviceMetadata.fromMap = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7;
+    if (json == null) dart.nullFailed(I[0], 928, 30, "json");
+    this[make$] = metadata._castAsString((t0 = json[$_get]("Make"), t0 == null ? null : t0));
+    this[model$] = metadata._castAsString((t0$ = json[$_get]("Model"), t0$ == null ? null : t0$));
+    this[software$] = metadata._castAsString((t0$0 = json[$_get]("Software"), t0$0 == null ? null : t0$0));
+    this[makerNote$] = metadata._castAsString((t0$1 = json[$_get]("MakerNote"), t0$1 == null ? null : t0$1));
+    this[cameraOwnerName$] = metadata._castAsString((t0$2 = json[$_get]("CameraOwnerName"), t0$2 == null ? null : t0$2));
+    this[bodySerialNumber$] = metadata._castAsString((t0$3 = json[$_get]("BodySerialNumber"), t0$3 == null ? null : t0$3));
+    this[lensSpecification$] = metadata._castAsDoubleMap(T.ListN().as((t0$4 = json[$_get]("LensSpecification"), t0$4 == null ? null : t0$4)));
+    this[lensMake$] = metadata._castAsString((t0$5 = json[$_get]("LensMake"), t0$5 == null ? null : t0$5));
+    this[lensModel$] = metadata._castAsString((t0$6 = json[$_get]("LensModel"), t0$6 == null ? null : t0$6));
+    this[lensSerialNumber$] = metadata._castAsString((t0$7 = json[$_get]("LensSerialNumber"), t0$7 == null ? null : t0$7));
+    ;
+  }).prototype = metadata.DeviceMetadata.prototype;
+  dart.addTypeTests(metadata.DeviceMetadata);
+  dart.addTypeCaches(metadata.DeviceMetadata);
+  dart.setLibraryUri(metadata.DeviceMetadata, I[1]);
+  dart.setFieldSignature(metadata.DeviceMetadata, () => ({
+    __proto__: dart.getFields(metadata.DeviceMetadata.__proto__),
+    make: dart.finalFieldType(dart.nullable(core.String)),
+    model: dart.finalFieldType(dart.nullable(core.String)),
+    software: dart.finalFieldType(dart.nullable(core.String)),
+    makerNote: dart.finalFieldType(dart.nullable(core.String)),
+    cameraOwnerName: dart.finalFieldType(dart.nullable(core.String)),
+    bodySerialNumber: dart.finalFieldType(dart.nullable(core.String)),
+    lensSpecification: dart.finalFieldType(dart.nullable(core.List$(dart.nullable(core.double)))),
+    lensMake: dart.finalFieldType(dart.nullable(core.String)),
+    lensModel: dart.finalFieldType(dart.nullable(core.String)),
+    lensSerialNumber: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  metadata._castAsInt = function _castAsInt(variable) {
+    if (variable == null) {
+      return null;
+    }
+    if (typeof variable == 'number') {
+      return variable[$toInt]();
+    }
+    return !core.int.is(variable) ? core.int.parse(dart.toString(variable)) : variable;
+  };
+  metadata._castAsDouble = function _castAsDouble(variable) {
+    if (variable == null) {
+      return null;
+    }
+    if (core.int.is(variable)) {
+      return variable[$toDouble]();
+    }
+    return !(typeof variable == 'number') ? core.double.parse(dart.toString(variable)) : variable;
+  };
+  metadata._castAsString = function _castAsString(variable) {
+    if (variable == null) {
+      return null;
+    }
+    if (core.List.is(variable)) {
+      return variable[$join]("");
+    }
+    return !(typeof variable == 'string') ? dart.toString(variable) : variable;
+  };
+  metadata._castAsIntMap = function _castAsIntMap(list) {
+    if (list == null) {
+      return null;
+    }
+    return list[$map](T.intN(), dart.fn(n => metadata._castAsInt(n), T.dynamicTointN()))[$toList]();
+  };
+  metadata._castAsDoubleMap = function _castAsDoubleMap(list) {
+    if (list == null) {
+      return null;
+    }
+    return list[$map](T.doubleN(), dart.fn(n => metadata._castAsDouble(n), T.dynamicTodoubleN()))[$toList]();
+  };
+  dart.trackLibraries("packages/multi_image_picker/src/metadata.dart", {
+    "package:multi_image_picker/src/metadata.dart": metadata
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["metadata.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/multi_image_picker/src/metadata.dart.lib.js"}');
+  // Exports:
+  return {
+    src__metadata: metadata
+  };
+}));
+
+//# sourceMappingURL=metadata.dart.lib.js.map
