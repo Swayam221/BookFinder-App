@@ -1,4 +1,4 @@
-#Sun Jul 18 16:00:08 IST 2021
+#Sun Jul 18 18:45:05 IST 2021
 base.0=C\:\\Users\\gupta\\OneDrive\\Desktop\\Flutter Projects\\Look_A_Book\\bookfinder_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

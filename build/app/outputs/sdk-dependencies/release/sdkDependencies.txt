@@ -283,6 +283,46 @@ library {
 }
 library {
   maven_library {
+    groupId: "org.jetbrains.kotlin"
+    artifactId: "kotlin-stdlib-jdk7"
+    version: "1.3.50"
+  }
+  digests {
+    sha256: "\232\002f9\347b\022\370\325{\206\325[\aS\224\302\340\t\361\227\221\020u\0354\300\\_u\325{"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.jetbrains.kotlin"
+    artifactId: "kotlin-stdlib"
+    version: "1.3.50"
+  }
+  digests {
+    sha256: "\346\360WF\356\003f\320\265(%\240\220\372\304t\334\364@\202\311\b;\273 [\321ivH\215l"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.jetbrains.kotlin"
+    artifactId: "kotlin-stdlib-common"
+    version: "1.3.50"
+  }
+  digests {
+    sha256: "\214\346x\350\216K\240\030\266m\254\354\371RG\036M}\376\341V\250\250\031v\nZ_\362\2352<"
+  }
+}
+library {
+  maven_library {
+    groupId: "org.jetbrains"
+    artifactId: "annotations"
+    version: "13.0"
+  }
+  digests {
+    sha256: "\254\342\241\r\310\342\325\3754\222^\312\300>I\210\262\300\370Qe\f\224\270\316\364\233\241\275\021\024x"
+  }
+}
+library {
+  maven_library {
     groupId: "com.sangcomz"
     artifactId: "FishBun"
     version: "0.11.2"
@@ -329,16 +369,6 @@ library {
   }
   digests {
     sha256: "\'=\273\351Gk\032\2276r\030\314\307jV\367\377\\\n}\346=\205\v\202\277\267\241\334\376\001\247"
-  }
-}
-library {
-  maven_library {
-    groupId: "org.jetbrains.kotlin"
-    artifactId: "kotlin-stdlib-jdk7"
-    version: "1.3.50"
-  }
-  digests {
-    sha256: "\232\002f9\347b\022\370\325{\206\325[\aS\224\302\340\t\361\227\221\020u\0354\300\\_u\325{"
   }
 }
 library {
@@ -523,36 +553,6 @@ library {
 }
 library {
   maven_library {
-    groupId: "org.jetbrains.kotlin"
-    artifactId: "kotlin-stdlib"
-    version: "1.3.50"
-  }
-  digests {
-    sha256: "\346\360WF\356\003f\320\265(%\240\220\372\304t\334\364@\202\311\b;\273 [\321ivH\215l"
-  }
-}
-library {
-  maven_library {
-    groupId: "org.jetbrains.kotlin"
-    artifactId: "kotlin-stdlib-common"
-    version: "1.3.50"
-  }
-  digests {
-    sha256: "\214\346x\350\216K\240\030\266m\254\354\371RG\036M}\376\341V\250\250\031v\nZ_\362\2352<"
-  }
-}
-library {
-  maven_library {
-    groupId: "org.jetbrains"
-    artifactId: "annotations"
-    version: "13.0"
-  }
-  digests {
-    sha256: "\254\342\241\r\310\342\325\3754\222^\312\300>I\210\262\300\370Qe\f\224\270\316\364\233\241\275\021\024x"
-  }
-}
-library {
-  maven_library {
     groupId: "com.github.bumptech.glide"
     artifactId: "glide"
     version: "4.11.0"
@@ -623,7 +623,7 @@ library {
 }
 library {
   digests {
-    sha256: "\236/2\203fI\365\254\242\356\241\300[GQ\340y`\025\215@!\307\316\322\246r\310\026\304W\021"
+    sha256: "\023\332g\276\216=\330i\353\000\336=\rZ#\n\377\310\240gp\314\003@B&j\341\332\260\364@"
   }
 }
 library_dependencies {
@@ -748,58 +748,104 @@ library_dependencies {
 library_dependencies {
   library_index: 28
   library_dep_index: 29
-  library_dep_index: 30
-  library_dep_index: 31
-  library_dep_index: 32
-  library_dep_index: 33
 }
 library_dependencies {
   library_index: 29
-  library_dep_index: 34
-}
-library_dependencies {
-  library_index: 30
-  library_dep_index: 1
-  library_dep_index: 0
-  library_dep_index: 35
-  library_dep_index: 36
-  library_dep_index: 9
-  library_dep_index: 37
-  library_dep_index: 38
-  library_dep_index: 39
+  library_dep_index: 30
   library_dep_index: 31
 }
 library_dependencies {
-  library_index: 35
+  library_index: 32
+  library_dep_index: 33
+  library_dep_index: 34
+  library_dep_index: 35
+  library_dep_index: 36
+  library_dep_index: 28
+}
+library_dependencies {
+  library_index: 33
+  library_dep_index: 37
+}
+library_dependencies {
+  library_index: 34
   library_dep_index: 1
   library_dep_index: 0
-  library_dep_index: 36
-  library_dep_index: 14
-  library_dep_index: 10
+  library_dep_index: 38
+  library_dep_index: 39
+  library_dep_index: 9
   library_dep_index: 40
   library_dep_index: 41
   library_dep_index: 42
+  library_dep_index: 35
+}
+library_dependencies {
+  library_index: 38
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 39
+  library_dep_index: 14
+  library_dep_index: 10
   library_dep_index: 43
   library_dep_index: 44
   library_dep_index: 45
   library_dep_index: 46
-}
-library_dependencies {
-  library_index: 36
-  library_dep_index: 1
-  library_dep_index: 0
   library_dep_index: 47
-  library_dep_index: 11
   library_dep_index: 48
   library_dep_index: 49
 }
 library_dependencies {
+  library_index: 39
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 50
+  library_dep_index: 11
+  library_dep_index: 51
+  library_dep_index: 52
+}
+library_dependencies {
+  library_index: 50
+  library_dep_index: 1
+}
+library_dependencies {
+  library_index: 51
+  library_dep_index: 1
+}
+library_dependencies {
+  library_index: 52
+  library_dep_index: 1
+}
+library_dependencies {
+  library_index: 43
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 14
+}
+library_dependencies {
+  library_index: 44
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 14
+}
+library_dependencies {
+  library_index: 45
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 14
+}
+library_dependencies {
+  library_index: 46
+  library_dep_index: 1
+}
+library_dependencies {
   library_index: 47
   library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 46
 }
 library_dependencies {
   library_index: 48
   library_dep_index: 1
+  library_dep_index: 0
 }
 library_dependencies {
   library_index: 49
@@ -809,87 +855,41 @@ library_dependencies {
   library_index: 40
   library_dep_index: 1
   library_dep_index: 0
-  library_dep_index: 14
 }
 library_dependencies {
   library_index: 41
   library_dep_index: 1
   library_dep_index: 0
-  library_dep_index: 14
-}
-library_dependencies {
-  library_index: 42
-  library_dep_index: 1
-  library_dep_index: 0
-  library_dep_index: 14
-}
-library_dependencies {
-  library_index: 43
-  library_dep_index: 1
-}
-library_dependencies {
-  library_index: 44
-  library_dep_index: 1
-  library_dep_index: 0
-  library_dep_index: 43
-}
-library_dependencies {
-  library_index: 45
-  library_dep_index: 1
-  library_dep_index: 0
-}
-library_dependencies {
-  library_index: 46
-  library_dep_index: 1
-}
-library_dependencies {
-  library_index: 37
-  library_dep_index: 1
-  library_dep_index: 0
-}
-library_dependencies {
-  library_index: 38
-  library_dep_index: 1
-  library_dep_index: 0
   library_dep_index: 4
-  library_dep_index: 46
-  library_dep_index: 36
+  library_dep_index: 49
+  library_dep_index: 39
   library_dep_index: 9
-  library_dep_index: 50
-  library_dep_index: 51
-}
-library_dependencies {
-  library_index: 50
-  library_dep_index: 1
-  library_dep_index: 0
-}
-library_dependencies {
-  library_index: 51
-  library_dep_index: 50
-  library_dep_index: 35
-}
-library_dependencies {
-  library_index: 39
-  library_dep_index: 1
-}
-library_dependencies {
-  library_index: 31
-  library_dep_index: 1
-  library_dep_index: 0
-  library_dep_index: 35
-}
-library_dependencies {
-  library_index: 32
-  library_dep_index: 52
-}
-library_dependencies {
-  library_index: 52
   library_dep_index: 53
   library_dep_index: 54
 }
 library_dependencies {
-  library_index: 33
-  library_dep_index: 52
+  library_index: 53
+  library_dep_index: 1
+  library_dep_index: 0
+}
+library_dependencies {
+  library_index: 54
+  library_dep_index: 53
+  library_dep_index: 38
+}
+library_dependencies {
+  library_index: 42
+  library_dep_index: 1
+}
+library_dependencies {
+  library_index: 35
+  library_dep_index: 1
+  library_dep_index: 0
+  library_dep_index: 38
+}
+library_dependencies {
+  library_index: 36
+  library_dep_index: 29
 }
 library_dependencies {
   library_index: 55
@@ -897,7 +897,7 @@ library_dependencies {
   library_dep_index: 57
   library_dep_index: 58
   library_dep_index: 9
-  library_dep_index: 51
+  library_dep_index: 54
   library_dep_index: 19
 }
 library_dependencies {
@@ -909,8 +909,8 @@ library_dependencies {
 }
 module_dependencies {
   module_name: "base"
-  dependency_index: 33
   dependency_index: 59
+  dependency_index: 28
   dependency_index: 60
   dependency_index: 61
   dependency_index: 62
