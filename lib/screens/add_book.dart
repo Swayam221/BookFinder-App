@@ -161,7 +161,6 @@ class _AddBookState extends State<AddBookPage>
                 validator: (e) => (e==null || e.compareTo(DateTime.now())>0 )?'please enter a valid date': null,
                 onDateSelected: (DateTime value) {
                   date = value.toString();
-                  print(date);
                 },
               ),
               const SizedBox(height: 20,),
@@ -189,7 +188,6 @@ class _AddBookState extends State<AddBookPage>
                         textStyle: const TextStyle(fontSize: 20),
                       ),
                       onPressed: () async {
-                        print(titleController.text);
                         if(_formKey.currentState!.validate())
                         {
                           setState(() {
@@ -202,7 +200,6 @@ class _AddBookState extends State<AddBookPage>
                           ));
                           else if(selectedImage!=null && response!='')
                           {
-                            print(response);
                             try{
                               
                             await Services().addImage(File(selectedImage.path), response);
@@ -213,7 +210,6 @@ class _AddBookState extends State<AddBookPage>
                                 content: Text("An error occured while uploading image."),
                               ));
                             }
-                            print(response);
                             
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                               content: Text("Book Added to Database Successfully"),
@@ -252,7 +248,6 @@ class _AddBookState extends State<AddBookPage>
         selectedImage = image;
       });
     } on Exception catch (e) {
-      print("fasdjkj");
       print(e.toString());
     }
 
@@ -262,10 +257,5 @@ class _AddBookState extends State<AddBookPage>
     if (!mounted) return;
 
     setState(() {});
-  }
-
-  void help()
-  {
-    print(titleController.text);
   }
 }

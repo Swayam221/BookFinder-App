@@ -17,9 +17,7 @@ class BookPagination extends ChangeNotifier{
   {
     loading = true;
     notifyListeners();
-    print(page);
     List<Book> results = await Services.getBooksByPage(page);
-    print(results);
     if(results.isNotEmpty && results!=prev)
     {
       

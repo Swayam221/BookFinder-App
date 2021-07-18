@@ -19,20 +19,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
   List<Book> books = [];
   var bookPagination ;
   var gridController = ScrollController();
   var searchController = TextEditingController();
   List<Book> searchResults = [];
   var searching = false;
-  void _incrementCounter() {
-    //Services.search('maze');
-    //Services.addBook("Murder On The Orient Express", "Agatha Christie", "1934-01-01");
-    setState(() {
-      _counter++;
-    });
-  }
   @override
   void initState()
   {
@@ -57,7 +49,6 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies()
   {
     super.didChangeDependencies();
-    print("didChangedependencies");
     this.bookPagination = Provider.of<BookPagination>(context);
     //bookPagination.getBooks();
   }
@@ -84,7 +75,6 @@ class _HomePageState extends State<HomePage> {
             ),
             onChanged: (val) async
             {
-              print(searchController.text);
               if(searchController.text.isNotEmpty)
               {
                 setState(() {

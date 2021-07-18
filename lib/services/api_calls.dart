@@ -33,13 +33,11 @@ class Services{
         headers: {'content-type': 'application/json'},
         body: body,
       );
-      print(json.decode(response.body));
       return json.decode(response.body)['_id'];
       
     }
     catch(err)
     {
-      print('error');
       return '';
     }
   } 
@@ -51,11 +49,9 @@ class Services{
         Uri.parse(emulatorUrl+searchRoute+query),
       );
       List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
-      //print(results[0].title);
       return results;
     }
     catch(err){
-      print("error");
       return [];
     }
   }
@@ -67,11 +63,9 @@ class Services{
         Uri.parse(emulatorUrl+addBookRoute),
       );
       List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
-      //print(results[0].title);
       return results;
     }
     catch(err){
-      print("error");
       return [];
     }
   }
@@ -84,30 +78,14 @@ class Services{
         Uri.parse(emulatorUrl+addBookRoute+page.toString()+'/'+pageSize.toString()),
       );
       List<Book> results = (json.decode(response.body) as List).map((i) => Book.fromJson(i)).toList();
-      //print(results[0].title);
       return results;
     }
     catch(err){
-      print("error");
       return [];
     }
   }
 
 
-  Future<dynamic> addImageForWeb(Uint8List image, String bookId) async
-  { print("hello");
-    FormData formData = FormData.fromMap({
-        "bookImg": http.MultipartFile.fromBytes('', image),
-        "bookId": bookId
-      });
-
-      final response = await dio.post(
-        emulatorUrl + imagesUrl+"forWeb",
-        data: formData,
-      );
-      print("hello");
-      return response;
-  }
 
   Future<Response> addImage(File image, String bookId) async {
     FormData formData = FormData.fromMap({
