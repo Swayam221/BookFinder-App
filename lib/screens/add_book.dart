@@ -25,6 +25,7 @@ class _AddBookState extends State<AddBookPage>
   dynamic selectedImage;
   List<Asset> temp1 = [];
   List<Asset>  temp2 =[];
+  bool  loading = false;
   final ImagePicker _picker = ImagePicker();
   @override
   Widget build(BuildContext context)
@@ -183,12 +184,15 @@ class _AddBookState extends State<AddBookPage>
                         print(titleController.text);
                         if(_formKey.currentState!.validate())
                         {
+                          setState(() {
+                            loading = true;
+                          });
                           var response = await Services.addBook(titleController.text,authorController.text,date);
                           if(response=='')
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text("An error occured while uploading book details."),
                           ));
-                          if(selectedImage!=null && response!='')
+                          else if(selectedImage!=null && response!='')
                           {
                             print(response);
                             try{
@@ -202,14 +206,24 @@ class _AddBookState extends State<AddBookPage>
                               ));
                             }
                             print(response);
+                            
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Book Added to Database Successfully"),
+                            ));
+                            Navigator.pop(context);
                           }
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text("Book Added to Database Successfully"),
-                          ));
-                          Navigator.pop(context);
+                          else if(selectedImage==null && response!=''){
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("Book Added to Database Successfully"),
+                            ));
+                            Navigator.pop(context);
+                          }
+                          setState(() {
+                            loading = false;
+                          });
                         }
                       },
-                      child: const Text('Add Book To Database'),
+                      child: !loading?const Text('Add Book To Database'):CircularProgressIndicator(),
                     ),
                   ],
                 ),

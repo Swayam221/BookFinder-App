@@ -153,10 +153,20 @@ class _HomePageState extends State<HomePage> {
         child: Text("No Resutls for This Query", style: TextStyle(fontSize: 16),)
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddBookPage()));},
+        onPressed: () async { 
+          await _navigate(context);
+        },
         tooltip: 'Add A book',
         child: Icon(Icons.add),
       ), 
     );
+  }
+
+  Future<void> _navigate(BuildContext context) async { 
+    await Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => AddBookPage()
+      )
+    );
+    bookPagination.getBooks();
   }
 }

@@ -5,6 +5,7 @@ INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookf
 INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml:1:1-41:12
 INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml:1:1-41:12
 MERGED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml:1:1-41:12
+MERGED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -135,6 +136,8 @@ uses-sdk
 INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\main\AndroidManifest.xml
+MERGED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -233,6 +236,22 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+queries
+ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
+	android:name
+		ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
+data
+ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+	android:mimeType
+		ADDED from [:file_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
 ADDED from [:image_picker] C:\Users\gupta\OneDrive\Desktop\Flutter Projects\Look_A_Book\bookfinder_app\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
 	android:grantUriPermissions
