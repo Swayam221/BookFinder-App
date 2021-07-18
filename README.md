@@ -1,16 +1,22 @@
 # bookfinder_app
 
-A new Flutter application.
+A book finder app in which users can add any book and search for books. 
+Node.js and MongoDB have been used for the backend and Flutter for the front-end of the application.
+The Flutter web app has been deployed on [000webhost](https://000webhost.com), but i request you
+to use the android app as uploading an image will not be possible on the web app.
 
-## Getting Started
+## Backend
 
-This project is a starting point for a Flutter application.
+Node.js has been used for the backend of the application along with MongoDB Atlas for the database service.
+The backend Node.js app has been deployed on a heroku cloud service.
 
-A few resources to get you started if this is your first Flutter project:
+-[Link To Backend Repository](https://github.com/Swayam221/BookFinderApp_Backend)
+-[Link To Deployed Backend](https://bookfinder-app-backend.herokuapp.com/)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Link To APK
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-[Android APK Link](https://drive.google.com/file/d/1o5h01oCfqqO61x-5BcEIzlCRMvZBy-ZY/view?usp=sharing)
+
+## Link to Web App
+-[Web App Link](http://look-a-book.000webhostapp.com/#/)
+
